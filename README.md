@@ -40,7 +40,7 @@ npm run dev
 
 ## Information
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/75f9a6f0dd0a4701b9ad43d242ba86e0)](https://www.codacy.com/app/mccr4fthd/JuzouSatoru2.github.io?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JuzouSatoru2/JuzouSatoru2.github.io&amp;utm_campaign=Badge_Grade) [![CircleCI](https://circleci.com/gh/JuzouSatoru2/JuzouSatoru2.github.io.svg?style=svg)](https://circleci.com/gh/JuzouSatoru2/JuzouSatoru2.github.io) ![GitHub](https://img.shields.io/github/license/Juzousatoru2/Juzousatoru2.github.io.svg)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/75f9a6f0dd0a4701b9ad43d242ba86e0)](https://www.codacy.com/app/mccr4fthd/JuzouSatoru2.github.io?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JuzouSatoru2/JuzouSatoru2.github.io&amp;utm_campaign=Badge_Grade) [![CircleCI](https://circleci.com/gh/JuzouSatoru2/JuzouSatoru2.github.io.svg?style=svg)](https://circleci.com/gh/JuzouSatoru2/JuzouSatoru2.github.io) ![GitHub](https://img.shields.io/github/license/JuzouSatoru2/NextJs-Website)
 
 ## Show your support
 
