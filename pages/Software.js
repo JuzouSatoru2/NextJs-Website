@@ -1,6 +1,6 @@
-import React from 'react'
-import ReactTable from 'react-table'
-import axios from 'axios'
+import React from 'react';
+import ReactTable from 'react-table';
+import axios from 'axios';
 import Head from 'next/head';
 
 import Sources from '../components/Sources';
@@ -35,7 +35,7 @@ const columns = [
     Header: 'Size (kb)',
     accessor: "size"
   }
-]
+];
 
 export default class Index extends React.Component {
   constructor (props) {

@@ -12,6 +12,8 @@
         "package-lock.json": true,
         "README.md": true,
         "yarn.lock": true,
-        "docs": true
-    }
+        "docs": true,
+        ".circleci": true
+    },
+    //"git.enabled": false
 }

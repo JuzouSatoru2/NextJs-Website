@@ -37,6 +37,12 @@ const DebugSources = () => (
       <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <link async rel="stylesheet" href="/static/css/style.css" type="text/css" />
+      <link rel="stylesheet" href="/static/vendors/bootstrap/css/bootstrap.min.css" />
+      <script src="/static/vendors/jquery/jquery.min.js"></script>
+      <script src=" /static/js/main.min.js"></script>
+      <script async src="/static/vendors/bootstrap/js/bootstrap.min.js"></script>
+      <script src="/static/vendors/modernizr/modernizr.js"></script>
     </Head>
   </div>
 );
