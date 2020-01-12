@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 const Footer = () => (
   <div>
@@ -26,10 +27,10 @@ const Footer = () => (
       <div className="container">
           <div className="row">
               <div className="col-6 col-md">
-                  <a href="/">Home</a>
+                  <Link href="/"><a>Home</a></Link>
               </div><div className="col-md rm"><p>|</p></div>
               <div className="col-6 col-md" >
-                  <a href="/Software">Software</a>
+                  <Link href="/software"><a>Software</a></Link>
               </div><div className="col-md rm"><p>|</p></div>
               <div className="col-6 col-md">
                   <a href="#">---</a>
@@ -41,7 +42,7 @@ const Footer = () => (
                   <a href="#">---</a>
               </div><div className="col-md rm"><p>|</p></div>
               <div className="col-6 col-md">
-                  <a href="/contact">Contact</a>
+                  <Link href="/contact"><a>Contact</a></Link>
               </div>
           </div>
       </div>
