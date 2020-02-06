@@ -11,7 +11,7 @@ app.prepare()
   const server = express();
   if(dev === true){
     app.use(compression());
-  };
+  }
     
   server.get('/dashboard', (req, res) => {
     res.sendStatus(404);

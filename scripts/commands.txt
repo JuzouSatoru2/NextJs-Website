@@ -1,5 +1,0 @@
-Start docker:
-(in main folder) docker-compose up
-
-Start Portainer:
-docker start {$container name(here:nifty_aryabhata)}

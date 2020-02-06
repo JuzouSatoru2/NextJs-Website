@@ -2,7 +2,7 @@ import DebugSources from '../components/DebugSources';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-import Link from 'next/link'
+import Link from 'next/link';
 
 const debug = () => (
     <div>
