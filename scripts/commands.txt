@@ -2,4 +2,4 @@ Start docker:
 (in main folder) docker-compose up
 
 Start Portainer:
-(require docker) docker start {$container name(here:nifty_aryabhata)}
+docker start {$container name(here:nifty_aryabhata)}
