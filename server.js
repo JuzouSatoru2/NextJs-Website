@@ -9,10 +9,11 @@ const handle = app.getRequestHandler();
 app.prepare()
 .then(() => {
   const server = express();
+
   if(dev === true){
-    app.use(compression());
-  }
-    
+    server.use(compression());
+  };
+
   server.get('/dashboard', (req, res) => {
     res.sendStatus(404);
   });
