@@ -1,9 +1,11 @@
 import Sources from '../components/Sources';
 
+import Link from 'next/link';
+
 const dashboard = () => (
     <div>
       <Sources></Sources>
-      <h1>Coming Soon!</h1>
+      <h1>Coming Soon!<br></br><Link href="/"><a>Go back</a></Link></h1>
       <style jsx>
           {
         ` @font-face {
@@ -11,7 +13,7 @@ const dashboard = () => (
             src: url(/static/fonts/Gravity-Regular.otf);
         }
 
-        h1 {
+        h1, a {
             margin: 10%;
             text-align: center;
             font-family: Gravity;
