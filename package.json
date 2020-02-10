@@ -9,7 +9,7 @@
     "start": "next start",
     "export": "next build && next export",
     "server": "node server.js",
-    "server:prod": "cross-env NODE_ENV=production node server.js"
+    "server:prod": "NODE_ENV=production node server.js"
   },
   "author": "Alex",
   "license": "MIT",

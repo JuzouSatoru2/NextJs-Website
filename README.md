@@ -14,7 +14,7 @@
   </a>
 </p>
 
-> NextJs / Docker / ExpressJs website
+> NextJs / ExpressJs / Docker (Mongodb/-express, Portainer, Nginx) website
 
 ### 🏠 [Homepage](https://github.com/JuzouSatoru2/NextJs-Website#readme)
 
@@ -33,6 +33,12 @@ npm install
 
 ```sh
 npm run start
+```
+
+## Usage Docker
+
+```sh
+docker-compose up
 ```
 
 ## Run tests
