@@ -30,6 +30,10 @@ body, html {
   text-align: left;
 }
 
+div.rt-td > a {
+  color: inherit;
+}
+
 .bxo {
    margin-top: 12%;
    margin-left: 5%;
