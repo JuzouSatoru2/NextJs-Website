@@ -6,14 +6,14 @@
         "nginx": true,
         ".dockerignore": true,
         ".gitignore": true,
-        "docker-compose.yml": true,
         "Dockerfile": true,
         "LICENSE": true,
         "package-lock.json": true,
         "README.md": true,
         "yarn.lock": true,
         "docs": true,
-        ".circleci": true
+        ".circleci": true,
+        "template.env": true
     },
     //"git.enabled": false
 }
