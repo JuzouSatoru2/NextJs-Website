@@ -17,6 +17,7 @@
 > NextJs / ExpressJs / Docker (Mongodb/-express, Portainer, Nginx) website
 
 ### 🏠 [Homepage](https://github.com/JuzouSatoru2/NextJs-Website#readme)
+### 📖 [Documentation](https://github.com/JuzouSatoru2/NextJs-Website/docs/)
 
 ## Prerequisites
 
