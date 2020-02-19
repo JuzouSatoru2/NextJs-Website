@@ -40,3 +40,4 @@ All locally installed packages in package.json
 - express for the Backend server
 - next, react and react-dom for the Frontend
 - react-table for displaying github data
+- mongoose for connecting to MongoDB
