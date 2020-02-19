@@ -2,6 +2,8 @@ version: '3'
 services:
   nextjs:
     build: ./
+    depends_on: 
+      - mongo
   portainer:
     image: portainer/portainer
     command: -H unix:///var/run/docker.sock
@@ -18,6 +20,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: admin
+    ports:
+      - '27017-27019:27017-27019'
   mongo-express:
     image: mongo-express
     restart: always
@@ -26,8 +30,13 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: admin
+      ME_CONFIG_BASICAUTH_USERNAME: alex
+      ME_CONFIG_BASICAUTH_PASSWORD: admin
+      ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
   nginx:
     build: ./nginx
+    depends_on: 
+      - nextjs
     ports:
       - 80:80
 
