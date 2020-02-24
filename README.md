@@ -48,7 +48,7 @@ docker-compose up
 npm run dev
 ```
 
-## Run minification script
+## Run minification script for /public files
 
 ```sh
 ./scripts/minify.sh or .bat
