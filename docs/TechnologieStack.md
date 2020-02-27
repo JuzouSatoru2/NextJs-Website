@@ -15,7 +15,7 @@ The Frontend for this website is built using [Nextjs](https://nextjs.org/). Comp
 The Backend server is [Express](https://expressjs.com/), which is handling all the ```/api``` routes and blocking requests for admin only pages.
 
 ## Docker
-[Docker](https://www.docker.com/) containers are used to build a Full Stack webserver. All containers are used with docker-compose. 
+[Docker](https://www.docker.com/) containers are used to build a Full Stack webserver with dockerizing all services.
 
 ### Portainer
 [Portainer](http://portainer.io/) is a management/administration tool the Docker enviroment. 
@@ -25,6 +25,9 @@ The webserver [Nginx](https://www.nginx.com/) with reverse proxy summarizes all 
 
 ### MongoDB and MongoExpress
 [MongoDB](http://mongodb.com/) is the database used by the Backend and displayed by [MongoExpress](https://github.com/mongo-express/mongo-express).
+
+### Fileserver
+[Fileserver](https://www.npmjs.com/package/http-server) is just a simple http server to serve static images in a list.
 
 ## Tools
 All Node Packages installed globaly and used in this project.

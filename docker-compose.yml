@@ -33,6 +33,10 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: alex
       ME_CONFIG_BASICAUTH_PASSWORD: admin
       ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
+  fileserver:
+    build: ./fileserver
+    ports: 
+      - 8082:8082
   nginx:
     build: ./nginx
     depends_on: 

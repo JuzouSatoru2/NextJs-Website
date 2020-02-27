@@ -8,9 +8,7 @@
         "Dockerfile": true,
         "LICENSE": true,
         "package-lock.json": true,
-        "README.md": true,
         "yarn.lock": true,
-        "docs": true,
         ".circleci": true,
         "template.env": true
     },

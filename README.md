@@ -39,7 +39,7 @@ npm run start
 ## Usage Docker
 
 ```sh
-docker-compose up
+docker-compose up -d
 ```
 
 ## Run tests
