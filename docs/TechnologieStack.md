@@ -26,9 +26,6 @@ The webserver [Nginx](https://www.nginx.com/) with reverse proxy summarizes all 
 ### MongoDB and MongoExpress
 [MongoDB](http://mongodb.com/) is the database used by the Backend and displayed by [MongoExpress](https://github.com/mongo-express/mongo-express).
 
-### Fileserver
-[Fileserver](https://www.npmjs.com/package/http-server) is just a simple http server to serve static images in a list.
-
 ## Tools
 All Node Packages installed globaly and used in this project.
  - node-minify for file minification
@@ -43,5 +40,6 @@ All locally installed packages in package.json
 - express for the Backend server
 - next, react and react-dom for the Frontend
 - react-table for displaying github data
-- mongoose and mongodb for connecting to MongoDB
+- mongoose for connecting to MongoDB
 - cross-env for running scripts cross platforms
+- nodemon(dev) for server restarting on change

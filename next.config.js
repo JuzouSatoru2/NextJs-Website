@@ -1,12 +1,12 @@
 require('dotenv').config()
 module.exports = {
-    exportPathMap: function() {
+    exportPathMap: () => {
       return {
         '/': { page: '/' },
-        'dashboard': { page: 'dashboard' },
         'software': { page: 'software' },
         'debug': { page: 'debug' },
-        'contact': { page: 'contact' }
+        'contact': { page: 'contact' },
+        'api/test': { page: 'api/test' }
       };
     },
     env: {

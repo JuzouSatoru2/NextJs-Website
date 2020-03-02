@@ -21,6 +21,7 @@ const Sources = () => (
       <link rel="icon" type="image/png" sizes="16x16" href="/static/icon/favicon-16x16.png" />
       <link rel="manifest" href="/static/icon/manifest.json" />
       <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name='mobile-web-app-capable' content='yes' />
       <meta name="msapplication-TileImage" content="/static/icon/ms-icon-144x144.png" />
       <meta name="msapplication-config" content="/static/icon/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
