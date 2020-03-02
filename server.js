@@ -1,17 +1,23 @@
 const express = require('express');
 const next = require('next');
 const compression = require('compression');
+const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
+const port = process.env.PORT || 3000;
+const apiRoutes = require('./server/routes/apiRoutes.js');
+
 app.prepare()
   .then(() => {
     const server = express();
+    server.use(bodyParser.json());
+    server.use(bodyParser.urlencoded({ extended: false }));
     server.set('trust proxy', true);
-    const port = process.env.PORT || 3000;
+    server.use('/api', apiRoutes);
 
     if (dev === false) {
       server.use(compression());

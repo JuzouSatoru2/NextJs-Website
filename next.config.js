@@ -5,8 +5,7 @@ module.exports = {
         '/': { page: '/' },
         'software': { page: 'software' },
         'debug': { page: 'debug' },
-        'contact': { page: 'contact' },
-        'api/test': { page: 'api/test' }
+        'contact': { page: 'contact' }
       };
     },
     env: {
