@@ -5,4 +5,3 @@
 - MongoDB: 
 - MongoExpress: 8081
 - Nginx: 80
-- Fileserver 8082
