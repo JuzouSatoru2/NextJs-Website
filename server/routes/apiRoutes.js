@@ -1,13 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const messageController = require('../controller/message');
 
 router.get('/test', (req, res) => {
     res.json('Api routes working');
 });
 
-// Api route post template (message=json post)
-// router.post('/post', (req, res) => {
-//     res.json(req.body.message);
-// });
+router.route('/msg')
+    .get(messageController.index)
+    .post(messageController.new);
+router.route('/msg/:message_id')
+    .get(messageController.view)
+    .patch(messageController.update)
+    .put(messageController.update)
+    .delete(messageController.delete);
 
 module.exports = router;
