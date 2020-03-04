@@ -43,3 +43,4 @@ All locally installed packages in package.json
 - mongoose for connecting to MongoDB
 - cross-env for running scripts cross platforms
 - nodemon(dev) for server restarting on change
+- morgan for logging http requests
