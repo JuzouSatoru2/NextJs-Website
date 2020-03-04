@@ -34,8 +34,12 @@ exports.new = (req, res) => {
 };
 exports.view = (req, res) => {
     Message.findById(req.params.message_id, (err, message) => {
-        if (err)
-            res.send(err);
+        if (err) {
+            res.json({
+                status: "error",
+                message: err,
+            });
+        }
         res.json({
             omessage: 'Message details loading..',
             data: message
@@ -48,8 +52,12 @@ exports.update = (req, res) => {
         message.name = req.body.name;
         message.message = req.body.message;
         message.save((err) => {
-            if (err)
-                res.json(err);
+            if (err) {
+            res.json({
+                status: "error",
+                message: err,
+            });
+        }
             res.json({
                 omessage: 'Message Info updated',
                 data: message
@@ -61,8 +69,12 @@ exports.delete = (req, res) => {
     Message.deleteOne({
         _id: req.params.message_id
     }, (err, message) => {
-        if (err)
-            res.send(err);
+        if (err) {
+            res.json({
+                status: "error",
+                message: err,
+            });
+        }
         res.json({
             status: "success",
             omessage: 'Message deleted'
