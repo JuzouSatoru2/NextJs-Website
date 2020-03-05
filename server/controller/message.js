@@ -1,4 +1,4 @@
-Message = require('../models/message.js');
+const Message = require('../models/message.js');
 
 exports.index = (req, res) => {
     Message.get((err, message) => {
@@ -53,11 +53,11 @@ exports.update = (req, res) => {
         message.message = req.body.message;
         message.save((err) => {
             if (err) {
-            res.json({
-                status: "error",
-                message: err,
-            });
-        }
+                res.json({
+                    status: "error",
+                    message: err,
+                });
+            }
             res.json({
                 omessage: 'Message Info updated',
                 data: message

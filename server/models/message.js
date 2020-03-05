@@ -12,6 +12,6 @@ const MessageSchema = new mongoose.Schema({
 });
 
 const Message = module.exports = mongoose.model('Message', MessageSchema);
-module.exports.get = function (callback, limit) {
+module.exports.get = (callback, limit) => {
     Message.find(callback).limit(limit);
-}
+};
