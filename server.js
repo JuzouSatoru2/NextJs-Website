@@ -4,7 +4,6 @@ const compression = require('compression');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
-const morgan = require('morgan');
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -31,7 +30,6 @@ app.prepare()
       db.once('open', () => {
         console.log("> Connected to MongoDB");
       });
-      server.use(morgan('tiny'));
     };
 
     server.get('/debug', (req, res) => {
