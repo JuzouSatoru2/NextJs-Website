@@ -37,7 +37,7 @@ const columns = [
   }
 ];
 
-export default class Index extends React.Component {
+export default class software extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
