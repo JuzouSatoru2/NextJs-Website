@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to my NextJs Website 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.3-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/github/package-json/v/JuzouSatoru2/NextJs-Website">
   <img src="https://img.shields.io/badge/npm-%3E%3D6.13.7-blue.svg" />
   <img src="https://img.shields.io/badge/node-%3E%3D10.14.2-blue.svg" />
   <a href="https://github.com/JuzouSatoru2/NextJs-Website#readme" target="_blank">
