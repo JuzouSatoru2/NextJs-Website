@@ -90,7 +90,7 @@ export default function Index() {
   <div className="pimg1 down-img" id="srcimg">
     <div className="ptext">
       <span className="titleb">
-        See my projects: <Link href="Software"><a className="link">Here</a></Link>
+        See my projects: <Link href="software"><a className="link">Here</a></Link>
       </span>
     </div>
   </div>

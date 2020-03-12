@@ -30,7 +30,7 @@ app.prepare()
       db.once('open', () => {
         console.log("> Connected to MongoDB");
       });
-    };
+    }
 
     server.get('/debug', (req, res) => {
       if (dev === false) {

@@ -11,7 +11,7 @@ const columns = [
   {
     Header: 'Title',
     accessor: 'html_url',
-    Cell: e =><a href={e.value}> {e.value.replace('https://github.com/JuzouSatoru2/','')} </a>
+    Cell: (e) => <a href={e.value}> {e.value.replace('https://github.com/JuzouSatoru2/','')} </a>
   },
   {
     Header: 'Description',
@@ -24,7 +24,7 @@ const columns = [
   {
     Header: 'Created at',
     accessor: "created_at",
-    Cell: e => <div>{e.value.split('T')[0]}</div>
+    Cell: (e) => <div>{e.value.split('T')[0]}</div>
   },
   {
     Header: 'Open issue',
@@ -39,15 +39,15 @@ const columns = [
 
 export default class software extends React.Component {
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {
       tableData: [{
-          html_url: '',
-          description: '',
-          language: '',
-          created_at: '',
-          open_issues_count: '',
-          size: ''
+          "html_url": '',
+          "description": '',
+          "language": '',
+          "created_at": '',
+          "open_issues_count": '',
+          "size": ''
       }]
     }
   }
@@ -55,7 +55,7 @@ export default class software extends React.Component {
   componentDidMount() {
         axios.get("https://api.github.com/users/JuzouSatoru2/repos", {
             responseType: 'json'
-        }).then(response => {
+        }).then((response) => {
             this.setState({ tableData: response.data });
         });
   }
@@ -83,6 +83,6 @@ export default class software extends React.Component {
       <Footer></Footer>
       <script src="/static/vendors/bootstrap/js/bootstrap.min.js"></script>
     </div>
-    )
+    );
   }
 }

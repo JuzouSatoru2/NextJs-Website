@@ -1,6 +1,3 @@
-$(window).resize(navScroll);
-$(document).ready(navScroll);
-$(window).scroll(navScroll);
 var toggle = 0;
 
 var url = window.location.pathname;
@@ -50,7 +47,7 @@ function navScroll() {
             "padding": "21px",
             "padding-top": "8px",
             "padding-bottom": "8px"
-        })
+        });
     }
 }
 
@@ -62,3 +59,6 @@ $(".navbar-toggler").click(() => {
         $("#global-nav").addClass("toggle-height");
     }
 });
+$(window).resize(navScroll);
+$(document).ready(navScroll);
+$(window).scroll(navScroll);

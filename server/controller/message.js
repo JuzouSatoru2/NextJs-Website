@@ -48,7 +48,7 @@ exports.view = (req, res) => {
 };
 exports.update = (req, res) => {
     Message.findById(req.params.message_id, (err, message) => {
-        if (err) res.send(err);
+        if (err) { res.send(err) };
         message.name = req.body.name;
         message.message = req.body.message;
         message.save((err) => {
