@@ -6,7 +6,7 @@ import Sources from "../components/Sources";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export default class software extends React.Component {
+export default class contact extends React.Component {
   constructor(props) {
     super(props);
     this.sendMessage = this.sendMessage.bind(this);

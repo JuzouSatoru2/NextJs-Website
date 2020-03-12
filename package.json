@@ -1,6 +1,6 @@
 {
   "name": "alex",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "alex website",
   "main": "server.js",
   "scripts": {

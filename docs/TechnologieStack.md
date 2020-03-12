@@ -34,7 +34,7 @@ All Node Packages installed globaly and used in this project.
 
 ## Npm Packages
 All locally installed packages in package.json
-- axios for data fetch
+- axios and body-parser for data fetch
 - compression for server data compression
 - dotenv for enviroment variables
 - express for the Backend server
@@ -43,4 +43,3 @@ All locally installed packages in package.json
 - mongoose for connecting to MongoDB
 - cross-env for running scripts cross platforms
 - nodemon(dev) for server restarting on change
-- morgan for logging http requests
