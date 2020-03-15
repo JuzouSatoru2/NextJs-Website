@@ -93,20 +93,20 @@ const Architecture = () => (
                                 </tr>
                                 <tr className="jsx-3146163188">
                                     <td className="jsx-3146163188">jwtidentity</td>
-                                    <td className="jsx-3146163188">/api/auth</td>
+                                    <td className="jsx-3146163188">/api/auth/</td>
                                     <td className="jsx-3146163188">Dotnet</td>
                                     <td className="jsx-3146163188">JWT Authentication Server used to secure all other
                                         services (hangfire, mailer)</td>
                                 </tr>
                                 <tr className="jsx-3146163188">
                                     <td className="jsx-3146163188">portainer</td>
-                                    <td className="jsx-3146163188">/portainer</td>
+                                    <td className="jsx-3146163188">/api/portainer/</td>
                                     <td className="jsx-3146163188">NodeJs</td>
                                     <td className="jsx-3146163188">Docker container management</td>
                                 </tr>
                                 <tr className="jsx-3146163188">
                                     <td className="jsx-3146163188">mongoexpress</td>
-                                    <td className="jsx-3146163188">/mongoadmin</td>
+                                    <td className="jsx-3146163188">/api/mongoadmin/</td>
                                     <td className="jsx-3146163188">NodeJs</td>
                                     <td className="jsx-3146163188">MongoDb database management</td>
                                 </tr>
@@ -118,7 +118,7 @@ const Architecture = () => (
                                 </tr>
                                 <tr className="jsx-3146163188">
                                     <td className="jsx-3146163188">redir</td>
-                                    <td className="jsx-3146163188">/redir</td>
+                                    <td className="jsx-3146163188">/redir/</td>
                                     <td className="jsx-3146163188">Node js</td>
                                     <td className="jsx-3146163188">Redirect links based on country</td>
                                 </tr>

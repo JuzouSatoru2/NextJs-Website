@@ -33,6 +33,7 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: alex
       ME_CONFIG_BASICAUTH_PASSWORD: admin
       ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
+      ME_CONFIG_SITE_BASEURL: /api/mongoadmin/
   nginx:
     build: ./nginx
     depends_on: 
