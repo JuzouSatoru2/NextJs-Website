@@ -6,6 +6,7 @@ import Head from 'next/head';
 import Sources from '../components/Sources';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Architecture from '../components/Architecture';
 
 const columns = [
   {
@@ -80,6 +81,7 @@ export default class software extends React.Component {
         defaultPageSize={10}
       />
       </div>
+      <Architecture></Architecture>
       <Footer></Footer>
       <script src="/static/vendors/bootstrap/js/bootstrap.min.js"></script>
     </div>

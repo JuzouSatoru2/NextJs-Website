@@ -1,0 +1,51 @@
+.section-dark {
+    background-color: #191919;
+    color: white;
+}
+.section {
+    text-align: left;
+    padding: 50px 0;
+}
+
+.listPanel.jsx-3146163188 ul.jsx-3146163188 {
+    padding: 0px;
+    padding-left: 20px;
+}
+
+.listPanel.jsx-3146163188 li.jsx-3146163188 {
+    font-size: 0.8em;
+}
+
+.subTitle.jsx-3146163188 p.jsx-3146163188 {
+    padding-top: 10px;
+    font-size: 0.43em;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
+}
+
+.listPanel.jsx-3146163188 h5.jsx-3146163188 {
+    margin: 0px;
+}
+
+.listPanel.jsx-3146163188 .col-lg-2.jsx-3146163188 div.jsx-3146163188 {
+    padding-bottom: 20px;
+}
+
+.listPanel.jsx-3146163188 .col-lg-2.jsx-3146163188 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+tr.jsx-3146163188, td.jsx-3146163188{
+    color:white;
+}
+
+.jsx-3146163188.container.sss {
+    padding: 0;
+}
+
+li.jsx-3146163188{
+    line-height: 1.5;
+}
