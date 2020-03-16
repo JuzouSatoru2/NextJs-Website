@@ -12,13 +12,18 @@ export default class contact extends React.Component {
     this.sendMessage = this.sendMessage.bind(this);
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeMessage = this.handleChangeMessage.bind(this);
+    this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.state = {
+      email: "",
       name: "",
       message: "",
       alert: "alert alert-success text-left d-none"
     };
   }
 
+  handleChangeEmail(event) {
+    this.setState({ email: event.target.value });
+  }
   handleChangeName(event) {
     this.setState({ name: event.target.value });
   }
@@ -31,7 +36,7 @@ export default class contact extends React.Component {
     event.preventDefault();
     axios.post(
       "/api/msg",
-      { name: this.state.name, message: this.state.message },
+      { email: this.state.email, name: this.state.name, message: this.state.message },
       { headers: { "Content-Type": "application/json" } }
     );
     this.setState({ alert: "alert alert-success text-left" });
@@ -62,6 +67,18 @@ export default class contact extends React.Component {
           <h1 className="title">Send messages</h1>
           <div className="container-fluid my-5">
             <form>
+            <div className="form-group row">
+                <label className="col-sm-2 col-form-label">Email</label>
+                <div className="col-sm-10">
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="staticEmail"
+                    onChange={this.handleChangeEmail}
+                    required="required"
+                  ></input>
+                </div>
+              </div>
               <div className="form-group row">
                 <label className="col-sm-2 col-form-label">Name</label>
                 <div className="col-sm-10">
@@ -70,6 +87,7 @@ export default class contact extends React.Component {
                     className="form-control"
                     id="staticName"
                     onChange={this.handleChangeName}
+                    required="required"
                   ></input>
                 </div>
               </div>
@@ -81,6 +99,7 @@ export default class contact extends React.Component {
                     className="form-control"
                     id="staticMessage"
                     onChange={this.handleChangeMessage}
+                    required="required"
                   ></input>
                 </div>
               </div>

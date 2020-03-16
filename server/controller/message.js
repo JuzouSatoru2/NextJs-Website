@@ -17,6 +17,7 @@ exports.index = (req, res) => {
 };
 exports.new = (req, res) => {
     var message = new Message();
+    message.email = req.body.email;
     message.name = req.body.name;
     message.message = req.body.message;
     message.save((err) => {
@@ -49,6 +50,7 @@ exports.view = (req, res) => {
 exports.update = (req, res) => {
     Message.findById(req.params.message_id, (err, message) => {
         if (err) { res.send(err); }
+        message.email = req.body.email;
         message.name = req.body.name;
         message.message = req.body.message;
         message.save((err) => {

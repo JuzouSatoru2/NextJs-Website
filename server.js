@@ -19,7 +19,7 @@ app.prepare()
     server.set('trust proxy', true);
     server.use('/api', apiRoutes);
 
-    if (process.env.MOOD === true) {
+    if (process.env.MOOD) {
       server.use(compression());
       mongoose.connect(process.env.DATABASE_URL, {
         useNewUrlParser: true,

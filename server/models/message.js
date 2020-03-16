@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const MessageSchema = new mongoose.Schema({
+    email: {
+        type: String,
+        default: '',
+    },
     name: {
         type: String,
         default: ''
