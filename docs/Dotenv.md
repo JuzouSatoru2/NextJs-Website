@@ -15,4 +15,8 @@ Be carefull at changing the MongoDB password(admin) and username(root) in docker
 
 ### Mood
 
-The variable "MOOD" enables compression, database and logger. Only set it as true if an MongoDB instance is running and configured like mentioned.
+The variable "MOOD" enables compression, database and logger. Only set it as "activate" if an MongoDB instance is running and configured like mentioned.
+
+### Admin key
+
+The admin key is used for the JWT authentication. You can login with the password at the ```/login``` route

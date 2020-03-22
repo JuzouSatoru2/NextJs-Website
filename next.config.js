@@ -5,11 +5,13 @@ module.exports = {
         '/': { page: '/' },
         'software': { page: 'software' },
         'debug': { page: 'debug' },
-        'contact': { page: 'contact' }
+        'contact': { page: 'contact' },
+        'login': { page: 'login' }
       };
     },
     env: {
       DATABASE_URL:process.env.DATABASE_URL,
-      MOOD:process.env.MOOD
+      MOOD:process.env.MOOD,
+      ADMIN_KEY:process.env.ADMIN_KEY
     },
 };

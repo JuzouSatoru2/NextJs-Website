@@ -3,6 +3,7 @@ const next = require('next');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
+const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -19,7 +20,7 @@ app.prepare()
     server.set('trust proxy', true);
     server.use('/api', apiRoutes);
 
-    if (process.env.MOOD) {
+    if (process.env.MOOD==='activate') {
       server.use(compression());
       mongoose.connect(process.env.DATABASE_URL, {
         useNewUrlParser: true,
@@ -39,6 +40,49 @@ app.prepare()
         handle(req, res);
       }
     });
+
+    server.post('/api/verify', verifyToken, (req, res) => {  
+      jwt.verify(req.token, 'secretkey', (err, authData) => {
+        if(err) {
+          res.sendStatus(403);
+        } else {
+          res.json({
+            message: 'Verified',
+            authData
+          });
+        }
+      });
+    });
+    
+    server.post('/api/login', (req, res) => {
+      if(req.body.key==process.env.ADMIN_KEY){
+      const user = {
+        id: "1", 
+        username: req.body.username,
+        email: req.body.email
+      }
+    
+      jwt.sign({user}, 'secretkey', { expiresIn: '24h' }, (err, token) => {
+        res.json({
+          token
+        });
+      });
+    } else {
+      res.sendStatus(403);
+    }
+    });
+
+    function verifyToken(req, res, next) {
+      const bearerHeader = req.headers['authorization'];
+      if(typeof bearerHeader !== 'undefined') {
+        const bearer = bearerHeader.split(' ');
+        const bearerToken = bearer[1];
+        req.token = bearerToken;
+        next();
+      } else {
+        res.sendStatus(403);
+      }
+    };
 
     server.get('*', (req, res) => {
       return handle(req, res);
