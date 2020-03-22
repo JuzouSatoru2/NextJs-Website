@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const messageController = require('../controller/message');
 
-router.get('/test', (req, res) => {
+router.get('/', (req, res) => {
     res.json('Api routes working');
 });
 

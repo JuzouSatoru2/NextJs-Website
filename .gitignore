@@ -3,6 +3,5 @@
 out/
 node_modules
 package-lock.json
-other
 .env
 docs/Admin/
