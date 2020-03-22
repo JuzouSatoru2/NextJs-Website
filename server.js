@@ -41,6 +41,18 @@ app.prepare()
       }
     });
 
+    function verifyToken(req, res, next) {
+      const bearerHeader = req.headers['authorization'];
+      if(typeof bearerHeader !== 'undefined') {
+        const bearer = bearerHeader.split(' ');
+        const bearerToken = bearer[1];
+        req.token = bearerToken;
+        next();
+      } else {
+        res.sendStatus(403);
+      }
+    }
+    
     server.post('/api/verify', verifyToken, (req, res) => {  
       jwt.verify(req.token, 'secretkey', (err, authData) => {
         if(err) {
@@ -55,12 +67,12 @@ app.prepare()
     });
     
     server.post('/api/login', (req, res) => {
-      if(req.body.key==process.env.ADMIN_KEY){
+      if(req.body.key===process.env.ADMIN_KEY){
       const user = {
         id: "1", 
         username: req.body.username,
         email: req.body.email
-      }
+      };
     
       jwt.sign({user}, 'secretkey', { expiresIn: '24h' }, (err, token) => {
         res.json({
@@ -71,18 +83,6 @@ app.prepare()
       res.sendStatus(403);
     }
     });
-
-    function verifyToken(req, res, next) {
-      const bearerHeader = req.headers['authorization'];
-      if(typeof bearerHeader !== 'undefined') {
-        const bearer = bearerHeader.split(' ');
-        const bearerToken = bearer[1];
-        req.token = bearerToken;
-        next();
-      } else {
-        res.sendStatus(403);
-      }
-    };
 
     server.get('*', (req, res) => {
       return handle(req, res);
