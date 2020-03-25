@@ -22,13 +22,16 @@ export default class contact extends React.Component {
   }
 
   handleChangeEmail(event) {
+    this.setState({ alert: "alert alert-success text-left d-none" });
     this.setState({ email: event.target.value });
   }
   handleChangeName(event) {
+    this.setState({ alert: "alert alert-success text-left d-none" });
     this.setState({ name: event.target.value });
   }
 
   handleChangeMessage(event) {
+    this.setState({ alert: "alert alert-success text-left d-none" });
     this.setState({ message: event.target.value });
   }
 
