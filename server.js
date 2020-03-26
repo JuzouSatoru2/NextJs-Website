@@ -4,6 +4,7 @@ const compression = require('compression');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
 const jwt = require('jsonwebtoken');
+const helmet = require('helmet')
 const mongoose = require('mongoose');
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -21,6 +22,7 @@ app.prepare()
     server.use('/api', apiRoutes);
 
     if (process.env.MOOD==='activate') {
+      server.use(helmet());
       server.use(compression());
       mongoose.connect(process.env.DATABASE_URL, {
         useNewUrlParser: true,
@@ -66,7 +68,7 @@ app.prepare()
       });
     });
     
-    server.post('/api/login', (req, res) => {
+    server.post('/api/auth', (req, res) => {
       if(req.body.key===process.env.ADMIN_KEY){
       const user = {
         id: "1", 
@@ -90,7 +92,7 @@ app.prepare()
 
     server.listen(port, (err) => {
       if (err) throw err
-      console.log('> Ready on http://localhost:' + port);
+      console.log(`> Ready on http://localhost:${port}`);
     });
   })
   .catch((ex) => {
