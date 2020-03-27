@@ -14,7 +14,7 @@
   </a>
 </p>
 
-> NextJs / ExpressJs / Docker (Mongodb/-express, Portainer, Nginx) website
+> NextJs / ExpressJs / Docker (Mongodb/-express, Portainer, Hangfire, Nginx) website
 
 ### 🏠 [Homepage](https://github.com/JuzouSatoru2/NextJs-Website#readme)
 ### 📖 [Documentation](https://github.com/JuzouSatoru2/NextJs-Website/tree/master/docs)

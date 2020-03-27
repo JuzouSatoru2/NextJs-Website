@@ -34,12 +34,43 @@ services:
       ME_CONFIG_BASICAUTH_PASSWORD: admin
       ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
       ME_CONFIG_SITE_BASEURL: /api/mongoadmin/
+  postgresql:
+    image: 'bitnami/postgresql:latest'
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRESQL_USERNAME=root
+      - POSTGRESQL_PASSWORD=svfsck2
+      - POSTGRESQL_DATABASE=hangfire
+    volumes:
+      - pgdata:/bitnami
+  hangui:
+    image: hangui
+    restart: always
+    build:
+      context: .
+      dockerfile: ./hangfire/Hangfire.UI/Dockerfile
+    ports:
+      - '5005:80'
+    depends_on:
+      - postgresql 
+  hangserver:
+    image: hangserver
+    restart: always
+    build:
+      context: .
+      dockerfile: ./hangfire/Hangfire.Server/Dockerfile
+    depends_on:
+      - postgresql
+      - hangui
   nginx:
     build: ./nginx
     depends_on: 
       - nextjs
+      - hangui
     ports:
       - 80:80
 
 volumes:
   portainer_data:
+  pgdata:

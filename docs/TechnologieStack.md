@@ -5,6 +5,7 @@
 	- [Portainer](#portainer)
 	- [Nginx](#nginx)
 	- [MongoDB & MongoExpress](#mongodb-and-mongoexpress)
+	- [Hangfire](#hangfire)
 - [Tools](#tools)
 - [Npm Packages](#npm-packages)
 
@@ -18,13 +19,16 @@ The Backend server is [Express](https://expressjs.com/), which is handling all t
 [Docker](https://www.docker.com/) containers are used to build a Full Stack webserver with dockerizing all services.
 
 ### Portainer
-[Portainer](http://portainer.io/) is a management/administration tool the Docker enviroment. 
+[Portainer](https://portainer.io/) is a management/administration tool the Docker enviroment. 
 
 ### Nginx
 The webserver [Nginx](https://www.nginx.com/) with reverse proxy summarizes all docker container. In addition it caches static files.
 
 ### MongoDB and MongoExpress
-[MongoDB](http://mongodb.com/) is the database used by the Backend and displayed by [MongoExpress](https://github.com/mongo-express/mongo-express).
+[MongoDB](https://mongodb.com/) is the database used by the Backend and displayed by [MongoExpress](https://github.com/mongo-express/mongo-express).
+
+### Hangfire
+[Hangfire](https://www.hangfire.io/) performs background processing backed by persistent storage. It is written in Asp.net Core.
 
 ## Tools
 All Node Packages installed globaly and used in this project.

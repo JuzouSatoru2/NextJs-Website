@@ -1,7 +1,10 @@
 # Api routes
 - [/msg](#/msg)
-- [Mood](#mood)
-- [Admin key](#Admin-Key)
+- [/auth](#/auth)
+- [/verify](#/verify)
+- [/mongoadmin](#/mongoadmin)
+- [/portainer](#/portainer)
+- [/hangfire](#/hangfire)
 
 ### /msg
 - / POST and GET requests of messages
@@ -12,3 +15,12 @@
 
 ### /verify
 - / POST requests for JWT authentication
+
+### /mongoadmin
+- / MongoDB dashboard
+
+### /portainer
+- / local docker network/container dashboard
+
+### hangfire
+- / background processing dashboard
