@@ -22,6 +22,7 @@ app.prepare()
     server.use('/api', apiRoutes);
 
     if (process.env.MOOD==='activate') {
+      server.use(cors());
       server.use(helmet());
       server.use(compression());
       mongoose.connect(process.env.DATABASE_URL, {

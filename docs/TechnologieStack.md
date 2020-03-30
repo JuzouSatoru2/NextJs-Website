@@ -49,4 +49,4 @@ All locally installed packages in package.json
 - nodemon(dev) for server restarting on change
 - jsonwebtoken for authentication user and services
 - localStorage for saving/getting the Bearer token
-- helmet for server security
+- helmet and cors for server security
