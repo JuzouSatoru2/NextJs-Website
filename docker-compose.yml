@@ -4,6 +4,8 @@ services:
     build: ./
     depends_on: 
       - mongo
+    ports: 
+      - 3000:3000
   portainer:
     image: portainer/portainer
     command: -H unix:///var/run/docker.sock
@@ -65,6 +67,7 @@ services:
       - hangui
   nginx:
     build: ./nginx
+    restart: always
     depends_on: 
       - nextjs
       - hangui

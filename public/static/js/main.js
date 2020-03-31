@@ -22,11 +22,11 @@ function changebgimg(num) {
 
 $(document).ready(() => {
 	changebgimg(0);
-    if ('serviceWorker' in navigator) {
-    	window.addEventListener('load', () => {
-    		navigator.serviceWorker.register('/service-worker.js');
-    	})
-    }
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', () => {
+			navigator.serviceWorker.register('/service-worker.js');
+		})
+	}
 	console.log("%c I'm ready! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧", "color:#bf1a40");
 });
 

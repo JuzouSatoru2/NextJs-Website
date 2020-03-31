@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const helmet = require('helmet');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
