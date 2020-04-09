@@ -38,9 +38,11 @@
     "localStorage": "^1.0.4",
     "mongoose": "^5.9.6",
     "next": "^9.3.1",
+    "next-cookies": "^2.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-table": "^6.11.5"
+    "react-table": "^6.11.5",
+    "var": "^0.4.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"

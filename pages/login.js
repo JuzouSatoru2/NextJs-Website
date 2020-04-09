@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Head from "next/head";
 import localStorage from "localStorage";
+import cookies from "next-cookies";
 
 import Sources from "../components/Sources";
 import Header from "../components/Header";
@@ -36,12 +37,14 @@ export default class login extends React.Component {
   sendLogin(event) {
     event.preventDefault();
     localStorage.removeItem("bearerKey");
+    document.cookie = 'name=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT';
     axios.post(
-      "/api/login",
+      "/api/auth",
       { email: this.state.email, name: this.state.name, key: this.state.password },
       { headers: { "Content-Type": "application/json" } }
     ).then((response) => {
         localStorage.setItem("bearerKey", "Bearer " + response.data.token);
+        document.cookie = `bearerKey=Bearer ${response.data.token}; path=/`;
     });
     this.setState({ alert: "alert alert-success text-left" });
   }
