@@ -2,6 +2,7 @@ const express = require('express');
 const next = require('next');
 const compression = require('compression');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const helmet = require('helmet');
@@ -17,6 +18,7 @@ const apiRoutes = require('./server/routes/apiRoutes.js');
 app.prepare()
   .then(() => {
     const server = express();
+    server.use(cookieParser());
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({ extended: false }));
     server.set('trust proxy', true);
@@ -36,14 +38,6 @@ app.prepare()
         console.log("> Connected to MongoDB");
       });
     }
-
-    server.get('/debug', (req, res) => {
-      if (dev === false) {
-        res.sendStatus(404);
-      } else {
-        handle(req, res);
-      }
-    });
 
     function verifyToken(req, res, next) {
       const bearerHeader = req.headers['authorization'];
@@ -66,6 +60,28 @@ app.prepare()
             message: 'Verified',
             authData
           });
+        }
+      });
+    });
+
+    function verifyCookie(req, res, next) {
+      const cookieHeader = req.cookies['bearerKey'];
+      if(typeof cookieHeader !== 'undefined') {
+        const cookie = cookieHeader.split(' ');
+        const cookieToken = cookie[1];
+        req.token = cookieToken;
+        next();
+      } else {
+        res.sendStatus(404);
+      }
+    }
+    
+    server.get('/debug', verifyCookie, (req, res) => {  
+      jwt.verify(req.token, 'secretkey', (err, authData) => {
+        if(err) {
+          res.sendStatus(404);
+        } else {
+          handle(req, res);
         }
       });
     });
