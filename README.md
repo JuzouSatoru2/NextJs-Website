@@ -54,6 +54,12 @@ npm run dev
 ./scripts/minify.sh or .bat
 ```
 
+## Initialize the dotenv file with helper script
+
+```sh
+./scripts/init-dotenv.sh
+```
+
 ## CI Information
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/01f0675aaa774401b6d4321f7afd1830)](https://www.codacy.com/manual/mccr4fthd/NextJs-Website?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JuzouSatoru2/NextJs-Website&amp;utm_campaign=Badge_Grade) [![CircleCI](https://circleci.com/gh/JuzouSatoru2/NextJs-Website.svg?style=svg)](https://circleci.com/gh/JuzouSatoru2/NextJs-Website)
