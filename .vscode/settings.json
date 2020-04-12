@@ -2,7 +2,6 @@
     "files.exclude": {
         "node_modules": true,
         ".next": true,
-        "out": true,
         ".dockerignore": true,
         ".gitignore": true,
         "Dockerfile": true,
