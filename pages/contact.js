@@ -17,32 +17,47 @@ export default class contact extends React.Component {
       email: "",
       name: "",
       message: "",
-      alert: "alert alert-success text-left d-none"
+      salert: "alert alert-success text-left d-none",
+      ealert: "alert alert-danger text-left d-none"
     };
   }
 
   handleChangeEmail(event) {
-    this.setState({ alert: "alert alert-success text-left d-none" });
+    this.setState({ salert: "alert alert-success text-left d-none" });
+    this.setState({ ealert: "alert alert-danger text-left d-none" });
     this.setState({ email: event.target.value });
   }
   handleChangeName(event) {
-    this.setState({ alert: "alert alert-success text-left d-none" });
+    this.setState({ salert: "alert alert-success text-left d-none" });
+    this.setState({ ealert: "alert alert-danger text-left d-none" });
     this.setState({ name: event.target.value });
   }
 
   handleChangeMessage(event) {
-    this.setState({ alert: "alert alert-success text-left d-none" });
+    this.setState({ salert: "alert alert-success text-left d-none" });
+    this.setState({ ealert: "alert alert-danger text-left d-none" });
     this.setState({ message: event.target.value });
   }
 
   sendMessage(event) {
     event.preventDefault();
+    if(
+      this.state.email == "" ||
+      this.state.name == "" ||
+      this.state.message == "" ||
+      this.state.messge == "" && this.state.messge == "" && this.state.messge == ""
+      ){alert("Fill out all fields!")}else{
     axios.post(
       "/api/msg",
       { email: this.state.email, name: this.state.name, message: this.state.message },
       { headers: { "Content-Type": "application/json" } }
-    );
-    this.setState({ alert: "alert alert-success text-left" });
+    ).then((response) => {
+      this.setState({ salert: "alert alert-success text-left" });
+  })
+  .catch((error) => {
+    this.setState({ ealert: "alert alert-danger text-left" });
+  });
+  }
   }
 
   render() {
@@ -64,8 +79,11 @@ export default class contact extends React.Component {
         <Sources></Sources>
         <Header></Header>
         <div className="bxo">
-          <div className={this.state.alert} role="alert">
+          <div className={this.state.salert} role="alert">
             Message sended successfully!
+          </div>
+          <div className={this.state.ealert} role="alert">
+            Something went wrong!
           </div>
           <h1 className="title">Send messages</h1>
           <div className="container-fluid my-5">

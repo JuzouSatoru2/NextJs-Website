@@ -19,18 +19,25 @@ export default class login extends React.Component {
       email: "",
       name: "",
       password: "",
-      alert: "alert alert-success text-left d-none"
+      salert: "alert alert-success text-left d-none",
+      ealert: "alert alert-danger text-left d-none"
     };
   }
 
   handleChangeEmail(event) {
+    this.setState({ ealert: "alert alert-danger text-left d-none" });
+    this.setState({ salert: "alert alert-success text-left d-none" });
     this.setState({ email: event.target.value });
   }
   handleChangeName(event) {
+    this.setState({ ealert: "alert alert-danger text-left d-none" });
+    this.setState({ salert: "alert alert-success text-left d-none" });
     this.setState({ name: event.target.value });
   }
 
   handleChangePassword(event) {
+    this.setState({ ealert: "alert alert-danger text-left d-none" });
+    this.setState({ salert: "alert alert-success text-left d-none" });
     this.setState({  password: event.target.value });
   }
 
@@ -45,8 +52,11 @@ export default class login extends React.Component {
     ).then((response) => {
         localStorage.setItem("bearerKey", "Bearer " + response.data.token);
         document.cookie = `bearerKey=Bearer ${response.data.token}; path=/`;
+        this.setState({ salert: "alert alert-success text-left" });
+    })
+    .catch((error) => {
+      this.setState({ ealert: "alert alert-danger text-left" });
     });
-    this.setState({ alert: "alert alert-success text-left" });
   }
 
   render() {
@@ -68,8 +78,11 @@ export default class login extends React.Component {
         <Sources></Sources>
         <Header></Header>
         <div className="bxo">
-          <div className={this.state.alert} role="alert">
+          <div className={this.state.salert} role="alert">
             Successfully logged in!
+          </div>
+          <div className={this.state.ealert} role="alert">
+            Something went wrong!
           </div>
           <h1 className="title">Login</h1>
           <div className="container-fluid my-5">
