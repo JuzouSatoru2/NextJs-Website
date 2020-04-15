@@ -44,17 +44,17 @@ const debug = () => (
             <li>CSS3</li>
             <li>Python</li>
             <li>Jquery / Bootstrap</li>
-            <li>Node.js / React / Angular</li>
-            <li>Algorithms</li>
+            <li>Node.js / React / Nextjs</li>
+            <li>Simple Algorithms</li>
           </ul>
         </div>
         <div className="col-sm">
           <ul className="list-l">
             <li>Git</li>
             <li>Terminal</li>
-            <li>Firebase</li>
+            <li>Docker / -compose</li>
             <li>HTTP / APIs</li>
-            <li>Npm</li>
+            <li>MongoDB</li>
           </ul>
         </div>
       </div>

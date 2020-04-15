@@ -42,11 +42,11 @@ export default class contact extends React.Component {
   sendMessage(event) {
     event.preventDefault();
     if(
-      this.state.email == "" ||
-      this.state.name == "" ||
-      this.state.message == "" ||
-      this.state.messge == "" && this.state.messge == "" && this.state.messge == ""
-      ){alert("Fill out all fields!")}else{
+      this.state.email === "" ||
+      this.state.name === "" ||
+      this.state.message === "" ||
+      this.state.messge === "" && this.state.messge == "" && this.state.messge == ""
+      ){alert("Fill out all fields!");}else{
     axios.post(
       "/api/msg",
       { email: this.state.email, name: this.state.name, message: this.state.message },

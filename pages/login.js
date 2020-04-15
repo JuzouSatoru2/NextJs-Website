@@ -115,7 +115,7 @@ export default class login extends React.Component {
                 <label className="col-sm-2 col-form-label">Password</label>
                 <div className="col-sm-10">
                   <input
-                    type="text"
+                    type="password"
                     className="form-control"
                     id="staticMessage"
                     onChange={this.handleChangePassword}

@@ -12,6 +12,7 @@ export default function Index() {
       <link async rel="stylesheet" href="/static/css/style.css" type="text/css" />
       <link rel="stylesheet" href="/static/vendors/bootstrap/css/bootstrap.min.css" />
       <script src="/static/vendors/jquery/jquery.min.js"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124672572-1" type="text/javascript"></script>
       <script src=" /static/js/main.min.js"></script>
       <script async src="/static/vendors/bootstrap/js/bootstrap.min.js"></script>
       </Head>
@@ -53,17 +54,17 @@ export default function Index() {
             <li>CSS3</li>
             <li>Python</li>
             <li>Jquery / Bootstrap</li>
-            <li>Node.js / React / Angular</li>
-            <li>Algorithms</li>
+            <li>Node.js / React / Nextjs</li>
+            <li>Simple Algorithms</li>
           </ul>
         </div>
         <div className="col-sm">
           <ul className="list-l">
             <li>Git</li>
             <li>Terminal</li>
-            <li>Firebase</li>
+            <li>Docker / -compose</li>
             <li>HTTP / APIs</li>
-            <li>Npm</li>
+            <li>MongoDB</li>
           </ul>
         </div>
       </div>
