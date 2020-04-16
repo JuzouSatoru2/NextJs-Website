@@ -4,12 +4,10 @@
   "description": "alex website",
   "main": "server.js",
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon server.js",
+    "start": "cross-env NODE_ENV=production node server.js",
     "build": "next build",
-    "start": "next start",
-    "export": "next build && next export",
-    "server": "nodemon server.js",
-    "server:prod": "cross-env NODE_ENV=production node server.js"
+    "export": "next build && next export"
   },
   "author": "Alex",
   "license": "MIT",
@@ -42,8 +40,7 @@
     "next-cookies": "^2.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-table": "^6.11.5",
-    "var": "^0.4.0"
+    "react-table": "^6.11.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"

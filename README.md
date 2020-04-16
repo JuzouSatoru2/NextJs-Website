@@ -33,19 +33,13 @@ npm install
 ## Usage
 
 ```sh
-npm run start
+npm run start (or dev to develop)
 ```
 
 ## Usage Docker
 
 ```sh
 docker-compose up -d
-```
-
-## Run tests
-
-```sh
-npm run dev
 ```
 
 ## Run minification script for /public files

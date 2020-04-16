@@ -14,4 +14,4 @@ EXPOSE 3000
 
 USER node
 
-CMD [ "npm", "run", "server:prod" ]
+CMD [ "npm", "run", "start" ]
