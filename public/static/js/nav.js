@@ -26,10 +26,7 @@ function navScroll() {
                 "padding-bottom": "10px",
                 "padding-top": "10px"
             })
-            if (!(filename === "timelapse-auto-ramp") && !(filename === "pathfinding") &&
-                !(filename === "air-conditioner-DIY") && !(filename === "contact") && !(filename === "yt-desc") &&
-                !(filename === "software") && !(filename === "electronics") &&
-                !(filename === "films") && !(filename === "photography")) {
+            if (!(filename === "contact") && !(filename === "software")) {
                 $(".scrollN").css({
                     "color": "white"
                 })

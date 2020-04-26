@@ -35,7 +35,7 @@
     "helmet": "^3.22.0",
     "jsonwebtoken": "^8.5.1",
     "localStorage": "^1.0.4",
-    "mongoose": "^5.9.6",
+    "mongoose": "^5.9.10",
     "next": "^9.3.1",
     "next-cookies": "^2.0.3",
     "nprogress": "^0.2.0",

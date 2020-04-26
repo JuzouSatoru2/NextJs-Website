@@ -27,7 +27,6 @@ $(document).ready(() => {
 			navigator.serviceWorker.register('/service-worker.js');
 		})
 	}
-	console.log("%c I'm ready! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧", "color:#bf1a40");
 });
 
 $(document).ready(() => {
