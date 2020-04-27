@@ -50,8 +50,8 @@ services:
     image: hangui
     restart: always
     build:
-      context: .
-      dockerfile: ./hangfire/Hangfire.UI/Dockerfile
+      context: ./services/hangfire
+      dockerfile: ./services/hangfire/Hangfire.UI/Dockerfile
     ports:
       - '5005:80'
     depends_on:
@@ -60,13 +60,13 @@ services:
     image: hangserver
     restart: always
     build:
-      context: .
-      dockerfile: ./hangfire/Hangfire.Server/Dockerfile
+      context: ./services/hangfire
+      dockerfile: ./services/hangfire/Hangfire.Server/Dockerfile
     depends_on:
       - postgresql
       - hangui
   nginx:
-    build: ./nginx
+    build: ./services/nginx
     restart: always
     depends_on: 
       - nextjs

@@ -23,7 +23,6 @@ const Header = () => (
      </div>
  </nav>
  <script src="/static/js/nav.min.js"></script>
- <script src="/static/vendors/jquery/jquery-migrate-3.0.1.min.js"></script>
   </div>
 );
 

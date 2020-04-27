@@ -68,8 +68,6 @@ export default class software extends React.Component {
       <Head>
         <link rel="stylesheet" href="/static/css/react-table.css"></link>
         <link async rel="stylesheet" href="/static/css/projects.min.css" type="text/css" />
-        <link rel="stylesheet" href="/static/vendors/bootstrap/css/bootstrap.min.css" />
-        <script src="/static/vendors/jquery/jquery.min.js"></script>
         </Head>
       <Sources></Sources>
       <Header></Header>
@@ -83,7 +81,6 @@ export default class software extends React.Component {
       </div>
       <Architecture></Architecture>
       <Footer></Footer>
-      <script src="/static/vendors/bootstrap/js/bootstrap.min.js"></script>
     </div>
     );
   }

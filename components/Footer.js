@@ -48,7 +48,6 @@ const Footer = () => (
       </div>
   </div>
 </footer>
-<script src="/static/js/footerShift.min.js" />
   </div>
 );
 

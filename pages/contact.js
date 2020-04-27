@@ -70,11 +70,6 @@ export default class contact extends React.Component {
             href="/static/css/projects.min.css"
             type="text/css"
           />
-          <link
-            rel="stylesheet"
-            href="/static/vendors/bootstrap/css/bootstrap.min.css"
-          />
-          <script src="/static/vendors/jquery/jquery.min.js"></script>
         </Head>
         <Sources></Sources>
         <Header></Header>
@@ -135,7 +130,6 @@ export default class contact extends React.Component {
           </div>
         </div>
         <Footer></Footer>
-        <script src="/static/vendors/bootstrap/js/bootstrap.min.js"></script>
       </div>
     );
   }

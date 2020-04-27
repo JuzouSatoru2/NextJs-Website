@@ -12,12 +12,12 @@ FROM microsoft/dotnet:2.2-sdk AS build
 COPY ./ /src
 WORKDIR /src
 
-RUN dotnet restore "hangfire/Hangfire.UI/Hangfire.UI.csproj"
-RUN dotnet build "hangfire/Hangfire.UI/Hangfire.UI.csproj" -c Release -o /app
+RUN dotnet restore "Hangfire.UI/Hangfire.UI.csproj"
+RUN dotnet build "Hangfire.UI/Hangfire.UI.csproj" -c Release -o /app
 
 # Rename the image as publish
 FROM build AS publish
-RUN dotnet publish "hangfire/Hangfire.UI/Hangfire.UI.csproj" -c Release -o /out
+RUN dotnet publish "Hangfire.UI/Hangfire.UI.csproj" -c Release -o /out
 
 # Building the project is done. We need the runtime image.
 FROM base
