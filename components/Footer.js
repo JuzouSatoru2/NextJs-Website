@@ -8,16 +8,16 @@ const Footer = () => (
      <div className="container extraSpace">
       <ul className="centerLinks socialIcons">
           <li className="inlb">
-              <a href="#"><img src="/static/images/icons/twitter.png"></img></a>
+              <a href="#"><img src="/static/images/icons/twitter.png" alt="twitter"></img></a>
           </li>
           <li className="inlb">
-              <a href="#"><img src="/static/images/icons/snapchat.png"></img></a>
+              <a href="#"><img src="/static/images/icons/snapchat.png" alt="snapchat"></img></a>
           </li>
           <li className="inlb">
-              <a href="#"><img src="/static/images/icons/instagram.png"></img></a>
+              <a href="#"><img src="/static/images/icons/instagram.png" alt="instagram"></img></a>
           </li>
           <li className="inlb">
-              <a href="https://github.com/JuzouSatoru2"><img src="/static/images/icons/github.png"></img></a>
+              <a href="https://github.com/JuzouSatoru2"><img src="/static/images/icons/github.png" alt="github"></img></a>
           </li>
       </ul>
       <p className="footerText subP">Email me with any suggestions,

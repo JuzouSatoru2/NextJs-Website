@@ -51,7 +51,7 @@ services:
     restart: always
     build:
       context: ./services/hangfire
-      dockerfile: ./services/hangfire/Hangfire.UI/Dockerfile
+      dockerfile: ./Hangfire.UI/Dockerfile
     ports:
       - '5005:80'
     depends_on:
@@ -61,7 +61,7 @@ services:
     restart: always
     build:
       context: ./services/hangfire
-      dockerfile: ./services/hangfire/Hangfire.Server/Dockerfile
+      dockerfile: ./Hangfire.Server/Dockerfile
     depends_on:
       - postgresql
       - hangui

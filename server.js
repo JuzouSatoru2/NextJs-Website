@@ -72,14 +72,14 @@ app.prepare()
         req.token = cookieToken;
         next();
       } else {
-        res.sendStatus(404);
+        res.redirect('404');
       }
     }
     
     server.get('/debug', verifyCookie, (req, res) => {  
       jwt.verify(req.token, 'secretkey', (err, authData) => {
         if(err) {
-          res.sendStatus(404);
+          res.redirect('404');
         } else {
           handle(req, res);
         }
