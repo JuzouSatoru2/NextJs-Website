@@ -50,7 +50,7 @@ export default class software extends React.Component {
           "open_issues_count": '',
           "size": ''
       }]
-    }
+    };
   }
 
   componentDidMount() {
