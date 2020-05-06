@@ -2,10 +2,12 @@ version: '3'
 services:
   nextjs:
     build: ./
+    restart: always
     depends_on: 
       - mongo
     ports: 
       - 3000:3000
+    container_name: frontend
   portainer:
     image: portainer/portainer
     command: -H unix:///var/run/docker.sock
@@ -16,6 +18,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data 
+    container_name: portainer
   mongo:
     image: mongo
     restart: always
@@ -24,6 +27,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: admin
     ports:
       - '27017-27019:27017-27019'
+    container_name: mongodb
   mongo-express:
     image: mongo-express
     restart: always
@@ -36,8 +40,10 @@ services:
       ME_CONFIG_BASICAUTH_PASSWORD: admin
       ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
       ME_CONFIG_SITE_BASEURL: /api/mongoadmin/
+    container_name: mongodb_dashboard
   postgresql:
     image: 'bitnami/postgresql:latest'
+    restart: always
     ports:
       - '5432:5432'
     environment:
@@ -46,6 +52,7 @@ services:
       - POSTGRESQL_DATABASE=hangfire
     volumes:
       - pgdata:/bitnami
+    container_name: hangfire_db
   hangui:
     image: hangui
     restart: always
@@ -56,6 +63,7 @@ services:
       - '5005:80'
     depends_on:
       - postgresql 
+    container_name: hangfire_ui
   hangserver:
     image: hangserver
     restart: always
@@ -65,14 +73,16 @@ services:
     depends_on:
       - postgresql
       - hangui
+    container_name: hangfire_server
   nginx:
     build: ./services/nginx
     restart: always
     depends_on: 
       - nextjs
-      - hangui
+      - hangserver
     ports:
       - 80:80
+    container_name: webserver
 
 volumes:
   portainer_data:
