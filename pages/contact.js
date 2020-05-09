@@ -110,13 +110,12 @@ export default class contact extends React.Component {
               <div className="form-group row">
                 <label className="col-sm-2 col-form-label">Message</label>
                 <div className="col-sm-10">
-                  <input
-                    type="text"
+                  <textarea
                     className="form-control"
                     id="staticMessage"
                     onChange={this.handleChangeMessage}
                     required="required"
-                  ></input>
+                  ></textarea>
                 </div>
               </div>
               <button

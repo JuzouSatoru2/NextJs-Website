@@ -51,7 +51,7 @@ body, html {
 }
 
 .down-img {
-  min-height: 90vh;
+  min-height: 60vh;
 }
 
 .section {
@@ -99,7 +99,7 @@ h2 {
 }
 
 .titlea {
-  font-size: 70px;
+  font-size: 60px;
   color: white;
 }
 
@@ -143,7 +143,8 @@ li {
   }
 
   .titlea {
-    font-size: 80px;
+    font-size: 40px;
+    letter-spacing: 10px;
   }
 }
 
@@ -154,6 +155,12 @@ li {
 
   .titlea {
     letter-spacing: 10px;
+  }
+
+  .headtitle {
+    margin-left: 26%;
+    margin-right: 22%;
+    text-align: left;
   }
 }
 

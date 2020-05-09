@@ -64,6 +64,16 @@
     }
 }
 
+@media (max-width: 768px) {
+    .col-md.rm {
+        display: none;
+    }
+
+    .col-6.col-md {
+        margin-bottom: 5px;
+    }
+}
+
 .inlb{
     display: inline-block;
 }

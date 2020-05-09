@@ -18,7 +18,8 @@ export default function Index() {
       <div className="pimg1" id="imgsrc">
     <div className="ptext">
       <span className="titlea">
-        <div className="animated">Alex Website</div>
+        <div className="headtitle">Alexander</div>
+        <div className="headtitle">Konietzko</div>
         <p className="subtitle">
           Self-learning software and web development. Making random stuff.
         </p>
@@ -88,11 +89,12 @@ export default function Index() {
   <div className="pimg1 down-img" id="srcimg">
     <div className="ptext">
       <span className="titleb">
-        See my projects: <Link href="software"><a className="link">Here</a></Link>
+      <Link href="/software"><button className="btn btn-dark mr-5">Software</button></Link>
+      <Link href="/contact"><button className="btn btn-dark ml-5">Contact</button></Link>
       </span>
     </div>
   </div>
-      <Footer></Footer>
+    <Footer></Footer>
     </div>
   );
 }
