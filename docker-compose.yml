@@ -3,9 +3,9 @@ services:
   nextjs:
     build: ./
     restart: always
-    depends_on: 
+    depends_on:
       - mongo
-    ports: 
+    ports:
       - 3000:3000
     container_name: frontend
   portainer:
@@ -17,7 +17,7 @@ services:
       - 8000:8000
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data 
+      - portainer_data:/data
     container_name: portainer
   mongo:
     image: mongo
@@ -62,7 +62,7 @@ services:
     ports:
       - '5005:80'
     depends_on:
-      - postgresql 
+      - postgresql
     container_name: hangfire_ui
   hangserver:
     image: hangserver
@@ -77,9 +77,10 @@ services:
   nginx:
     build: ./services/nginx
     restart: always
-    depends_on: 
+    depends_on:
       - nextjs
       - hangserver
+      - hangui
     ports:
       - 80:80
     container_name: webserver
