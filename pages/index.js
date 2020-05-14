@@ -21,7 +21,7 @@ export default function Index() {
         <div className="headtitle">Alexander</div>
         <div className="headtitle">Konietzko</div>
         <p className="subtitle">
-          Self-learning software and web development. Making random stuff.
+          Self-learning software and web engineering through research & development. Making random stuff.
         </p>
       </span>
     </div>
@@ -29,7 +29,7 @@ export default function Index() {
       <h4><Link href="#scroll"><a className="stealthLink subPmin padX0 readMore">Read More</a></Link></h4>
       <Link href="#scroll"><a className="stealthLink subPmin padX0">
         <button className="smoothScrollBtn" type="button">
-          <img src="/static/images/Down-Arrow-White.png" width="30" id="scroll" alt="Arrow"/>
+          <img src="/static/images/Down-Arrow-White.svg" width="30" id="scroll" alt="Arrow"/>
         </button></a></Link>
     </div>
   </div>
