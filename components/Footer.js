@@ -48,6 +48,95 @@ const Footer = () => (
       </div>
   </div>
 </footer>
+<style jsx>{`
+  .footer {
+    background-color: #282828;
+    padding: 0px;
+}
+
+.socialIcons li a img {
+    vertical-align: middle;
+    padding: 5px;
+    height: 50px;
+}
+
+.footerText {
+    text-align: center;
+    padding-top: 60px;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.bottomLinksDiv {
+    background-color: #191919;
+    padding: 30px;
+    margin-left: -30px;
+}
+
+.bottomLinksDiv div div div p {
+    margin: 0px;
+}
+
+.bottomLinksDiv a {
+    text-align: center;
+    color: white;
+}
+
+.bottomLinks li, .bottomLinks p {
+    display: inline;
+}
+
+.bottomLinks p {
+    color: white;
+    padding: 20px;
+}
+
+.bottomLinksDiv div div a {
+    color: white;
+}
+
+.centerLinks {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+@media (min-width: 768px) {
+    .bottomLinksDiv div div a {
+        display: inline;
+        text-align: center;
+    }
+    .bottomLinksDiv div .col-md {
+        display: block;
+        text-align: center;
+        color: #3d3d3d;
+        padding: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md.rm {
+        display: none;
+    }
+
+    .col-6.col-md {
+        margin-bottom: 5px;
+    }
+}
+
+.inlb{
+    display: inline-block;
+}
+
+.bla {
+    text-align: center;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box !important;
+}
+`}</style>
   </div>
 );
 
