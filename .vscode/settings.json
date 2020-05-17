@@ -6,7 +6,7 @@
         "Dockerfile": true,
         "LICENSE": true,
         "package-lock.json": true,
-        //".circleci": true,
+        ".circleci": true,
         "template.env": true
     },
     //"git.enabled": false
