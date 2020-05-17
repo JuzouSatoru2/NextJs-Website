@@ -50,3 +50,6 @@ All locally installed packages in package.json
 - jsonwebtoken and next-cookies/cookie-parser for authentication user and services
 - localStorage for saving/getting the Bearer token
 - helmet and cors for server security
+- nprogress for loading indication
+- cypress for testing
+- start-server-and-test combining server and testing

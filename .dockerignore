@@ -10,3 +10,4 @@ scripts/
 other/
 docs/
 .vscode/
+cypress/
