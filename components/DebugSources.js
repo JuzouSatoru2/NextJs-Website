@@ -6,9 +6,6 @@ const DebugSources = () => (
       <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <title>Alex</title>
       <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
-      <link rel="stylesheet" href="/static/css/footer.css" type="text/css" />
-      <link rel="stylesheet" href="/static/css/spacing.css" type="text/css" />
-      <link rel="stylesheet" href="/static/css/scrollbar.css" type="text/css" />
       <link rel="stylesheet" href="/static/css/nav.css" type="text/css" />
       <link rel="apple-touch-icon" sizes="57x57" href="/static/icon/apple-icon-57x57.png" />
       <link rel="apple-touch-icon" sizes="60x60" href="/static/icon/apple-icon-60x60.png" />

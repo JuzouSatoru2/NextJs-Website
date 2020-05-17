@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import Head from "next/head";
 
 import Sources from "../components/Sources";
 import Header from "../components/Header";
@@ -63,14 +62,6 @@ export default class contact extends React.Component {
   render() {
     return (
       <div>
-        <Head>
-          <link
-            async
-            rel="stylesheet"
-            href="/static/css/projects.min.css"
-            type="text/css"
-          />
-        </Head>
         <Sources></Sources>
         <Header></Header>
         <div className="bxo">
@@ -129,6 +120,60 @@ export default class contact extends React.Component {
           </div>
         </div>
         <Footer></Footer>
+        <style jsx global>{`
+        *, ::after, ::before {
+          box-sizing: border-box !important;
+          margin: 0;
+          padding: 0;
+        }
+        
+        @font-face {
+          font-family: Gravity;
+          src: url(/static/fonts/Gravity-Regular.otf);
+        }
+        
+        body, html {
+          height: 100vh;
+          margin: 0;
+          font-family: Gravity !important;
+          font-size: 1em;
+          line-height: 1.15;
+          font-weight: 400;
+          scroll-behavior: smooth;
+          text-align: center;
+        }
+        
+        .title {
+          font-size: 1.9em;
+          text-align: left;
+          padding: 10px;
+        }
+        
+        .rt-td {
+          text-align: left;
+        }
+        
+        div.rt-td > a {
+          color: inherit;
+        }
+        
+        .bxo {
+           margin-top: 12%;
+           margin-left: 5%;
+           margin-right: 5%;
+           margin-bottom: 5%;
+          }
+        
+        .nav-link, .navbar-brand{
+          color: black !important;
+        }
+        
+        @media (max-width: 991px) {
+          .nav-link {
+              text-align: left;
+          }
+        }
+        `}</style>
       </div>
     );
   }

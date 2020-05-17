@@ -39,7 +39,7 @@ npm run start (or dev to develop)
 ## Usage Docker
 
 ```sh
-docker-compose up -d
+docker-compose up --build -d
 ```
 
 ## Run minification script for /public files

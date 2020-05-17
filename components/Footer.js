@@ -1,9 +1,7 @@
-import Head from 'next/head';
 import Link from 'next/link';
 
 const Footer = () => (
   <div>
-    <Head><link rel="stylesheet" href="/static/css/footer.min.css" type="text/css" /></Head>
     <footer className="footer container-fluid">
      <div className="container extraSpace">
       <ul className="centerLinks socialIcons">
