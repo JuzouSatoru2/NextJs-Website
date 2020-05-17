@@ -1,20 +1,16 @@
 version: 2.1
-jobs:
+orbs:
+  cypress: cypress-io/cypress@1
+workflows:
   build:
-    docker:
-      - image: circleci/node:latest
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm run build
-      - run: npm i -D cypress
-      - run: npm run test:ci
+    jobs:
+      - cypress/install:
+          build: 'npm run build'
+      - cypress/run:
+          requires:
+            - cypress/install
+          record: true
+          parallel: true
+          parallelism: 4
+          group: 'all tests'
+          start: 'npm start'
