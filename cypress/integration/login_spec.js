@@ -1,6 +1,6 @@
 describe('Test login page', () => {
     it('Visits page /login', () => {
-      cy.visit('http://localhost:3000/login')
+      cy.visit('/login')
       cy.get('nav')
       cy.get('footer')
     })

@@ -1,17 +1,17 @@
 describe('Pre render pages', () => {
     it('Visits page contact', () => {
-      cy.visit('http://localhost:3000/contact', {failOnStatusCode: false})
+      cy.visit('/contact', {failOnStatusCode: false})
     })
     it('Visits page debug', () => {
-        cy.visit('http://localhost:3000/debug', {failOnStatusCode: false})
+        cy.visit('/debug', {failOnStatusCode: false})
     })
     it('Visits page index', () => {
-        cy.visit('http://localhost:3000/', {failOnStatusCode: false})
+        cy.visit('/', {failOnStatusCode: false})
     })
     it('Visits page login', () => {
-        cy.visit('http://localhost:3000/login', {failOnStatusCode: false})
+        cy.visit('/login', {failOnStatusCode: false})
     })
     it('Visits page software', () => {
-        cy.visit('http://localhost:3000/software', {failOnStatusCode: false})
+        cy.visit('/software', {failOnStatusCode: false})
     })
 })

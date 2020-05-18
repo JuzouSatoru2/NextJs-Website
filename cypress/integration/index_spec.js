@@ -1,6 +1,6 @@
 describe('Test index page', () => {
     it('Visits page /', () => {
-      cy.visit('http://localhost:3000/')
+      cy.visit('/')
       cy.get('nav')
       cy.get('footer')
     })

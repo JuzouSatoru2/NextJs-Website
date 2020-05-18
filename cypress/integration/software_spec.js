@@ -1,6 +1,6 @@
 describe('Test software page', () => {
     it('Visits page /software', () => {
-      cy.visit('http://localhost:3000/software')
+      cy.visit('/software')
       cy.get('nav')
       cy.get('footer')
     })
