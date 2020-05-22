@@ -1,20 +1,21 @@
 <h1 align="center">Welcome to my NextJs Website 👋</h1>
 <p>
-  <img src="https://img.shields.io/github/package-json/v/JuzouSatoru2/NextJs-Website">
-  <img src="https://img.shields.io/badge/npm-%3E%3D6.13.7-blue.svg" />
-  <img src="https://img.shields.io/badge/node-%3E%3D10.14.2-blue.svg" />
+  <img src="https://img.shields.io/github/package-json/v/JuzouSatoru2/NextJs-Website?style=flat-square" />
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/JuzouSatoru2/NextJs-Website?style=flat-square" />
+  <img src="https://img.shields.io/badge/npm-%3E%3D6.13.7-blue.svg?style=flat-square" />
+  <img src="https://img.shields.io/badge/node-%3E%3D10.14.2-blue.svg?style=flat-square" />
   <a href="https://github.com/JuzouSatoru2/NextJs-Website#readme" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg?style=flat-square" />
   </a>
   <a href="https://github.com/JuzouSatoru2/NextJs-Website/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square" />
   </a>
   <a href="https://github.com/JuzouSatoru2/NextJs-Website/blob/master/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/JuzouSatoru2/NextJs-Website" />
+    <img alt="License: MIT" src="https://img.shields.io/github/license/JuzouSatoru2/NextJs-Website?style=flat-square" />
   </a>
 </p>
 
-> NextJs / ExpressJs / Docker (Mongodb/-express, Portainer, Hangfire, Nginx) website
+> NextJs / ExpressJs / Docker website
 
 ### 🏠 [Homepage](https://github.com/JuzouSatoru2/NextJs-Website#readme)
 ### 📖 [Documentation](https://github.com/JuzouSatoru2/NextJs-Website/tree/master/docs)
@@ -33,25 +34,21 @@ npm install
 ## Usage
 
 ```sh
-npm run start (or dev to develop)
+npm run dev
 ```
 
-## Usage Docker
+## Docker
+
+> To use whole platform including databases (Requires environment variables)
 
 ```sh
 docker-compose up --build -d
 ```
 
-## Run minification script for /public files
+## Run test
 
 ```sh
-./scripts/minify.sh or .bat
-```
-
-## Initialize the dotenv file with helper script
-
-```sh
-./scripts/init-dotenv.sh
+npm run test:ci
 ```
 
 ## CI Information

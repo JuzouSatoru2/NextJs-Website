@@ -1,4 +1,7 @@
-# Dotenv
+# Environment variables
+
+> Set trough .env or in docker-compose file
+
 - [Mongo](#mongo)
 - [Mood](#mood)
 - [Admin key](#Admin-Key)
