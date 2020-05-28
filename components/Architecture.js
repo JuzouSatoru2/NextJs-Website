@@ -39,7 +39,6 @@ const Architecture = () => (
                                 <li>CPU Intensive Backend Servers</li>
                                 <li>Used for business logic, automation, large data, web APIs
                                 </li>
-                                <li>This is the kind of development I want to focus on</li>
                             </ul>
                         </div>
                         <div className="col-lg-2">
@@ -57,7 +56,7 @@ const Architecture = () => (
                         </div>
                         <div className="col-lg-2">
                             <div>
-                                <h5>Database</h5><sub>MONGODB</sub>
+                                <h5>Database</h5><sub>MONGODB + POSTGRESQL</sub>
                             </div>
                             <ul>
                                 <li>Storage for JWT Identity, services and all APIs.
@@ -70,7 +69,7 @@ const Architecture = () => (
                                 <h5>Deployment</h5><sub>KUBERNETES</sub>
                             </div>
                             <ul>
-                                <li>Docker containers for each service hosted on localhost.</li>
+                                <li>Docker containers for each microservice with kubernetes orchestration.</li>
                                 <li>Nginx ingress controller connects our services together.
                                     /api/ goes to the backend server and so on..</li>
                             </ul>
@@ -93,7 +92,7 @@ const Architecture = () => (
                                     <td>/api/auth/</td>
                                     <td>Dotnet</td>
                                     <td>JWT Authentication Server used to secure all other
-                                        services (hangfire, mailer)</td>
+                                        services</td>
                                 </tr>
                                 <tr>
                                     <td>portainer</td>
@@ -114,10 +113,10 @@ const Architecture = () => (
                                     <td>Database for jwtidentity, portainer, mongoadmin, apis</td>
                                 </tr>
                                 <tr>
-                                    <td>redir</td>
-                                    <td>/redir/</td>
+                                    <td>msg</td>
+                                    <td>/api/msg/</td>
                                     <td>Node js</td>
-                                    <td>Redirect links based on country</td>
+                                    <td>Messages api</td>
                                 </tr>
                                 <tr>
                                     <td>front</td>

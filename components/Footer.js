@@ -31,13 +31,7 @@ const Footer = () => (
                   <Link href="/software"><a>Software</a></Link>
               </div><div className="col-md rm"><p>|</p></div>
               <div className="col-6 col-md">
-                  <a href="#">---</a>
-              </div><div className="col-md rm"><p>|</p></div>
-              <div className="col-6 col-md">
-                  <a href="#" className="bla">---</a>
-              </div><div className="col-md rm"><p>|</p></div>
-              <div className="col-6 col-md">
-                  <a href="#">---</a>
+                  <Link href="#"><a>---</a></Link>
               </div><div className="col-md rm"><p>|</p></div>
               <div className="col-6 col-md">
                   <Link href="/contact"><a>Contact</a></Link>
