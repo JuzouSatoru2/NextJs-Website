@@ -38,8 +38,8 @@
     "helmet": "^3.22.0",
     "jsonwebtoken": "^8.5.1",
     "localStorage": "^1.0.4",
-    "mongoose": "^5.9.14",
-    "next": "^9.4.1",
+    "mongoose": "^5.9.16",
+    "next": "^9.4.4",
     "next-cookies": "^2.0.3",
     "nprogress": "^0.2.0",
     "react": "^16.13.1",
@@ -47,7 +47,7 @@
     "react-table": "^6.11.5"
   },
   "devDependencies": {
-    "cypress": "^4.5.0",
+    "cypress": "^4.7.0",
     "nodemon": "^2.0.4",
     "start-server-and-test": "^1.11.0"
   }
