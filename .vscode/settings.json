@@ -5,8 +5,11 @@
         ".gitignore": true,
         "Dockerfile": true,
         "LICENSE": true,
+        "CODE_OF_CONDUCT.md": true,
+        "CONTRIBUTING.md": true,
         "package-lock.json": true,
         ".circleci": true,
+        ".github": true,
         "template.env": true
     },
     //"git.enabled": false
