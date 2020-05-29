@@ -18,5 +18,5 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run build
-
+      - run: npm i -D cypress
       - run: npm run test:ci
