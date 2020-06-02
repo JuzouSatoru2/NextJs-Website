@@ -3,7 +3,7 @@ module.exports = {
       return {
         '/': { page: '/' },
         'software': { page: 'software' },
-        'debug': { page: 'debug' },
+        'admin': { page: 'admin' },
         'contact': { page: 'contact' },
         'login': { page: 'login' }
       };

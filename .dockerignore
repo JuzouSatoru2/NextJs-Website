@@ -11,3 +11,5 @@ other/
 docs/
 .vscode/
 cypress/
+*.md
+.github/

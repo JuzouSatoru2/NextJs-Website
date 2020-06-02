@@ -76,7 +76,7 @@ app.prepare()
       }
     }
     
-    server.get('/debug', verifyCookie, (req, res) => {  
+    server.get('/admin', verifyCookie, (req, res) => {  
       jwt.verify(req.token, 'secretkey', (err, authData) => {
         if(err) {
           res.redirect('404');
