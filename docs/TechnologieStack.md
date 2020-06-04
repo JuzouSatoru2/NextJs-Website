@@ -53,3 +53,4 @@ All locally installed packages in package.json
 - nprogress for loading indication
 - cypress for testing
 - start-server-and-test combining server and testing
+- dompurify, jsdom, marked and slugify for the back-end formatting of the blog api posts

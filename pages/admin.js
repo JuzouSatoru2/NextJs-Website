@@ -9,7 +9,7 @@ const admin = () => (
       <div className="bxo">
           <h1 className="title">Admin dashboard</h1>
           <div className="container-fluid my-5">
-          <ul class="list-group">
+          <ul className="list-group">
             <li className="list-group-item active">Api services</li>
             <a href="/api/portainer"><li className="list-group-item">Portainer</li></a>
             <a href="/api/mongoadmin"><li className="list-group-item">Mongoadmin</li></a>
@@ -54,7 +54,7 @@ const admin = () => (
            margin-bottom: 5%;
           }
         
-        ul {
+        .list-group {
           max-width: 400px;
           text-align: left;
         }

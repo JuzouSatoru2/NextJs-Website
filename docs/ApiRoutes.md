@@ -2,6 +2,7 @@
 - [/msg](#/msg)
 - [/auth](#/auth)
 - [/verify](#/verify)
+- [/blog](#/blog)
 - [/mongoadmin](#/mongoadmin)
 - [/portainer](#/portainer)
 - [/hangfire](#/hangfire)
@@ -15,6 +16,10 @@
 
 ### /verify
 - / POST requests for JWT authentication
+
+### /blog
+- / POST and GET request of articles
+- /:id GET, PATCH, DELETE and PUT requests for article with id in url
 
 ### /mongoadmin
 - / MongoDB dashboard

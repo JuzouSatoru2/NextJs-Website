@@ -14,7 +14,7 @@ const Header = () => (
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav mr-auto">
         <li> <Link href="/software"><a className="nav-link scrollN">Software</a></Link></li>
-        <li> <a className="nav-link scrollN" href="https://github.com/JuzouSatoru2/NextJs-Website">This Website Repo</a></li>
+        <li> <Link href="/blog"><a className="nav-link scrollN">Blog</a></Link></li>
       </ul>
       <ul className="navbar-nav">
           <li><Link href="/contact"><a className="nav-link scrollN">Contact</a></Link></li>

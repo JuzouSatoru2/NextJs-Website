@@ -13,7 +13,8 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 const port = process.env.PORT || 3000;
-const apiRoutes = require('./server/routes/apiRoutes.js');
+const apiRoutes = require('./server/routes/apiRoutes');
+const blogRoutes = require('./server/routes/articlesRoutes');
 
 app.prepare()
   .then(() => {
@@ -23,6 +24,7 @@ app.prepare()
     server.use(bodyParser.urlencoded({ extended: false }));
     server.set('trust proxy', true);
     server.use('/api', apiRoutes);
+    server.use('/api/blog', blogRoutes);
 
     if (process.env.MOOD==='activate') {
       server.use(cors());
@@ -30,7 +32,8 @@ app.prepare()
       server.use(compression());
       mongoose.connect(process.env.DATABASE_URL, {
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
+        useCreateIndex: true
       });
       const db = mongoose.connection;
       db.on('error', console.error.bind(console, 'connection error:'));
@@ -76,7 +79,7 @@ app.prepare()
       }
     }
     
-    server.get('/admin', verifyCookie, (req, res) => {  
+    server.get('/admin|new|edit/*', verifyCookie, (req, res) => {  
       jwt.verify(req.token, 'secretkey', (err, authData) => {
         if(err) {
           res.redirect('404');

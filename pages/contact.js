@@ -106,6 +106,7 @@ export default class contact extends React.Component {
                     id="staticMessage"
                     onChange={this.handleChangeMessage}
                     required="required"
+                    rows="5"
                   ></textarea>
                 </div>
               </div>
