@@ -5,12 +5,12 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   const article = await Article.find().sort({
     createdAt: 'desc'
-  })
+  });
   res.json(article);
 });
 
 router.get('/:slug', async (req, res) => {
-  const article = await Article.findOne({ slug: req.params.slug })
+  const article = await Article.findOne({ slug: req.params.slug });
   if (article == null) res.status(404);
   res.json(article);
 });

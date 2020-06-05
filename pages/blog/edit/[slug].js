@@ -97,7 +97,7 @@ function Edit() {
           }
           `}</style>
     </Layout>
-  )
+  );
 }
 
 export default Edit;

@@ -1,0 +1,44 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "es6": true,
+        "commonjs": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "React": "writable"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "no-undef": "off",
+        "no-unused-vars": "off",
+        "react/prop-types": "off",
+        "react/display-name": "off",
+        "react/jsx-no-target-blank": "off",
+        "react/no-unescaped-entities": "off"
+    },
+    "settings": {
+        "react": {
+            "createClass": "createReactClass",
+            "pragma": "React",
+            "version": "detect",
+            "flowVersion": "0.53"
+        }
+    }
+}

@@ -9,8 +9,9 @@
     "build": "next build",
     "export": "next build && next export",
     "test": "cypress run",
-    "test:ci": "start-server-and-test start http://localhost:3000 test",
-    "test:open": "cypress open"
+    "test:ci": "npm run test:lint && start-server-and-test start http://localhost:3000 test",
+    "test:open": "cypress open",
+    "test:lint": "eslint server.js server/** components/** pages/** cypress/**"
   },
   "author": "Alex",
   "license": "MIT",
@@ -51,7 +52,10 @@
     "slugify": "^1.4.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "cypress": "^4.7.0",
+    "eslint": "^7.1.0",
+    "eslint-plugin-react": "^7.20.0",
     "nodemon": "^2.0.4",
     "start-server-and-test": "^1.11.0"
   }

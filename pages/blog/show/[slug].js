@@ -33,7 +33,7 @@ function Show() {
     <div dangerouslySetInnerHTML={{__html: post ? post.sanitizedHtml : ''}}></div>
   </div>
     </Layout>
-  )
+  );
 }
 
 export default Show;
