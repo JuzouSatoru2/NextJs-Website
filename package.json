@@ -11,7 +11,7 @@
     "test": "cypress run",
     "test:ci": "npm run test:lint && start-server-and-test start http://localhost:3000 test",
     "test:open": "cypress open",
-    "test:lint": "eslint server.js server/** components/** pages/** cypress/**"
+    "test:lint": "eslint server.js server/** components/** pages/**"
   },
   "author": "Alex",
   "license": "MIT",
