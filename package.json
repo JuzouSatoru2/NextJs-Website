@@ -9,7 +9,7 @@
     "build": "next build",
     "export": "next build && next export",
     "test": "cypress run",
-    "test:ci": "npm run test:lint && start-server-and-test start http://localhost:3000 test",
+    "test:ci": "start-server-and-test start http://localhost:3000 test",
     "test:open": "cypress open",
     "test:lint": "eslint server.js server/** components/** pages/**"
   },

@@ -44,7 +44,7 @@ export default class contact extends React.Component {
       this.state.email === "" ||
       this.state.name === "" ||
       this.state.message === "" ||
-      this.state.messge === "" && this.state.messge == "" && this.state.messge == ""
+      this.state.messge === "" && this.state.messge === "" && this.state.messge === ""
       ){alert("Fill out all fields!");}else{
     axios.post(
       "/api/msg",
