@@ -1,16 +1,17 @@
 {
-    "files.exclude": {
-        ".next": true,
-        ".dockerignore": true,
-        ".gitignore": true,
-        "Dockerfile": true,
-        "LICENSE": true,
-        "CODE_OF_CONDUCT.md": true,
-        "CONTRIBUTING.md": true,
-        "package-lock.json": true,
-        ".circleci": true,
-        ".github": true,
-        "template.env": true
-    },
-    //"git.enabled": false
+  "files.exclude": {
+    ".next": true,
+    ".dockerignore": true,
+    ".gitignore": true,
+    "Dockerfile": true,
+    "LICENSE": true,
+    "CODE_OF_CONDUCT.md": true,
+    "CONTRIBUTING.md": true,
+    "package-lock.json": true,
+    ".circleci": true,
+    ".github": true,
+    "template.env": true
+  },
+  //"git.enabled": false
+  "editor.formatOnSave": true
 }

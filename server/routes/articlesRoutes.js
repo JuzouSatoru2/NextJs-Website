@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:slug', async (req, res) => {
   const article = await Article.findOne({ slug: req.params.slug });
-  if (article === null){ res.status(404); }
+  if (article === null) { res.status(404); }
   res.json(article);
 });
 

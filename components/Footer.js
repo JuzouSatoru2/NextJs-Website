@@ -1,47 +1,47 @@
 import Link from 'next/link';
 
 const Footer = () => (
-  <div>
-    <footer className="footer container-fluid">
-     <div className="container extraSpace">
-      <ul className="centerLinks socialIcons">
-          <li className="inlb">
-              <a href="#"><img src="/static/images/icons/twitter.png" alt="twitter"></img></a>
-          </li>
-          <li className="inlb">
-              <a href="#"><img src="/static/images/icons/snapchat.png" alt="snapchat"></img></a>
-          </li>
-          <li className="inlb">
-              <a href="#"><img src="/static/images/icons/instagram.png" alt="instagram"></img></a>
-          </li>
-          <li className="inlb">
-              <a href="https://github.com/JuzouSatoru2"><img src="/static/images/icons/github.png" alt="github"></img></a>
-          </li>
-      </ul>
-      <p className="footerText subP">Email me with any suggestions,
-      collaborations, or just to talk!<br></br>alexanderkonietzko@gmx.de</p>
-  </div>
-  <div className="bottomLinksDiv">
-      <div className="container">
-          <div className="row">
-              <div className="col-6 col-md">
-                  <Link href="/"><a>Home</a></Link>
-              </div><div className="col-md rm"><p>|</p></div>
-              <div className="col-6 col-md" >
-                  <Link href="/software"><a>Software</a></Link>
-              </div><div className="col-md rm"><p>|</p></div>
-              <div className="col-6 col-md">
-                  <Link href="/blog"><a>Blog</a></Link>
-              </div><div className="col-md rm"><p>|</p></div>
-              <div className="col-6 col-md">
-                  <Link href="/contact"><a>Contact</a></Link>
-              </div>
-          </div>
-      </div>
-  </div>
-</footer>
-<style jsx>{`
-  .footer {
+    <div>
+        <footer className="footer container-fluid">
+            <div className="container extraSpace">
+                <ul className="centerLinks socialIcons">
+                    <li className="inlb">
+                        <a href="#"><img src="/static/images/icons/twitter.png" alt="twitter"></img></a>
+                    </li>
+                    <li className="inlb">
+                        <a href="#"><img src="/static/images/icons/snapchat.png" alt="snapchat"></img></a>
+                    </li>
+                    <li className="inlb">
+                        <a href="#"><img src="/static/images/icons/instagram.png" alt="instagram"></img></a>
+                    </li>
+                    <li className="inlb">
+                        <a href="https://github.com/JuzouSatoru2"><img src="/static/images/icons/github.png" alt="github"></img></a>
+                    </li>
+                </ul>
+                <p className="footerText subP">Email me with any suggestions,
+                    collaborations, or just to talk!<br></br>alexanderkonietzko@gmx.de</p>
+            </div>
+            <div className="bottomLinksDiv">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-6 col-md">
+                            <Link href="/"><a>Home</a></Link>
+                        </div><div className="col-md rm"><p>|</p></div>
+                        <div className="col-6 col-md" >
+                            <Link href="/software"><a>Software</a></Link>
+                        </div><div className="col-md rm"><p>|</p></div>
+                        <div className="col-6 col-md">
+                            <Link href="/blog"><a>Blog</a></Link>
+                        </div><div className="col-md rm"><p>|</p></div>
+                        <div className="col-6 col-md">
+                            <Link href="/contact"><a>Contact</a></Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <style jsx>{`
+.footer {
     background-color: #282828;
     padding: 0px;
 }
@@ -129,7 +129,7 @@ const Footer = () => (
     box-sizing: border-box !important;
 }
 `}</style>
-  </div>
+    </div>
 );
 
 export default Footer;

@@ -1,7 +1,7 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
-const {registerRoute} = workbox.routing;
-const {CacheFirst, StaleWhileRevalidate} = workbox.strategies;
-const {ExpirationPlugin} = workbox.expiration;
+const { registerRoute } = workbox.routing;
+const { CacheFirst, StaleWhileRevalidate } = workbox.strategies;
+const { ExpirationPlugin } = workbox.expiration;
 self.__WB_DISABLE_DEV_LOGS = true;
 
 registerRoute(

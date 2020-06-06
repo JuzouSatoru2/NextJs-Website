@@ -18,6 +18,7 @@
 > NextJs / ExpressJs / Docker website
 
 ### 🏠 [Homepage](https://github.com/JuzouSatoru2/NextJs-Website#readme)
+
 ### 📖 [Documentation](https://github.com/JuzouSatoru2/NextJs-Website/tree/master/docs)
 
 ## Prerequisites
@@ -53,18 +54,18 @@ npm run test:ci
 
 ## CI Information
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/01f0675aaa774401b6d4321f7afd1830)](https://www.codacy.com/manual/mccr4fthd/NextJs-Website?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JuzouSatoru2/NextJs-Website&amp;utm_campaign=Badge_Grade) [![CircleCI](https://circleci.com/gh/JuzouSatoru2/NextJs-Website.svg?style=svg)](https://circleci.com/gh/JuzouSatoru2/NextJs-Website)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/01f0675aaa774401b6d4321f7afd1830)](https://www.codacy.com/manual/mccr4fthd/NextJs-Website?utm_source=github.com&utm_medium=referral&utm_content=JuzouSatoru2/NextJs-Website&utm_campaign=Badge_Grade) [![CircleCI](https://circleci.com/gh/JuzouSatoru2/NextJs-Website.svg?style=svg)](https://circleci.com/gh/JuzouSatoru2/NextJs-Website)
 
 ## Author
 
 👤 **Alex**
 
-* Website: juzousatoru2.github.io
-* Github: [@JuzouSatoru2](https://github.com/JuzouSatoru2)
+- Website: juzousatoru2.github.io
+- Github: [@JuzouSatoru2](https://github.com/JuzouSatoru2)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/JuzouSatoru2/NextJs-Website/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/JuzouSatoru2/NextJs-Website/issues).
 
 ## Show your support
 
@@ -75,5 +76,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2020 [Alex](https://github.com/JuzouSatoru2).<br />
 This project is [MIT](https://github.com/JuzouSatoru2/NextJs-Website/blob/master/LICENSE) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

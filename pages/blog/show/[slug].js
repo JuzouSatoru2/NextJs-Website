@@ -13,9 +13,9 @@ function Show() {
     const fetchData = async () => {
       axios.get(`/api/blog/${slug}`, {
         responseType: 'json'
-    }).then((response) => {
-      setPost(response.data); 
-    });
+      }).then((response) => {
+        setPost(response.data);
+      });
     };
     if (slug) {
       fetchData();
@@ -24,14 +24,14 @@ function Show() {
 
   return (
     <Layout>
-     <div className="container">
-    <h1 className="mb-1">{post ? post.title : null}</h1>
-    <div className="text-muted mb-2">
-      {post ? new Date(post.createdAt).toLocaleDateString("en" , { year: 'numeric', month: 'long', day: 'numeric' }) : null}
-    </div>
-    <Link href="/blog"><a className="btn btn-secondary">All Articles</a></Link>
-    <div dangerouslySetInnerHTML={{__html: post ? post.sanitizedHtml : ''}}></div>
-  </div>
+      <div className="container">
+        <h1 className="mb-1">{post ? post.title : null}</h1>
+        <div className="text-muted mb-2">
+          {post ? new Date(post.createdAt).toLocaleDateString("en", { year: 'numeric', month: 'long', day: 'numeric' }) : null}
+        </div>
+        <Link href="/blog"><a className="btn btn-secondary">All Articles</a></Link>
+        <div dangerouslySetInnerHTML={{ __html: post ? post.sanitizedHtml : '' }}></div>
+      </div>
     </Layout>
   );
 }

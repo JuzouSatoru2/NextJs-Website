@@ -6,7 +6,7 @@ EXPOSE 80
 
 # Start to build
 FROM microsoft/dotnet:2.2-sdk AS build
- 
+
 # Copy all source files to /src folder
 # This is necessary for solutions. (Multiple projects, also you can define this by specifying projects)
 COPY ./ /src

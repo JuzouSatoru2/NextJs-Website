@@ -43,11 +43,11 @@ export default class newPost extends React.Component {
       { title: this.state.title, description: this.state.description, markdown: this.state.markdown },
       { headers: { "Content-Type": "application/json" } }
     ).then((response) => {
-        this.setState({ salert: "alert alert-success text-left" });
+      this.setState({ salert: "alert alert-success text-left" });
     })
-    .catch((error) => {
-      this.setState({ ealert: "alert alert-danger text-left" });
-    });
+      .catch((error) => {
+        this.setState({ ealert: "alert alert-danger text-left" });
+      });
   }
 
   render() {
@@ -63,7 +63,7 @@ export default class newPost extends React.Component {
           <h1 className="title">New article</h1>
           <div className="container-fluid my-5">
             <form onSubmit={this.sendPost.bind(this)}>
-            <div className="form-group row">
+              <div className="form-group row">
                 <label className="col-sm-2 col-form-label">Title</label>
                 <div className="col-sm-10">
                   <input

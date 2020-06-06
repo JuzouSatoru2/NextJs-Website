@@ -1,10 +1,10 @@
-version: '3.4'
+version: "3.4"
 
 services:
   postgresql:
-    image: 'bitnami/postgresql:latest'
+    image: "bitnami/postgresql:latest"
     ports:
-      - '5432:5432'
+      - "5432:5432"
     environment:
       - POSTGRESQL_USERNAME=root
       - POSTGRESQL_PASSWORD=svfsck2
@@ -21,7 +21,7 @@ services:
       context: .
       dockerfile: ./Hangfire.UI/Dockerfile
     ports:
-      - '5005:80'
+      - "5005:80"
     networks:
       - svcnw
     depends_on:
@@ -48,11 +48,10 @@ services:
       - postgresql
       - hang.ui
       - hang.server1
-      
 
 volumes:
   pgdata:
- 
+
 networks:
   svcnw:
     driver: bridge

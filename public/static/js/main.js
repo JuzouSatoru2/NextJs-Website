@@ -30,8 +30,8 @@ $(document).ready(() => {
 });
 
 $(document).ready(() => {
-	$(".padX0").on("click", function(event) {
+	$(".padX0").on("click", function (event) {
 		event.preventDefault();
-		$('html,body').animate({scrollTop: $("#scroll").offset().top}, 700);
+		$('html,body').animate({ scrollTop: $("#scroll").offset().top }, 700);
 	});
 });

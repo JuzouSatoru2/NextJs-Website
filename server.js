@@ -90,21 +90,21 @@ app.prepare()
     });
 
     server.post('/api/auth', (req, res) => {
-      if(req.body.key===process.env.ADMIN_KEY){
-      const user = {
-        id: "1",
-        username: req.body.username,
-        email: req.body.email
-      };
-    
-      jwt.sign({user}, 'secretkey', { expiresIn: '24h' }, (err, token) => {
-        res.json({
-          token
+      if (req.body.key === process.env.ADMIN_KEY) {
+        const user = {
+          id: "1",
+          username: req.body.username,
+          email: req.body.email
+        };
+
+        jwt.sign({ user }, 'secretkey', { expiresIn: '24h' }, (err, token) => {
+          res.json({
+            token
+          });
         });
-      });
-    } else {
-      res.sendStatus(403);
-    }
+      } else {
+        res.sendStatus(403);
+      }
     });
 
     server.get('*', (req, res) => {

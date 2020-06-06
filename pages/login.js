@@ -37,7 +37,7 @@ export default class login extends React.Component {
   handleChangePassword(event) {
     this.setState({ ealert: "alert alert-danger text-left d-none" });
     this.setState({ salert: "alert alert-success text-left d-none" });
-    this.setState({  password: event.target.value });
+    this.setState({ password: event.target.value });
   }
 
   sendLogin(event) {
@@ -49,13 +49,13 @@ export default class login extends React.Component {
       { email: this.state.email, name: this.state.name, key: this.state.password },
       { headers: { "Content-Type": "application/json" } }
     ).then((response) => {
-        localStorage.setItem("bearerKey", "Bearer " + response.data.token);
-        document.cookie = `bearerKey=Bearer ${response.data.token}; path=/`;
-        this.setState({ salert: "alert alert-success text-left" });
+      localStorage.setItem("bearerKey", "Bearer " + response.data.token);
+      document.cookie = `bearerKey=Bearer ${response.data.token}; path=/`;
+      this.setState({ salert: "alert alert-success text-left" });
     })
-    .catch((error) => {
-      this.setState({ ealert: "alert alert-danger text-left" });
-    });
+      .catch((error) => {
+        this.setState({ ealert: "alert alert-danger text-left" });
+      });
   }
 
   render() {
@@ -73,7 +73,7 @@ export default class login extends React.Component {
           <h1 className="title">Login</h1>
           <div className="container-fluid my-5">
             <form>
-            <div className="form-group row">
+              <div className="form-group row">
                 <label className="col-sm-2 col-form-label">Email</label>
                 <div className="col-sm-10">
                   <input

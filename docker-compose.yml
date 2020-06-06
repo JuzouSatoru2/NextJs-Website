@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   nextjs:
     build: ./
@@ -26,7 +26,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: admin
     ports:
-      - '27017-27019:27017-27019'
+      - "27017-27019:27017-27019"
     container_name: mongodb
   mongo-express:
     image: mongo-express
@@ -42,10 +42,10 @@ services:
       ME_CONFIG_SITE_BASEURL: /api/mongoadmin/
     container_name: mongodb_dashboard
   postgresql:
-    image: 'bitnami/postgresql:latest'
+    image: "bitnami/postgresql:latest"
     restart: always
     ports:
-      - '5432:5432'
+      - "5432:5432"
     environment:
       - POSTGRESQL_USERNAME=root
       - POSTGRESQL_PASSWORD=svfsck2
@@ -60,7 +60,7 @@ services:
       context: ./services/hangfire
       dockerfile: ./Hangfire.UI/Dockerfile
     ports:
-      - '5005:80'
+      - "5005:80"
     depends_on:
       - postgresql
     container_name: hangfire_ui

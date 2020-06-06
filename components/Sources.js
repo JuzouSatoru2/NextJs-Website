@@ -6,7 +6,7 @@ const Sources = () => (
       <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <title>Alex</title>
       <meta property="og:type" content="website" />
-      <meta name="og:title" content="Alex"/>
+      <meta name="og:title" content="Alex" />
       <link rel="shortcut icon" href="/static/icon/favicon.ico" />
       <link rel="apple-touch-icon" sizes="57x57" href="/static/icon/apple-icon-57x57.png" />
       <link rel="apple-touch-icon" sizes="60x60" href="/static/icon/apple-icon-60x60.png" />

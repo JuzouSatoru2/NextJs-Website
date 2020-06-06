@@ -3,22 +3,22 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const admin = () => (
-    <div>
-      <Sources></Sources>
-      <Header></Header>
-      <div className="bxo">
-          <h1 className="title">Admin dashboard</h1>
-          <div className="container-fluid my-5">
-          <ul className="list-group">
-            <li className="list-group-item active">Api services</li>
-            <a href="/api/portainer"><li className="list-group-item">Portainer</li></a>
-            <a href="/api/mongoadmin"><li className="list-group-item">Mongoadmin</li></a>
-            <a href="/api/hangfire"><li className="list-group-item">Hangfire</li></a>
-          </ul>
-          </div>
-        </div>
-        <Footer></Footer>
-        <style jsx global>{`
+  <div>
+    <Sources></Sources>
+    <Header></Header>
+    <div className="bxo">
+      <h1 className="title">Admin dashboard</h1>
+      <div className="container-fluid my-5">
+        <ul className="list-group">
+          <li className="list-group-item active">Api services</li>
+          <a href="/api/portainer"><li className="list-group-item">Portainer</li></a>
+          <a href="/api/mongoadmin"><li className="list-group-item">Mongoadmin</li></a>
+          <a href="/api/hangfire"><li className="list-group-item">Hangfire</li></a>
+        </ul>
+      </div>
+    </div>
+    <Footer></Footer>
+    <style jsx global>{`
         *, ::after, ::before {
           box-sizing: border-box;
           margin: 0;
@@ -69,7 +69,7 @@ const admin = () => (
           }
         }
         `}</style>
-    </div>
-  );
-  
-  export default admin;
+  </div>
+);
+
+export default admin;

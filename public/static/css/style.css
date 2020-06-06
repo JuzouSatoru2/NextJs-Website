@@ -3,7 +3,8 @@
   src: url('/static/fonts/Gravity-Regular.otf');
 }
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   font-family: Gravity !important;
@@ -13,7 +14,9 @@ body, html {
   background-color: #191919;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -22,6 +25,7 @@ body, html {
 .hprlnk {
   color: #0d4cb8;
 }
+
 .link {
   text-decoration: none;
   color: white;
@@ -32,7 +36,9 @@ body, html {
   text-decoration-color: white !important;
 }
 
-.pimg1, .pimg2, .pimg3 {
+.pimg1,
+.pimg2,
+.pimg3 {
   position: relative;
   background-position: center;
   background-size: cover;
@@ -89,7 +95,10 @@ body, html {
 }
 
 @media(max-width:911px) {
-.pimg1, .pimg2, .pimg3 {
+
+  .pimg1,
+  .pimg2,
+  .pimg3 {
     background-attachment: scroll;
   }
 }
@@ -133,7 +142,7 @@ li {
   .pc {
     display: none;
   }
-  
+
   .subtitle {
     display: none;
   }
@@ -180,7 +189,9 @@ li {
   outline: 0;
 }
 
-.stealthLink, .stealthLink:focus, .stealthLink:hover {
+.stealthLink,
+.stealthLink:focus,
+.stealthLink:hover {
   color: white;
   outline: 0;
   text-decoration: none;
