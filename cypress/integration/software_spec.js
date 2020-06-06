@@ -4,7 +4,7 @@ describe("Test software page", () => {
     cy.get("nav");
     cy.get("footer");
   });
-  it("Get this repos information", () => {
-    cy.get(".rt-td").find("a").contains("NextJs-Website");
+  it("Test number of table rows", () => {
+    cy.get(".rt-tbody").find(".rt-tr-group").its("length").should("be.gte", 3);
   });
 });
