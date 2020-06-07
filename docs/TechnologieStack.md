@@ -2,7 +2,11 @@
 
 - [Frontend](#frontend)
 - [Backend](#backend)
-- [Docker](#docker) - [Portainer](#portainer) - [Nginx](#nginx) - [MongoDB & MongoExpress](#mongodb-and-mongoexpress) - [Hangfire](#hangfire)
+- [Docker](#docker)
+- [Portainer](#portainer)
+- [Nginx](#nginx)
+- [MongoDB & MongoExpress](#mongodb-and-mongoexpress)
+- [Hangfire](#hangfire)
 - [Tools](#tools)
 - [Npm Packages](#npm-packages)
 

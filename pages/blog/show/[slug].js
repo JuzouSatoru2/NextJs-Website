@@ -32,6 +32,11 @@ function Show() {
         <Link href="/blog"><a className="btn btn-secondary">All Articles</a></Link>
         <div dangerouslySetInnerHTML={{ __html: post ? post.sanitizedHtml : '' }}></div>
       </div>
+      <style jsx>{`
+        .content {
+          padding-top: 2%;
+        }
+      `}</style>
     </Layout>
   );
 }

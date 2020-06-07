@@ -1,4 +1,6 @@
 {
+  //"editor.formatOnSave": true,
+  //"git.enabled": false,
   "files.exclude": {
     ".next": true,
     ".dockerignore": true,
@@ -11,7 +13,5 @@
     ".circleci": true,
     ".github": true,
     "template.env": true
-  },
-  //"git.enabled": false
-  "editor.formatOnSave": true
+  }
 }
