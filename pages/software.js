@@ -114,10 +114,10 @@ export default class software extends React.Component {
       }
       
       .bxo {
-         margin-top: 12%;
-         margin-left: 5%;
-         margin-right: 5%;
-         margin-bottom: 5%;
+        margin-top: 12%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
         }
       
       .nav-link, .navbar-brand{

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect} from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -6,10 +6,10 @@ import { useRouter } from 'next/router';
 import Layout from '../../../components/Layout';
 
 function Show() {
-  const [post, setPost] = React.useState(null);
+  const [post, setPost] = useState(null);
   const router = useRouter();
   const { slug } = router.query;
-  React.useEffect(() => {
+  useEffect(() => {
     const fetchData = async () => {
       axios.get(`/api/blog/${slug}`, {
         responseType: 'json'

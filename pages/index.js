@@ -100,6 +100,10 @@ export default function Index() {
       src: url('/static/fonts/Gravity-Regular.otf');
     }
     
+    footer {
+      font-size: 0.9rem;
+    }
+
     body, html {
       height: 100%;
       margin: 0;

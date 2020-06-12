@@ -13,12 +13,12 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
       - run: npm install
+      - run: npm run build
       - save_cache:
           paths:
             - node_modules
             - .next/cache
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm run build
       - run: npm i -D cypress
       - run: npm run test:lint
       - run: npm run test:ci
