@@ -2,5 +2,5 @@
 .next
 out/
 node_modules
-.env
+.env*.local
 docs/Admin/
