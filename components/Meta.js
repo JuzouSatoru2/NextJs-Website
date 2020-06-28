@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const Sources = () => (
+const Meta = () => (
   <div>
     <Head>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -21,11 +21,11 @@ const Sources = () => (
       <link rel="icon" type="image/png" sizes="32x32" href="/static/icon/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="96x96" href="/static/icon/favicon-96x96.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/static/icon/favicon-16x16.png" />
-      <link rel="manifest" href="/static/icon/manifest.json" />
+      <link rel="manifest" href="/manifest.json" />
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name='mobile-web-app-capable' content='yes' />
       <meta name="msapplication-TileImage" content="/static/icon/ms-icon-144x144.png" />
-      <meta name="msapplication-config" content="/static/icon/browserconfig.xml" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
       <meta name="application-name" content="Alex" />
       <meta name="keywords" content="website, next, node, express" />
@@ -40,4 +40,4 @@ const Sources = () => (
   </div>
 );
 
-export default Sources;
+export default Meta;

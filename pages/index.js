@@ -1,4 +1,4 @@
-import Sources from '../components/Sources';
+import Meta from '../components/Meta';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -12,7 +12,7 @@ export default function Index() {
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124672572-1" type="text/javascript"></script>
         <script src="/static/js/main.min.js"></script>
       </Head>
-      <Sources></Sources>
+      <Meta></Meta>
       <Header></Header>
       <div className="pimg1" id="imgsrc">
         <div className="ptext">

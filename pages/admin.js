@@ -1,10 +1,10 @@
-import Sources from '../components/Sources';
+import Meta from '../components/Meta';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const admin = () => (
   <div>
-    <Sources></Sources>
+    <Meta></Meta>
     <Header></Header>
     <div className="bxo">
       <h1 className="title">Admin dashboard</h1>

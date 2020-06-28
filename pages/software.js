@@ -2,7 +2,7 @@ import React from 'react';
 import ReactTable from 'react-table';
 import axios from 'axios';
 
-import Sources from '../components/Sources';
+import Meta from '../components/Meta';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Architecture from '../components/Architecture';
@@ -64,7 +64,7 @@ export default class software extends React.Component {
     const { tableData } = this.state;
     return (
       <div>
-        <Sources></Sources>
+        <Meta></Meta>
         <Header></Header>
         <div className="bxo">
           <h1 className="title">Software Repository</h1>

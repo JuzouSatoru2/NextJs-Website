@@ -3,7 +3,7 @@ import axios from "axios";
 import localStorage from "localStorage";
 import cookies from "next-cookies";
 
-import Sources from "../components/Sources";
+import Meta from "../components/Meta";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -61,7 +61,7 @@ export default class login extends React.Component {
   render() {
     return (
       <div>
-        <Sources></Sources>
+        <Meta></Meta>
         <Header></Header>
         <div className="bxo">
           <div className={this.state.salert} role="alert">

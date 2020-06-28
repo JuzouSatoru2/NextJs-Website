@@ -1,10 +1,10 @@
-import Sources from './Sources';
+import Meta from './Meta';
 import Header from './Header';
 import Footer from './Footer';
 
 const Layout = ({ children }) => (
   <div>
-    <Sources></Sources>
+    <Meta></Meta>
     <Header></Header>
     <div className="bxo">{children}</div>
     <Footer></Footer>
