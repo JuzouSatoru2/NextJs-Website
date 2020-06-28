@@ -112,6 +112,7 @@ export default function Index() {
       line-height: 1.15;
       font-weight: 400;
       background-color: #191919;
+      text-align: center;
     }
     
     *, ::after, ::before {

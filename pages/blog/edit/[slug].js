@@ -34,12 +34,12 @@ function Edit() {
     { title: title, description: desc, markdown: mark },
     { headers: { "Content-Type": "application/json" } });
     router.push(`/blog/show/${slug}`);
-  }
+  };
 
   const deletePost = () => {
     axios.delete(`/api/blog/${post._id}`);
     router.push(`/blog`);
-  }
+  };
 
   return (
     <Layout>
@@ -56,7 +56,7 @@ function Edit() {
                   id="statictitle"
                   required="required"
                   defaultValue={post ? post.title : ""}
-                  onChange={e => setTitle(e.target.value)}
+                  onChange={(e) => setTitle(e.target.value)}
                 ></input>
               </div>
             </div>
@@ -68,7 +68,7 @@ function Edit() {
                   id="staticdescription"
                   required="required"
                   defaultValue={post ? post.description : null}
-                  onChange={e => setDesc(e.target.value)}
+                  onChange={(e) => setDesc(e.target.value)}
                 ></textarea>
               </div>
             </div>
@@ -81,7 +81,7 @@ function Edit() {
                   required="required"
                   rows="7"
                   defaultValue={post ? post.markdown : null}
-                  onChange={e => setMark(e.target.value)}
+                  onChange={(e) => setMark(e.target.value)}
                 ></textarea>
               </div>
             </div>

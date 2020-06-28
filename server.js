@@ -115,7 +115,7 @@ app.prepare()
       if (err) {
         throw err;
       }
-      console.log(`> Ready on http://localhost:${port}`);
+      console.log(`> Ready on http://localhost:${port} in ${dev ? 'development' : 'production'} mode`);
     });
   })
   .catch((ex) => {

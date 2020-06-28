@@ -1,10 +1,11 @@
 # Environment variables
 
-> Set trough .env or in docker-compose file
+> Set with .env, command-line or in docker-compose file
 
 - [Mongo](#mongo)
 - [Mood](#mood)
 - [Admin key](#Admin-Key)
+- [Optional](#Optional)
 
 ### Mongo
 
@@ -22,4 +23,8 @@ The variable "MOOD" enables compression, database and logger. Only set it as `ac
 
 ### Admin key
 
-The admin key is used for the JWT authentication. You can login with the password at the `/login` route
+The admin key is used for the JWT authentication. You can login with the password at the `/login` route.
+
+### Optional
+
+You can define a specific port with `PORT` (default is 3000) or the Node environment with `NODE_ENV` (production / development).
