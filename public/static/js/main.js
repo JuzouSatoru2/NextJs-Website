@@ -12,8 +12,8 @@ function changebgimg(num) {
 		rd = Math.floor((Math.random() * 2) + 1);
 	}
 	if (rd === 1 || num === 1) {
-		$("#imgsrc").css("background-image", "url(/static/images/login.jpg)");
-		$("#srcimg").css("background-image", "url(/static/images/login.jpg)");
+		$("#imgsrc").css("background-image", "url(/static/images/parallax.jpg)");
+		$("#srcimg").css("background-image", "url(/static/images/parallax.jpg)");
 	} else if (rd === 2 || num === 2) {
 		$("#imgsrc").css("background-image", "url(/static/images/parallax3.jpg)");
 		$("#srcimg").css("background-image", "url(/static/images/parallax3.jpg)");
