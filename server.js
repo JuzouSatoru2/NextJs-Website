@@ -114,7 +114,7 @@ app.prepare()
       if (err) {
         throw err;
       }
-      console.log(`> Ready on http://localhost:${port} in ${dev ? 'development' : 'production'} mode`);
+      console.log('\x1b[36minfo', `\x1b[0m - Ready on http://localhost:${port} in ${dev ? 'development' : 'production'} mode`);
     });
   })
   .catch((ex) => {
