@@ -81,7 +81,7 @@ export default function Index() {
 
       <section className="section section-light">
         <h2>My Chat App</h2>
-        <a href="https://simpleangularchat.github.io/" className="hprlnk" target="_blank" rel="noopener">Simple Angular Chat</a><br></br>
+        <a href="https://simpleangularchat.github.io/" className="hprlnk" target="_blank" rel="noreferrer noopener">Simple Angular Chat</a><br></br>
         <h6>Powered by Angular / Firebase</h6>
       </section>
 
