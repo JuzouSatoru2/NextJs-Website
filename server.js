@@ -37,7 +37,7 @@ app.prepare()
       const db = mongoose.connection;
       db.on('error', console.error.bind(console, 'connection error:'));
       db.once('open', () => {
-        console.log("> Connected to MongoDB");
+        console.log('\x1b[36minfo', '\x1b[0m - Connected to MongoDB');
       });
     }
 
