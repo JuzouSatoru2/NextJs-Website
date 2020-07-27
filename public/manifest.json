@@ -1,5 +1,6 @@
 {
     "name": "Alex",
+    "Scope": "/",
     "start-url": "/",
     "icons": [{
             "src": "/static/icon/android-icon-36x36.png",
@@ -47,5 +48,6 @@
     "background_color": "#fff",
     "theme_color": "#fff",
     "short_name": "Alex",
-    "display": "standalone"
+    "display": "standalone",
+    "orientation": "portrait"
 }
