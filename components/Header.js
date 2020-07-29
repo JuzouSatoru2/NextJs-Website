@@ -3,21 +3,48 @@ import Head from 'next/head';
 
 const Header = () => (
   <div>
-    <Head><link rel="stylesheet" href="/static/css/nav.min.css" type="text/css" /></Head>
-    <nav className="navbar fixed-top navbar-expand-lg toggle-height" id="global-nav">
+    <Head>
+      <link rel="stylesheet" href="/static/css/nav.min.css" type="text/css" />
+    </Head>
+    <nav
+      className="navbar fixed-top navbar-expand-lg toggle-height"
+      id="global-nav">
       <div className="container">
-        <Link href="/"><a className="navbar-brand scrollN">Alex</a></Link>
-        <button className="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <Link href="/">
+          <a className="navbar-brand scrollN">Alex</a>
+        </Link>
+        <button
+          className="navbar-toggler custom-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
           <span className="navbar-toggler-icon custom-toggler"></span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li> <Link href="/software"><a className="nav-link scrollN">Software</a></Link></li>
-            <li> <Link href="/blog"><a className="nav-link scrollN">Blog</a></Link></li>
+            <li>
+              {' '}
+              <Link href="/software">
+                <a className="nav-link scrollN">Software</a>
+              </Link>
+            </li>
+            <li>
+              {' '}
+              <Link href="/blog">
+                <a className="nav-link scrollN">Blog</a>
+              </Link>
+            </li>
           </ul>
           <ul className="navbar-nav">
-            <li><Link href="/contact"><a className="nav-link scrollN">Contact</a></Link></li>
+            <li>
+              <Link href="/contact">
+                <a className="nav-link scrollN">Contact</a>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

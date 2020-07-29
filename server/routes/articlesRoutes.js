@@ -4,14 +4,16 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   const article = await Article.find().sort({
-    createdAt: 'desc'
+    createdAt: 'desc',
   });
   res.json(article);
 });
 
 router.get('/:slug', async (req, res) => {
   const article = await Article.findOne({ slug: req.params.slug });
-  if (article === null) { res.status(404); }
+  if (article === null) {
+    res.status(404);
+  }
   res.json(article);
 });
 
@@ -22,9 +24,9 @@ router.post('/', (req, res) => {
   article.markdown = req.body.markdown;
   try {
     article = article.save();
-    res.json("Posted article");
+    res.json('Posted article');
   } catch (e) {
-    res.json("Failed posting article");
+    res.json('Failed posting article');
   }
 });
 
@@ -35,9 +37,9 @@ router.put('/:id', async (req, res) => {
   article.markdown = req.body.markdown;
   try {
     article = article.save();
-    res.json("Put article");
+    res.json('Put article');
   } catch (e) {
-    res.json("Failed putting article");
+    res.json('Failed putting article');
   }
 });
 
@@ -48,9 +50,9 @@ router.patch('/:id', async (req, res) => {
   article.markdown = req.body.markdown;
   try {
     article = article.save();
-    res.json("Patched article");
+    res.json('Patched article');
   } catch (e) {
-    res.json("Failed patching article");
+    res.json('Failed patching article');
   }
 });
 

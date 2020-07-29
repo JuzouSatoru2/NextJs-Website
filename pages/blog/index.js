@@ -9,29 +9,33 @@ export default class blog extends React.Component {
     super(props);
     this.formatDate = this.formatDate.bind(this);
     this.state = {
-      articles: [{
-        "id": "",
-        "createdAt": "",
-        "title": "",
-        "description": "",
-        "markdown": "",
-        "slug": "",
-        "sanitizedHtml": ""
-      }]
+      articles: [
+        {
+          id: '',
+          createdAt: '',
+          title: '',
+          description: '',
+          markdown: '',
+          slug: '',
+          sanitizedHtml: '',
+        },
+      ],
     };
   }
 
   componentDidMount() {
-    axios.get("/api/blog", {
-      responseType: 'json'
-    }).then((response) => {
-      this.setState({ articles: response.data });
-    });
+    axios
+      .get('/api/blog', {
+        responseType: 'json',
+      })
+      .then((response) => {
+        this.setState({ articles: response.data });
+      });
   }
 
   formatDate(string) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(string).toLocaleDateString("en", options);
+    return new Date(string).toLocaleDateString('en', options);
   }
 
   render() {
@@ -48,7 +52,9 @@ export default class blog extends React.Component {
                   {this.formatDate(article.createdAt)}
                 </div>
                 <div className="card-text mb-2">{article.description}</div>
-                <Link href={"blog/show/" + article.slug}><a className="btn btn-primary">Read More</a></Link>
+                <Link href={'blog/show/' + article.slug}>
+                  <a className="btn btn-primary">Read More</a>
+                </Link>
               </div>
             </div>
           ))}

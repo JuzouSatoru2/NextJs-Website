@@ -5,7 +5,7 @@ module.exports = {
       'software': { page: 'software' },
       'admin': { page: 'admin' },
       'contact': { page: 'contact' },
-      'login': { page: 'login' }
+      'login': { page: 'login' },
     };
-  }
+  },
 };

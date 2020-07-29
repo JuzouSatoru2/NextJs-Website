@@ -1,11 +1,11 @@
-import React from "react";
-import axios from "axios";
-import localStorage from "localStorage";
-import cookies from "next-cookies";
+import React from 'react';
+import axios from 'axios';
+import localStorage from 'localStorage';
+import cookies from 'next-cookies';
 
-import Meta from "../components/Meta";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Meta from '../components/Meta';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default class login extends React.Component {
   constructor(props) {
@@ -15,46 +15,53 @@ export default class login extends React.Component {
     this.handleChangePassword = this.handleChangePassword.bind(this);
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.state = {
-      email: "",
-      name: "",
-      password: "",
-      salert: "alert alert-success text-left d-none",
-      ealert: "alert alert-danger text-left d-none"
+      email: '',
+      name: '',
+      password: '',
+      salert: 'alert alert-success text-left d-none',
+      ealert: 'alert alert-danger text-left d-none',
     };
   }
 
   handleChangeEmail(event) {
-    this.setState({ ealert: "alert alert-danger text-left d-none" });
-    this.setState({ salert: "alert alert-success text-left d-none" });
+    this.setState({ ealert: 'alert alert-danger text-left d-none' });
+    this.setState({ salert: 'alert alert-success text-left d-none' });
     this.setState({ email: event.target.value });
   }
   handleChangeName(event) {
-    this.setState({ ealert: "alert alert-danger text-left d-none" });
-    this.setState({ salert: "alert alert-success text-left d-none" });
+    this.setState({ ealert: 'alert alert-danger text-left d-none' });
+    this.setState({ salert: 'alert alert-success text-left d-none' });
     this.setState({ name: event.target.value });
   }
 
   handleChangePassword(event) {
-    this.setState({ ealert: "alert alert-danger text-left d-none" });
-    this.setState({ salert: "alert alert-success text-left d-none" });
+    this.setState({ ealert: 'alert alert-danger text-left d-none' });
+    this.setState({ salert: 'alert alert-success text-left d-none' });
     this.setState({ password: event.target.value });
   }
 
   sendLogin(event) {
     event.preventDefault();
-    localStorage.removeItem("bearerKey");
-    document.cookie = 'bearerKey=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT';
-    axios.post(
-      "/api/auth",
-      { email: this.state.email, name: this.state.name, key: this.state.password },
-      { headers: { "Content-Type": "application/json" } }
-    ).then((response) => {
-      localStorage.setItem("bearerKey", "Bearer " + response.data.token);
-      document.cookie = `bearerKey=Bearer ${response.data.token}; path=/`;
-      this.setState({ salert: "alert alert-success text-left" });
-    })
+    localStorage.removeItem('bearerKey');
+    document.cookie =
+      'bearerKey=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+    axios
+      .post(
+        '/api/auth',
+        {
+          email: this.state.email,
+          name: this.state.name,
+          key: this.state.password,
+        },
+        { headers: { 'Content-Type': 'application/json' } }
+      )
+      .then((response) => {
+        localStorage.setItem('bearerKey', 'Bearer ' + response.data.token);
+        document.cookie = `bearerKey=Bearer ${response.data.token}; path=/`;
+        this.setState({ salert: 'alert alert-success text-left' });
+      })
       .catch((error) => {
-        this.setState({ ealert: "alert alert-danger text-left" });
+        this.setState({ ealert: 'alert alert-danger text-left' });
       });
   }
 
@@ -81,8 +88,7 @@ export default class login extends React.Component {
                     className="form-control"
                     id="staticEmail"
                     onChange={this.handleChangeEmail}
-                    required="required"
-                  ></input>
+                    required="required"></input>
                 </div>
               </div>
               <div className="form-group row">
@@ -93,8 +99,7 @@ export default class login extends React.Component {
                     className="form-control"
                     id="staticName"
                     onChange={this.handleChangeName}
-                    required="required"
-                  ></input>
+                    required="required"></input>
                 </div>
               </div>
               <div className="form-group row">
@@ -105,15 +110,13 @@ export default class login extends React.Component {
                     className="form-control"
                     id="staticPassword"
                     onChange={this.handleChangePassword}
-                    required="required"
-                  ></input>
+                    required="required"></input>
                 </div>
               </div>
               <button
                 className="btn btn-primary m-4"
                 type="submit"
-                onClick={this.sendLogin}
-              >
+                onClick={this.sendLogin}>
                 Submit
               </button>
             </form>
@@ -121,58 +124,62 @@ export default class login extends React.Component {
         </div>
         <Footer></Footer>
         <style jsx global>{`
-        *, ::after, ::before {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
-        
-        @font-face {
-          font-family: Gravity;
-          src: url(/static/fonts/Gravity-Regular.otf);
-        }
-        
-        body, html {
-          height: 100vh;
-          margin: 0;
-          font-family: Gravity !important;
-          font-size: 1em;
-          line-height: 1.15;
-          font-weight: 400;
-          scroll-behavior: smooth;
-          text-align: center;
-        }
-        
-        .title {
-          font-size: 1.9em;
-          text-align: left;
-          padding: 10px;
-        }
-        
-        .rt-td {
-          text-align: left;
-        }
-        
-        div.rt-td > a {
-          color: inherit;
-        }
-        
-        .bxo {
-           margin-top: 12%;
-           margin-left: 5%;
-           margin-right: 5%;
-           margin-bottom: 5%;
+          *,
+          ::after,
+          ::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
           }
-        
-        .nav-link, .navbar-brand{
-          color: black !important;
-        }
-        
-        @media (max-width: 991px) {
-          .nav-link {
+
+          @font-face {
+            font-family: Gravity;
+            src: url(/static/fonts/Gravity-Regular.otf);
+          }
+
+          body,
+          html {
+            height: 100vh;
+            margin: 0;
+            font-family: Gravity !important;
+            font-size: 1em;
+            line-height: 1.15;
+            font-weight: 400;
+            scroll-behavior: smooth;
+            text-align: center;
+          }
+
+          .title {
+            font-size: 1.9em;
+            text-align: left;
+            padding: 10px;
+          }
+
+          .rt-td {
+            text-align: left;
+          }
+
+          div.rt-td > a {
+            color: inherit;
+          }
+
+          .bxo {
+            margin-top: 12%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 5%;
+          }
+
+          .nav-link,
+          .navbar-brand {
+            color: black !important;
+          }
+
+          @media (max-width: 991px) {
+            .nav-link {
               text-align: left;
+            }
           }
-        }
         `}</style>
       </div>
     );

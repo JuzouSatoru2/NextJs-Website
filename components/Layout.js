@@ -9,18 +9,21 @@ const Layout = ({ children }) => (
     <div className="bxo">{children}</div>
     <Footer></Footer>
     <style jsx global>{`
-    *, ::after, ::before {
+      *,
+      ::after,
+      ::before {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
-      
+
       @font-face {
         font-family: Gravity;
         src: url(/static/fonts/Gravity-Regular.otf);
       }
-      
-      body, html {
+
+      body,
+      html {
         height: 100vh;
         margin: 0;
         font-family: Gravity !important;
@@ -30,26 +33,27 @@ const Layout = ({ children }) => (
         scroll-behavior: smooth;
       }
 
-    .nav-link, .navbar-brand{
+      .nav-link,
+      .navbar-brand {
         color: black !important;
-    }
+      }
 
-    .bxo {
+      .bxo {
         margin-top: 12%;
         margin-left: 5%;
         margin-right: 5%;
         margin-bottom: 5%;
-    }
+      }
 
-    @media (max-width: 991px) {
+      @media (max-width: 991px) {
         .nav-link {
-            text-align: left;
+          text-align: left;
         }
       }
-    
-    .bottomLinksDiv {
-      text-align: center;
-    }
+
+      .bottomLinksDiv {
+        text-align: center;
+      }
     `}</style>
   </div>
 );

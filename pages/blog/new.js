@@ -1,7 +1,7 @@
-import React from "react";
-import axios from "axios";
+import React from 'react';
+import axios from 'axios';
 
-import Layout from "../../components/Layout";
+import Layout from '../../components/Layout';
 
 export default class newPost extends React.Component {
   constructor(props) {
@@ -10,43 +10,49 @@ export default class newPost extends React.Component {
     this.handleChangeDescription = this.handleChangeDescription.bind(this);
     this.handleChangeMarkdown = this.handleChangeMarkdown.bind(this);
     this.state = {
-      title: "",
-      description: "",
-      markdown: "",
-      salert: "alert alert-success text-left d-none",
-      ealert: "alert alert-danger text-left d-none"
+      title: '',
+      description: '',
+      markdown: '',
+      salert: 'alert alert-success text-left d-none',
+      ealert: 'alert alert-danger text-left d-none',
     };
   }
 
   handleChangeTitle(event) {
-    this.setState({ salert: "alert alert-success text-left d-none" });
-    this.setState({ ealert: "alert alert-danger text-left d-none" });
+    this.setState({ salert: 'alert alert-success text-left d-none' });
+    this.setState({ ealert: 'alert alert-danger text-left d-none' });
     this.setState({ title: event.target.value });
   }
 
   handleChangeDescription(event) {
-    this.setState({ salert: "alert alert-success text-left d-none" });
-    this.setState({ ealert: "alert alert-danger text-left d-none" });
+    this.setState({ salert: 'alert alert-success text-left d-none' });
+    this.setState({ ealert: 'alert alert-danger text-left d-none' });
     this.setState({ description: event.target.value });
   }
 
   handleChangeMarkdown(event) {
-    this.setState({ salert: "alert alert-success text-left d-none" });
-    this.setState({ ealert: "alert alert-danger text-left d-none" });
+    this.setState({ salert: 'alert alert-success text-left d-none' });
+    this.setState({ ealert: 'alert alert-danger text-left d-none' });
     this.setState({ markdown: event.target.value });
   }
 
   sendPost(event) {
     event.preventDefault();
-    axios.post(
-      "/api/blog",
-      { title: this.state.title, description: this.state.description, markdown: this.state.markdown },
-      { headers: { "Content-Type": "application/json" } }
-    ).then((response) => {
-      this.setState({ salert: "alert alert-success text-left" });
-    })
+    axios
+      .post(
+        '/api/blog',
+        {
+          title: this.state.title,
+          description: this.state.description,
+          markdown: this.state.markdown,
+        },
+        { headers: { 'Content-Type': 'application/json' } }
+      )
+      .then((response) => {
+        this.setState({ salert: 'alert alert-success text-left' });
+      })
       .catch((error) => {
-        this.setState({ ealert: "alert alert-danger text-left" });
+        this.setState({ ealert: 'alert alert-danger text-left' });
       });
   }
 
@@ -71,8 +77,7 @@ export default class newPost extends React.Component {
                     className="form-control"
                     id="statictitle"
                     onChange={this.handleChangeTitle}
-                    required="required"
-                  ></input>
+                    required="required"></input>
                 </div>
               </div>
               <div className="form-group row">
@@ -82,8 +87,7 @@ export default class newPost extends React.Component {
                     className="form-control"
                     id="staticdescription"
                     onChange={this.handleChangeDescription}
-                    required="required"
-                  ></textarea>
+                    required="required"></textarea>
                 </div>
               </div>
               <div className="form-group row">
@@ -94,30 +98,26 @@ export default class newPost extends React.Component {
                     id="staticMarkdown"
                     onChange={this.handleChangeMarkdown}
                     required="required"
-                    rows="7"
-                  ></textarea>
+                    rows="7"></textarea>
                 </div>
               </div>
-              <button
-                className="btn btn-primary m-4"
-                type="submit"
-              >
+              <button className="btn btn-primary m-4" type="submit">
                 Submit post
               </button>
             </form>
           </div>
         </div>
         <style jsx>{`
-        .bxo {
+          .bxo {
             text-align: center;
           }
-          
+
           .title {
             font-size: 1.9em;
             text-align: left;
             padding: 10px;
           }
-          `}</style>
+        `}</style>
       </Layout>
     );
   }

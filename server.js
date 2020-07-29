@@ -15,7 +15,8 @@ const port = process.env.PORT || 3000;
 const apiRoutes = require('./server/routes/apiRoutes');
 const blogRoutes = require('./server/routes/articlesRoutes');
 
-app.prepare()
+app
+  .prepare()
   .then(() => {
     const server = express();
     server.use(cookieParser());
@@ -32,7 +33,7 @@ app.prepare()
       mongoose.connect(process.env.DATABASE_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useCreateIndex: true
+        useCreateIndex: true,
       });
       const db = mongoose.connection;
       db.on('error', console.error.bind(console, 'connection error:'));
@@ -60,7 +61,7 @@ app.prepare()
         } else {
           res.json({
             message: 'Verified',
-            authData
+            authData,
           });
         }
       });
@@ -91,14 +92,14 @@ app.prepare()
     server.post('/api/auth', (req, res) => {
       if (req.body.key === process.env.ADMIN_KEY) {
         const user = {
-          id: "1",
+          id: '1',
           username: req.body.username,
-          email: req.body.email
+          email: req.body.email,
         };
 
         jwt.sign({ user }, 'secretkey', { expiresIn: '24h' }, (err, token) => {
           res.json({
-            token
+            token,
           });
         });
       } else {
@@ -114,7 +115,12 @@ app.prepare()
       if (err) {
         throw err;
       }
-      console.log('\x1b[36minfo', `\x1b[0m - Ready on http://localhost:${port} in ${dev ? 'development' : 'production'} mode`);
+      console.log(
+        '\x1b[36minfo',
+        `\x1b[0m - Ready on http://localhost:${port} in ${
+          dev ? 'development' : 'production'
+        } mode`
+      );
     });
   })
   .catch((ex) => {

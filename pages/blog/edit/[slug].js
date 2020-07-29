@@ -1,8 +1,8 @@
-import { useState, useEffect} from "react";
-import axios from "axios";
-import { useRouter } from "next/router";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useRouter } from 'next/router';
 
-import Layout from "../../../components/Layout";
+import Layout from '../../../components/Layout';
 
 function Edit() {
   const [post, setPost] = useState(null);
@@ -15,7 +15,7 @@ function Edit() {
     const fetchData = async () => {
       axios
         .get(`/api/blog/${slug}`, {
-          responseType: "json",
+          responseType: 'json',
         })
         .then((response) => {
           setPost(response.data);
@@ -30,9 +30,11 @@ function Edit() {
   }, [slug]);
 
   const submitEdit = () => {
-    axios.patch(`/api/blog/${post._id}`, 
-    { title: title, description: desc, markdown: mark },
-    { headers: { "Content-Type": "application/json" } });
+    axios.patch(
+      `/api/blog/${post._id}`,
+      { title: title, description: desc, markdown: mark },
+      { headers: { 'Content-Type': 'application/json' } }
+    );
     router.push(`/blog/show/${slug}`);
   };
 
@@ -55,9 +57,8 @@ function Edit() {
                   className="form-control"
                   id="statictitle"
                   required="required"
-                  defaultValue={post ? post.title : ""}
-                  onChange={(e) => setTitle(e.target.value)}
-                ></input>
+                  defaultValue={post ? post.title : ''}
+                  onChange={(e) => setTitle(e.target.value)}></input>
               </div>
             </div>
             <div className="form-group row">
@@ -68,8 +69,7 @@ function Edit() {
                   id="staticdescription"
                   required="required"
                   defaultValue={post ? post.description : null}
-                  onChange={(e) => setDesc(e.target.value)}
-                ></textarea>
+                  onChange={(e) => setDesc(e.target.value)}></textarea>
               </div>
             </div>
             <div className="form-group row">
@@ -81,14 +81,18 @@ function Edit() {
                   required="required"
                   rows="7"
                   defaultValue={post ? post.markdown : null}
-                  onChange={(e) => setMark(e.target.value)}
-                ></textarea>
+                  onChange={(e) => setMark(e.target.value)}></textarea>
               </div>
             </div>
             <button className="btn btn-primary m-4" type="submit">
               Submit post
             </button>
-            <button type="button" className="btn btn-danger" onClick={deletePost}>Delete post</button>
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={deletePost}>
+              Delete post
+            </button>
           </form>
         </div>
       </div>
