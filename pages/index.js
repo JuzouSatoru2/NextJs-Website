@@ -9,10 +9,6 @@ export default function Index() {
   return (
     <div>
       <Head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-124672572-1"
-          type="text/javascript"></script>
         <script src="/static/js/main.min.js"></script>
       </Head>
       <Meta></Meta>
@@ -320,6 +316,10 @@ export default function Index() {
           color: white;
           outline: 0;
           text-decoration: none;
+        }
+
+        .navbar {
+          text-align: left;
         }
       `}</style>
     </div>

@@ -15,10 +15,9 @@ class MyDocument extends Document {
             href="/static/vendors/bootstrap/css/bootstrap.min.css"
           />
           <script src="/static/vendors/jquery/jquery.min.js"></script>
-          <script async src="/static/vendors/popper/popper.min.js"></script>
           <script
             async
-            src="/static/vendors/bootstrap/js/bootstrap.min.js"></script>
+            src="/static/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
         </Head>
         <body>
           <Main />

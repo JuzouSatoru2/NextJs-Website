@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import localStorage from 'localStorage';
 import cookies from 'next-cookies';
 
 import Meta from '../components/Meta';
@@ -42,7 +41,6 @@ export default class login extends React.Component {
 
   sendLogin(event) {
     event.preventDefault();
-    localStorage.removeItem('bearerKey');
     document.cookie =
       'bearerKey=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT';
     axios
@@ -56,7 +54,6 @@ export default class login extends React.Component {
         { headers: { 'Content-Type': 'application/json' } }
       )
       .then((response) => {
-        localStorage.setItem('bearerKey', 'Bearer ' + response.data.token);
         document.cookie = `bearerKey=Bearer ${response.data.token}; path=/`;
         this.setState({ salert: 'alert alert-success text-left' });
       })
