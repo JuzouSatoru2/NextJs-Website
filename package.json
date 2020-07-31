@@ -40,7 +40,6 @@
     "helmet": "^3.23.3",
     "jsdom": "^16.3.0",
     "jsonwebtoken": "^8.5.1",
-    "localStorage": "^1.0.4",
     "marked": "^1.1.1",
     "mongoose": "^5.9.26",
     "next": "^9.5.1",
