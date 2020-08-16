@@ -55,7 +55,7 @@ app
     }
 
     server.post('/api/verify', verifyToken, (req, res) => {
-      jwt.verify(req.token, 'secretkey', (err, authData) => {
+      jwt.verify(req.token, process.env.JWT_KEY || 'secretkey', (err, authData) => {
         if (err) {
           res.sendStatus(403);
         } else {
@@ -80,7 +80,7 @@ app
     }
 
     server.get('/admin|new|edit/*', verifyCookie, (req, res) => {
-      jwt.verify(req.token, 'secretkey', (err, authData) => {
+      jwt.verify(req.token, process.env.JWT_KEY || 'secretkey', (err, authData) => {
         if (err) {
           res.redirect('404');
         } else {

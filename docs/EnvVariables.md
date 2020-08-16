@@ -25,6 +25,10 @@ The variable "MOOD" enables compression, database and logger. Only set it as `ac
 
 The admin key is used for the JWT authentication. You can login with the password at the `/login` route.
 
+### JWT key
+
+The jwt key is used to encrypt the jwt token. If not set the server will use "secretkey".
+
 ### Optional
 
 You can define a specific port with `PORT` (default is 3000) or the Node environment with `NODE_ENV` (production / development).
