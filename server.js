@@ -55,16 +55,20 @@ app
     }
 
     server.post('/api/verify', verifyToken, (req, res) => {
-      jwt.verify(req.token, process.env.JWT_KEY || 'secretkey', (err, authData) => {
-        if (err) {
-          res.sendStatus(403);
-        } else {
-          res.json({
-            message: 'Verified',
-            authData,
-          });
+      jwt.verify(
+        req.token,
+        process.env.JWT_KEY || 'secretkey',
+        (err, authData) => {
+          if (err) {
+            res.sendStatus(403);
+          } else {
+            res.json({
+              message: 'Verified',
+              authData,
+            });
+          }
         }
-      });
+      );
     });
 
     function verifyCookie(req, res, next) {
@@ -80,13 +84,17 @@ app
     }
 
     server.get('/admin|new|edit/*', verifyCookie, (req, res) => {
-      jwt.verify(req.token, process.env.JWT_KEY || 'secretkey', (err, authData) => {
-        if (err) {
-          res.redirect('404');
-        } else {
-          handle(req, res);
+      jwt.verify(
+        req.token,
+        process.env.JWT_KEY || 'secretkey',
+        (err, authData) => {
+          if (err) {
+            res.redirect('404');
+          } else {
+            handle(req, res);
+          }
         }
-      });
+      );
     });
 
     server.post('/api/auth', (req, res) => {
