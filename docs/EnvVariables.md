@@ -9,7 +9,7 @@
 
 ### Mongo
 
-When using the Dotenv package you have to add the MongoDB url like in the template.
+When using the environment variables you have to add the MongoDB url like in the template.
 
 If you don't use Docker it's: `mongodb://localhost:27017/{DATABASE}`
 

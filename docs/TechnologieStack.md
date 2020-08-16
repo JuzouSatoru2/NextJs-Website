@@ -67,3 +67,4 @@ All locally installed packages in package.json
 - start-server-and-test combining server and testing
 - dompurify, jsdom, marked and slugify for the back-end formatting of the blog api posts
 - eslint, babel-eslint and eslint-plugin-react lints all js files
+- Prettier formats the code
