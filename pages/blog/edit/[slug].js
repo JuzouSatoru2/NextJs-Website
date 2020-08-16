@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
+import cookies from 'js-cookie';
 
 import Layout from '../../../components/Layout';
 
@@ -16,6 +17,9 @@ function Edit() {
       axios
         .get(`/api/blog/${slug}`, {
           responseType: 'json',
+          headers: {
+            Authorization: `${cookies.get('bearerKey')}`,
+          },
         })
         .then((response) => {
           setPost(response.data);
@@ -33,7 +37,12 @@ function Edit() {
     axios.patch(
       `/api/blog/${post._id}`,
       { title: title, description: desc, markdown: mark },
-      { headers: { 'Content-Type': 'application/json' } }
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `${cookies.get('bearerKey')}`,
+        },
+      }
     );
     router.push(`/blog/show/${slug}`);
   };

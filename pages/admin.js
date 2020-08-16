@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import cookies from 'js-cookie';
 
 import Meta from '../components/Meta';
 import Header from '../components/Header';
@@ -11,6 +12,9 @@ function admin() {
     axios
       .get(`/api/msg`, {
         responseType: 'json',
+        headers: {
+          Authorization: `${cookies.get('bearerKey')}`,
+        },
       })
       .then((response) => {
         setMessages(

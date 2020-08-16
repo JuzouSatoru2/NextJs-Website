@@ -59,8 +59,7 @@ All locally installed packages in package.json
 - mongoose for connecting to MongoDB
 - cross-env for running scripts cross platforms
 - nodemon(dev) for server restarting on change
-- jsonwebtoken and next-cookies/cookie-parser for authentication user and services
-- localStorage for saving/getting the Bearer token
+- jsonwebtoken and js-cookie/cookie-parser for authentication user and services
 - helmet and cors for server security
 - nprogress for loading indication
 - cypress for testing

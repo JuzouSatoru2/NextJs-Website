@@ -1,6 +1,7 @@
 const express = require('express');
 const Article = require('../models/articles');
 const router = express.Router();
+const auth = require('../lib/auth');
 
 router.get('/', async (req, res) => {
   const article = await Article.find().sort({
@@ -17,7 +18,7 @@ router.get('/:slug', async (req, res) => {
   res.json(article);
 });
 
-router.post('/', (req, res) => {
+router.post('/', auth, (req, res) => {
   let article = new Article();
   article.title = req.body.title;
   article.description = req.body.description;
@@ -30,7 +31,7 @@ router.post('/', (req, res) => {
   }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', auth, async (req, res) => {
   let article = await Article.findById(req.params.id);
   article.title = req.body.title;
   article.description = req.body.description;
@@ -43,7 +44,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-router.patch('/:id', async (req, res) => {
+router.patch('/:id', auth, async (req, res) => {
   let article = await Article.findById(req.params.id);
   article.title = req.body.title;
   article.description = req.body.description;
@@ -56,7 +57,7 @@ router.patch('/:id', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
   await Article.findByIdAndDelete(req.params.id);
   res.json('Deleted article');
 });

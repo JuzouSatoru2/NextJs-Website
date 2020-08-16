@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import cookies from 'next-cookies';
+import cookies from 'js-cookie';
 
 import Meta from '../components/Meta';
 import Header from '../components/Header';
@@ -41,8 +41,7 @@ export default class login extends React.Component {
 
   sendLogin(event) {
     event.preventDefault();
-    document.cookie =
-      'bearerKey=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+    cookies.remove('bearerKey');
     axios
       .post(
         '/api/auth',
@@ -54,7 +53,7 @@ export default class login extends React.Component {
         { headers: { 'Content-Type': 'application/json' } }
       )
       .then((response) => {
-        document.cookie = `bearerKey=Bearer ${response.data.token}; path=/`;
+        cookies.set('bearerKey', `Bearer ${response.data.token}`);
         this.setState({ salert: 'alert alert-success text-left' });
       })
       .catch((error) => {

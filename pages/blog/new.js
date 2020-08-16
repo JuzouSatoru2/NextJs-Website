@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import cookies from 'js-cookie';
 
 import Layout from '../../components/Layout';
 
@@ -46,7 +47,12 @@ export default class newPost extends React.Component {
           description: this.state.description,
           markdown: this.state.markdown,
         },
-        { headers: { 'Content-Type': 'application/json' } }
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `${cookies.get('bearerKey')}`,
+          },
+        }
       )
       .then((response) => {
         this.setState({ salert: 'alert alert-success text-left' });

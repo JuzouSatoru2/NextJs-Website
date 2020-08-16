@@ -1,5 +1,7 @@
 # Api routes
 
+> Most api routes require the jwt auth. The frontend adds the header by default. 
+
 - [/msg](#/msg)
 - [/auth](#/auth)
 - [/verify](#/verify)
