@@ -47,7 +47,7 @@ export default class login extends React.Component {
         '/api/auth',
         {
           email: this.state.email,
-          name: this.state.name,
+          username: this.state.name,
           key: this.state.password,
         },
         { headers: { 'Content-Type': 'application/json' } }

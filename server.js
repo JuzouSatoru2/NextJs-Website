@@ -19,6 +19,9 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    server.use(cors());
+    server.use(helmet());
+    server.use(compression());
     server.use(cookieParser());
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({ extended: false }));
@@ -26,10 +29,7 @@ app
     server.use('/api', apiRoutes);
     server.use('/api/blog', blogRoutes);
 
-    if (process.env.MOOD === 'activate') {
-      server.use(cors());
-      server.use(helmet());
-      server.use(compression());
+    if (process.env.DATABASE_URL) {
       mongoose.connect(process.env.DATABASE_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -40,6 +40,8 @@ app
       db.once('open', () => {
         console.log('\x1b[36minfo', '\x1b[0m - Connected to MongoDB');
       });
+    } else {
+      console.log('\x1b[36minfo', '\x1b[0m - No Database connection');
     }
 
     function verifyToken(req, res, next) {
@@ -100,16 +102,20 @@ app
     server.post('/api/auth', (req, res) => {
       if (req.body.key === process.env.ADMIN_KEY) {
         const user = {
-          id: '1',
           username: req.body.username,
           email: req.body.email,
         };
 
-        jwt.sign({ user }, 'secretkey', { expiresIn: '24h' }, (err, token) => {
-          res.json({
-            token,
-          });
-        });
+        jwt.sign(
+          { user },
+          process.env.JWT_KEY || 'secretkey',
+          { expiresIn: '24h' },
+          (err, token) => {
+            res.json({
+              token,
+            });
+          }
+        );
       } else {
         res.sendStatus(403);
       }

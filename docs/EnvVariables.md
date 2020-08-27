@@ -3,11 +3,12 @@
 > Set with .env, command-line or in docker-compose file
 
 - [Mongo](#mongo)
-- [Mood](#mood)
 - [Admin key](#Admin-Key)
 - [Optional](#Optional)
 
-### Mongo
+### Database URL
+
+> DATABASE_URL
 
 When using the environment variables you have to add the MongoDB url like in the template.
 
@@ -17,17 +18,17 @@ If you use Docker it's: `mongodb://root:admin@mongo:27017/{DATABASE}?authSource=
 
 Be carefull at changing the MongoDB password(admin) and username(root) in docker-compose because you have to change it in the .env file too!
 
-### Mood
-
-The variable "MOOD" enables compression, database and logger. Only set it as `activate` if an MongoDB instance is running and configured like mentioned.
-
 ### Admin key
+
+> ADMIN_KEY
 
 The admin key is used for the JWT authentication. You can login with the password at the `/login` route.
 
 ### JWT key
 
-The jwt key is used to encrypt the jwt token. If not set the server will use "secretkey".
+> JWT_KEY
+
+The jwt key is used to encrypt the jwt token. If not set the server will use the default key  "secretkey".
 
 ### Optional
 
