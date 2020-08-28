@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 
 function admin() {
   const [messages, setMessages] = useState(null);
+  const [monitor, setMonitor] = useState(null);
   useEffect(() => {
     axios
       .get(`/api/msg`, {
@@ -27,7 +28,18 @@ function admin() {
           ))
         );
       });
-  });
+
+    axios
+      .get(`/api/monitor`, {
+        responseType: 'json',
+        headers: {
+          Authorization: `${cookies.get('bearerKey')}`,
+        },
+      })
+      .then((response) => {
+        setMonitor(response.data);
+      });
+  }, []);
 
   return (
     <div>
@@ -36,17 +48,48 @@ function admin() {
       <div className="bxo">
         <h1 className="title">Admin dashboard</h1>
         <div className="container-fluid my-5 table-responsive">
-          <p className="par">Received messages via /contact</p>
-          <table className="table table-striped table-bordered table-hover">
-            <thead className="thead-dark">
-              <tr>
-                <th scope="col">Email</th>
-                <th scope="col">Name</th>
-                <th scope="col">Message</th>
-              </tr>
-            </thead>
-            <tbody>{messages ? messages : null}</tbody>
-          </table>
+          <div className="floated">
+            <p className="par">Received messages via /contact</p>
+            <table className="table table-striped table-bordered table-hover">
+              <thead className="thead-dark">
+                <tr>
+                  <th scope="col">Email</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Message</th>
+                </tr>
+              </thead>
+              <tbody>{messages ? messages : null}</tbody>
+            </table>
+          </div>
+          <div className="monitor">
+            <p>Package name: {monitor ? `${monitor.package.name}` : null}</p>
+            <p>
+              package description:{' '}
+              {monitor ? `${monitor.package.description}` : null}
+            </p>
+            <p>
+              Package version: {monitor ? `${monitor.package.version}` : null}
+            </p>
+            <p>
+              Package author: {monitor ? `${monitor.package.author}` : null}
+            </p>
+            <p>Memory rss: {monitor ? `${monitor.memory.rss}` : null}</p>
+            <p>
+              Memory heap total:{' '}
+              {monitor ? `${monitor.memory.heapTotal}` : null}
+            </p>
+            <p>
+              Memory heap used: {monitor ? `${monitor.memory.heapUsed}` : null}
+            </p>
+            <p>
+              Memory external: {monitor ? `${monitor.memory.external}` : null}
+            </p>
+            <p>
+              Memory array buffers:{' '}
+              {monitor ? `${monitor.memory.arrayBuffers}` : null}
+            </p>
+            <p>Uptime: {monitor ? `${monitor.uptime}` : null}</p>
+          </div>
         </div>
       </div>
       <Footer></Footer>
@@ -93,6 +136,24 @@ function admin() {
           margin-bottom: 5%;
         }
 
+        .monitor {
+          text-align: right;
+        }
+
+        @media (min-width: 991px) {
+          .monitor {
+            float: right;
+          }
+
+          .floated {
+            float: left;
+            width: 60%;
+          }
+
+          .my-5 {
+            overflow: hidden;
+          }
+        }
         .nav-link,
         .navbar-brand {
           color: black !important;

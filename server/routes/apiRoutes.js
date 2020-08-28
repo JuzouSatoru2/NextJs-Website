@@ -4,7 +4,7 @@ const messageController = require('../controller/message');
 const auth = require('../lib/auth');
 
 router.get('/', (req, res) => {
-  res.json('Api routes working');
+  res.sendStatus(200);
 });
 
 router

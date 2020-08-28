@@ -14,6 +14,7 @@ const handle = app.getRequestHandler();
 const port = process.env.PORT || 3000;
 const apiRoutes = require('./server/routes/apiRoutes');
 const blogRoutes = require('./server/routes/articlesRoutes');
+const monitorRoutes = require('./server/routes/monitorRoutes');
 
 app
   .prepare()
@@ -28,6 +29,7 @@ app
     server.set('trust proxy', true);
     server.use('/api', apiRoutes);
     server.use('/api/blog', blogRoutes);
+    server.use('/api/monitor', monitorRoutes);
 
     if (process.env.DATABASE_URL) {
       mongoose.connect(process.env.DATABASE_URL, {
