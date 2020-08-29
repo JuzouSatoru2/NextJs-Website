@@ -41,6 +41,7 @@ function Show() {
           <a className="btn btn-secondary">All Articles</a>
         </Link>
         <div
+        className="sanitizedHtml"
           dangerouslySetInnerHTML={{
             __html: post ? post.sanitizedHtml : '',
           }}></div>
@@ -48,6 +49,10 @@ function Show() {
       <style jsx>{`
         .content {
           padding-top: 2%;
+        }
+
+        .sanitizedHtml {
+          margin-top: 3%;
         }
       `}</style>
     </Layout>
