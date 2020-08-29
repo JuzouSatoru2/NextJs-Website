@@ -5,15 +5,15 @@ describe("Test api routes", () => {
     });
   });
   it("Checks auth of /api/msg", () => {
-    cy.request("/api/msg").then((response) => {
+    cy.request("/api/msg", { failOnStatusCode: false }).then((response) => {
       expect(response.status).to.eq(403);
     });
-    cy.request("/api/msg/value").then((response) => {
+    cy.request("/api/msg/value", { failOnStatusCode: false }).then((response) => {
       expect(response.status).to.eq(403);
     });
   });
   it("Checks auth for /monitor", () => {
-    cy.request("/api/monitor").then((response) => {
+    cy.request("/api/monitor", { failOnStatusCode: false }).then((response) => {
       expect(response.status).to.eq(403);
     });
   });
