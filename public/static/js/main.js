@@ -5,10 +5,8 @@ function changebgimg() {
   }
   if (rd === 1) {
     $('#imgsrc').css('background-image', 'url(/static/images/parallax.jpg)');
-    $('#srcimg').css('background-image', 'url(/static/images/parallax.jpg)');
   } else if (rd === 2) {
     $('#imgsrc').css('background-image', 'url(/static/images/parallax3.jpg)');
-    $('#srcimg').css('background-image', 'url(/static/images/parallax3.jpg)');
   }
 }
 

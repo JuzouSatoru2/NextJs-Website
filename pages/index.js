@@ -47,62 +47,122 @@ export default function Index() {
 
       <section className="section section-dark">
         <div className="container">
-          <h4>My Programming Skills</h4>
-          <div className="row">
+          <h3 className="workTitle">MY WORK</h3>
+          <p className="workText">
+            I was never the best in school, I'm just a guy who is interested in
+            software engineering. This site just exists because I'm really into
+            programming web apps. I've been working with NextJs a lot lately to
+            improve my skills and and to better understand the structure of the
+            Internet and websites. What I'm doing doesn't have a real sense or
+            something, so I guess I'm just doing this for fun.
+          </p>
+          <div className="row workList">
             <div className="col-sm">
+              <h5>Languages</h5>
               <ul className="list-l">
-                <li>HTML5</li>
-                <li>JavaScript</li>
-                <li>Java</li>
-                <li>SQL</li>
-                <li>Data Structures</li>
-              </ul>
-            </div>
-            <div className="col-sm">
-              <ul className="list-l">
-                <li>CSS3</li>
+                <li>Javascript</li>
                 <li>Python</li>
-                <li>Jquery / Bootstrap</li>
-                <li>Node.js / React / Nextjs</li>
-                <li>Simple Algorithms</li>
+                <li>Java</li>
+                <li>ASP.NET Core</li>
               </ul>
             </div>
             <div className="col-sm">
+              <h5>Javascript Frameworks</h5>
+              <ul className="list-l">
+                <li>NextJs</li>
+                <li>Express</li>
+                <li>Vue</li>
+                <li>React</li>
+              </ul>
+            </div>
+            <div className="col-sm">
+              <h5>Basic Knowledge</h5>
               <ul className="list-l">
                 <li>Git</li>
                 <li>Terminal</li>
-                <li>Docker / -compose</li>
-                <li>HTTP / APIs</li>
-                <li>MongoDB</li>
+                <li>Docker</li>
+                <li>Databases</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="pimg2">
-        <div className="ptext">
-          <span className="border trans pc">
-            "Talk is cheap. Show me the code." -Linus Torvalds
-          </span>
-          <span className="border trans mb">Hi</span>
-        </div>
-      </div>
-
       <section className="section section-light">
-        <h2>My Chat App</h2>
-        <a
-          href="https://simpleangularchat.github.io/"
-          className="hprlnk"
-          target="_blank"
-          rel="noreferrer noopener">
-          Simple Angular Chat
-        </a>
-        <br></br>
-        <h6>Powered by Angular / Firebase</h6>
+        <h5 className="container projectTitle">
+          Projects I'm currently working on
+        </h5>
+        <div className="container table-responsive">
+          <table className="table table-hover projectTable">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Language</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <Link href="https://github.com/JuzouSatoru2/NextJs-Website">
+                    <a
+                      className="projectLink"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      NextJs website
+                    </a>
+                  </Link>
+                </td>
+                <td>This website</td>
+                <td>Javascript</td>
+              </tr>
+              <tr>
+                <td>
+                  <Link href="https://github.com/JuzouSatoru2/NextJs-Boilerplate">
+                    <a
+                      className="projectLink"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      NextJs boilerplate
+                    </a>
+                  </Link>
+                </td>
+                <td>Boilerplate site with NextJs</td>
+                <td>Javascript</td>
+              </tr>
+              <tr>
+                <td>
+                  <Link href="https://github.com/JuzouSatoru2/create-nextjs-project">
+                    <a
+                      className="projectLink"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      Create Nextjs project
+                    </a>
+                  </Link>
+                </td>
+                <td>CLI to clone the boilerplate</td>
+                <td>Javascript</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="container">
+          <h5 className="projectTitle">Future things I want to learn</h5>
+          <div className="row projectList">
+            <div className="col-sm">
+              <ul className="list-l">
+                <li>Hangfire (ASP.NET)</li>
+                <li>Writing desktop applications</li>
+                <li>Kubernetes</li>
+                <li>Deploying an orchestration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <div className="pimg1 down-img" id="srcimg">
+      <div className="pimg1 down-img">
         <div className="ptext">
           <span className="titleb">
             <Link href="/software">
@@ -159,7 +219,6 @@ export default function Index() {
         }
 
         .pimg1,
-        .pimg2,
         .pimg3 {
           position: relative;
           background-position: center;
@@ -173,13 +232,9 @@ export default function Index() {
           min-height: 100vh;
         }
 
-        .pimg2 {
-          background-image: url('/static/images/parallax2.jpg');
-          min-height: 400px;
-        }
-
         .down-img {
-          min-height: 60vh;
+          background-image: url('/static/images/parallax2.jpg');
+          min-height: 50vh;
         }
 
         .section {
@@ -206,21 +261,14 @@ export default function Index() {
           text-transform: uppercase;
         }
 
-        .ptext .border {
-          background-color: #111;
-          color: #fff;
-          padding: 20px;
-        }
-
-        .ptext .border.trans {
-          background-color: transparent;
-        }
-
         @media (max-width: 911px) {
           .pimg1,
-          .pimg2,
           .pimg3 {
             background-attachment: scroll;
+          }
+
+          .section {
+            padding: 50px 40px;
           }
         }
 
@@ -242,6 +290,43 @@ export default function Index() {
           font-size: 0.37em;
           text-align: left;
           letter-spacing: 0;
+        }
+
+        .workTitle {
+          padding-top: 60px;
+          letter-spacing: 10px;
+          padding-bottom: 60px;
+          margin-bottom: 0px;
+        }
+
+        .workText {
+          padding-bottom: 60px;
+          padding-top: 20px;
+          font-size: 0.9em;
+          letter-spacing: 1px;
+          margin: 0px;
+          line-height: 1.5;
+        }
+
+        .workList {
+          padding-bottom: 40px;
+        }
+
+        .projectTable {
+          font-size: 0.9em;
+        }
+
+        .projectTitle {
+          color: black;
+          padding-top: 60px;
+          padding-bottom: 20px;
+          margin-bottom: 0px;
+        }
+
+        .projectLink,
+        .projectLink:hover,
+        .projectList {
+          color: black;
         }
 
         .titleb {
