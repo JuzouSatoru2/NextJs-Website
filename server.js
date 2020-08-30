@@ -43,7 +43,7 @@ app
         console.log('\x1b[36minfo', '\x1b[0m - Connected to MongoDB');
       });
     } else {
-      console.log('\x1b[36minfo', '\x1b[0m - No Database connection');
+      console.log('\x1b[36minfo', '\x1b[0m - No database connection');
     }
 
     function verifyToken(req, res, next) {

@@ -41,7 +41,7 @@ function Show() {
           <a className="btn btn-secondary">All Articles</a>
         </Link>
         <div
-        className="sanitizedHtml"
+          className="sanitizedHtml"
           dangerouslySetInnerHTML={{
             __html: post ? post.sanitizedHtml : '',
           }}></div>
