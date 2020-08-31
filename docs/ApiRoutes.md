@@ -6,7 +6,7 @@
 - [/auth](#/auth)
 - [/verify](#/verify)
 - [/blog](#/blog)
-- [/monitor](#/monitro)
+- [/monitor](#/monitor)
 - [/mongoadmin](#/mongoadmin)
 - [/portainer](#/portainer)
 - [/hangfire](#/hangfire)
