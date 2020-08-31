@@ -10,6 +10,16 @@ export default function Index() {
     <div>
       <Head>
         <script src="/static/js/main.min.js"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+          });
+        }
+        `,
+          }}></script>
       </Head>
       <Meta></Meta>
       <Header></Header>

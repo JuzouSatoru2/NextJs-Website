@@ -30,6 +30,11 @@ body .scrollN:hover {
         min-height: 56px !important;
         background-color: white;
     }
+
+    body .scrollN,
+    body .scrollN:hover {
+    color: black    ;
+}
 }
 
 @media (min-width: 992px) {
@@ -47,16 +52,6 @@ body .scrollN:hover {
         background-color: white;
         height: 60px !important;
         line-height: 60px;
-    }
-
-    .counter {
-        width: 20px;
-        height: 20px;
-        background: black;
-        color: #fff;
-        position: fixed;
-        top: 120px;
-        right: 0;
     }
 
     .navbar-nav li,

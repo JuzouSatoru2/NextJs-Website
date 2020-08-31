@@ -12,14 +12,6 @@ function changebgimg() {
 
 $(document).ready(() => {
   changebgimg();
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js');
-    });
-  }
-});
-
-$(document).ready(() => {
   $('.padX0').on('click', function (event) {
     event.preventDefault();
     $('html,body').animate({ scrollTop: $('#scroll').offset().top }, 700);

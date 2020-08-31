@@ -1,14 +1,11 @@
-var toggle = 0;
-
-var url = window.location.pathname;
-var filename = url.substring(0, url.lastIndexOf('/'));
+const url = window.location.pathname;
+let filename = url.substring(0, url.lastIndexOf('/'));
 filename = filename.substring(filename.lastIndexOf('/') + 1);
 
 function navScroll() {
   if ($(window).width() >= 992) {
     var scrollTop = 0;
     scrollTop = $(window).scrollTop();
-    $('.counter').html(scrollTop);
 
     if (scrollTop >= 100) {
       $('#global-nav').css({
@@ -47,14 +44,6 @@ function navScroll() {
   }
 }
 
-$('.navbar-toggler').click(() => {
-  toggle++;
-  if (toggle % 2 === 1) {
-    $('#global-nav').removeClass('toggle-height');
-  } else {
-    $('#global-nav').addClass('toggle-height');
-  }
-});
 $(window).resize(navScroll);
 $(document).ready(navScroll);
 $(window).scroll(navScroll);
