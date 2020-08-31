@@ -4,6 +4,7 @@
 
 - [Mongo](#mongo)
 - [Admin key](#Admin-Key)
+- [JWT key](#JWT-key)
 - [Optional](#Optional)
 
 ### Database URL

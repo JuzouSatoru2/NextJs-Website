@@ -6,6 +6,7 @@
 - [/auth](#/auth)
 - [/verify](#/verify)
 - [/blog](#/blog)
+- [/monitor](#/monitro)
 - [/mongoadmin](#/mongoadmin)
 - [/portainer](#/portainer)
 - [/hangfire](#/hangfire)
@@ -27,6 +28,10 @@
 
 - / POST and GET request of articles
 - /:id GET, PATCH, DELETE and PUT requests for article with id in url
+
+### /monitor
+
+- / GET request for server informations
 
 ### /mongoadmin
 

@@ -12,7 +12,7 @@
 
 ## Frontend
 
-The Frontend for this website is built using [Nextjs](https://nextjs.org/). Components are at `/pages`, the whole pages at `/pages` and all the static/public files at `/public/static`. All the config is in `next.config.js` located.
+The Frontend for this website is built using [Nextjs](https://nextjs.org/). Components are at `/components`, the whole pages at `/pages` and all the static/public files at `/public`. All the config is in `next.config.js` located.
 
 ## Backend
 
@@ -43,7 +43,6 @@ The webserver [Nginx](https://www.nginx.com/) with reverse proxy summarizes all 
 All Node Packages installed globaly and used in this project.
 
 - node-minify for file minification
-- synp for converting yarn.lock and package.json files
 - readme-md-generator for the Readme
 
 ## Npm Packages

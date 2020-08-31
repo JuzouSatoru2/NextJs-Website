@@ -7,6 +7,6 @@
 ### pages
 
 - / = all posts
-- /new = create post
+- /new = create post (admin only)
 - /edit/:slug = edit posts (admin only)
 - /show/:slug = view post

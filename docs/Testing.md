@@ -3,8 +3,9 @@
 - [General](#general)
 - [Cypress](#cypress)
 - [CircleCi](#circleci)
-- [Start-server-and-test](#start-server-and-test)
 - [Linting](#linting)
+- [Formatting](#formatting)
+- [Start-server-and-test](#start-server-and-test)
 
 ### General
 
