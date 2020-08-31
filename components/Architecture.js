@@ -11,18 +11,19 @@ const Architecture = () => (
               <div className="col-lg-2">
                 <div>
                   <h5>Front end</h5>
-                  <sub>REACT + NEXT JS</sub>
+                  <sub>NEXT JS</sub>
                 </div>
                 <ul>
-                  <li>Single page Web apps written in create-react-app</li>
+                  <li>Single page Web apps written in simple Next js.</li>
                   <li>
-                    Multi-page, server rendered apps written in Next js + React
+                    Multi-page, server (Express) rendered apps written in Next
+                    js.
                   </li>
                 </ul>
               </div>
               <div className="col-lg-2">
                 <div>
-                  <h5>Thin Backend Servers (non CPU-bound)</h5>
+                  <h5>Thin Backend Servers</h5>
                   <sub>NODE JS + EXPRESS</sub>
                 </div>
                 <ul>
@@ -35,56 +36,52 @@ const Architecture = () => (
               </div>
               <div className="col-lg-2">
                 <div>
-                  <h5>Application Servers (CPU-Bound)</h5>
+                  <h5>Application Servers (Future!)</h5>
                   <sub>ASP.NET CORE</sub>
                 </div>
                 <ul>
-                  <li>CPU Intensive Backend Servers</li>
+                  <li>CPU Intensive Backend Servers.</li>
                   <li>
-                    Used for business logic, automation, large data, web APIs
+                    Used for business logic, automation, large data, web APIs.
                   </li>
                 </ul>
               </div>
               <div className="col-lg-2">
                 <div>
                   <h5>Security</h5>
-                  <sub>JWT + DOTNET IDENTITY</sub>
+                  <sub>JSON WEB TOKEN</sub>
                 </div>
                 <ul>
+                  <li>JSON Web Tokens are created by the back-end Server.</li>
                   <li>
-                    JSON Web Tokens are created by Application Servers, backed
-                    by dotnet identity
+                    Accepts both cookie and authorization header Bearer tokens.
                   </li>
-                  <li>Accepts both cookie and Authorization Bearer tokens</li>
-                  <li>
-                    Service accounts are created for each service that needs to
-                    be secured
-                  </li>
+                  <li>APIs use JWT to secure each other and itselfs.</li>
                 </ul>
               </div>
               <div className="col-lg-2">
                 <div>
                   <h5>Database</h5>
-                  <sub>MONGODB + POSTGRESQL</sub>
+                  <sub>MONGODB</sub>
                 </div>
                 <ul>
-                  <li>Storage for JWT Identity, services and all APIs.</li>
+                  <li>Storage for all APIs.</li>
                   <li>Single instance backed by persistent volume.</li>
                 </ul>
               </div>
               <div className="col-lg-2">
                 <div>
                   <h5>Deployment</h5>
-                  <sub>KUBERNETES</sub>
+                  <sub>VERCEL</sub>
                 </div>
                 <ul>
                   <li>
-                    Docker containers for each microservice with kubernetes
-                    orchestration.
+                    Vercel builds and sets the server up after every github
+                    commit.
                   </li>
                   <li>
-                    Nginx ingress controller connects our services together.
-                    /api/ goes to the backend server and so on..
+                    Would like to deploy a kubernetes cluster with real back-end
+                    in the future.
                   </li>
                 </ul>
               </div>
@@ -102,44 +99,39 @@ const Architecture = () => (
                     <th>Description</th>
                   </tr>
                   <tr>
-                    <td>jwtidentity</td>
-                    <td>/api/auth/</td>
-                    <td>Dotnet</td>
-                    <td>
-                      JWT Authentication Server used to secure all other
-                      services
-                    </td>
+                    <td>json web token</td>
+                    <td>/api/verify</td>
+                    <td>NodeJs</td>
+                    <td>Verifies the JWT token for authenticate all APIs.</td>
                   </tr>
                   <tr>
-                    <td>portainer</td>
-                    <td>/api/portainer/</td>
+                    <td>monitor</td>
+                    <td>private. Only accessible by admin</td>
                     <td>NodeJs</td>
-                    <td>Docker container management</td>
-                  </tr>
-                  <tr>
-                    <td>mongoexpress</td>
-                    <td>/api/mongoadmin/</td>
-                    <td>NodeJs</td>
-                    <td>MongoDb database management</td>
+                    <td>Monitors server informations</td>
                   </tr>
                   <tr>
                     <td>mongodb</td>
-                    <td>private. only accessible within cluster</td>
+                    <td>private. only accessible within the server</td>
                     <td>MongoDb</td>
-                    <td>
-                      Database for jwtidentity, portainer, mongoadmin, apis
-                    </td>
+                    <td>Database for the storage of all APIs</td>
+                  </tr>
+                  <tr>
+                    <td>articles</td>
+                    <td>/api/articles</td>
+                    <td>NodeJs</td>
+                    <td>Articles API</td>
                   </tr>
                   <tr>
                     <td>msg</td>
-                    <td>/api/msg/</td>
+                    <td>/api/msg</td>
                     <td>Node js</td>
-                    <td>Messages api</td>
+                    <td>Messages API</td>
                   </tr>
                   <tr>
                     <td>front</td>
-                    <td>localhost/</td>
-                    <td>Next js + React</td>
+                    <td>/</td>
+                    <td>Next js</td>
                     <td>What you see</td>
                   </tr>
                 </tbody>
