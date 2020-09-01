@@ -2,42 +2,42 @@
 
 > Most api routes require the jwt auth. The frontend adds the header by default. 
 
-- [/msg](#/msg)
-- [/auth](#/auth)
-- [/verify](#/verify)
-- [/blog](#/blog)
-- [/monitor](#/monitor)
-- [/mongoadmin](#/mongoadmin)
-- [/portainer](#/portainer)
-- [/hangfire](#/hangfire)
+- [/msg](#msg)
+- [/auth](#auth)
+- [/verify](#verify)
+- [/blog](#blog)
+- [/monitor](#monitor)
+- [/mongoadmin](#mongoadmin)
+- [/portainer](#portainer)
+- [/hangfire](#hangfire)
 
-### /msg
+### msg
 
 - / POST and GET requests of messages
 - /:id GET, PATCH, DELETE and PUT requests for message with id in url
 
-### /auth
+### auth
 
 - / POST requests for JWT authorization
 
-### /verify
+### verify
 
 - / POST requests for JWT authentication
 
-### /blog
+### blog
 
 - / POST and GET request of articles
 - /:id GET, PATCH, DELETE and PUT requests for article with id in url
 
-### /monitor
+### monitor
 
 - / GET request for server informations
 
-### /mongoadmin
+### mongoadmin
 
 - / MongoDB dashboard
 
-### /portainer
+### portainer
 
 - / local docker network/container dashboard
 
