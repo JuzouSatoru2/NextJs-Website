@@ -2,7 +2,7 @@
 
 > Set with .env, command-line or in docker-compose file
 
-- [Mongo](#mongo)
+- [Database URL](#Database-URL)
 - [Admin key](#Admin-Key)
 - [JWT key](#JWT-key)
 - [Optional](#Optional)
