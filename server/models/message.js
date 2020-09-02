@@ -3,15 +3,15 @@ const mongoose = require('mongoose');
 const MessageSchema = new mongoose.Schema({
   email: {
     type: String,
-    default: '',
+    required: true,
   },
   name: {
     type: String,
-    default: '',
+    required: true,
   },
   message: {
     type: String,
-    default: '',
+    required: true,
   },
 });
 

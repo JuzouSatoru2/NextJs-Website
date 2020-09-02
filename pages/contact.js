@@ -6,9 +6,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function contact() {
-  const [email, setEmail] = useState(null);
-  const [name, setName] = useState(null);
-  const [message, setMessage] = useState(null);
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
   const [salert, setSalert] = useState('alert alert-success text-left d-none');
   const [ealert, setEalert] = useState('alert alert-danger text-left d-none');
 
@@ -43,7 +43,11 @@ export default function contact() {
         { headers: { 'Content-Type': 'application/json' } }
       )
       .then((response) => {
-        setSalert('alert alert-success text-left');
+        if (response.data.status !== 'error') {
+          setSalert('alert alert-success text-left');
+        } else {
+          setEalert('alert alert-danger text-left');
+        }
       })
       .catch((error) => {
         setEalert('alert alert-danger text-left');

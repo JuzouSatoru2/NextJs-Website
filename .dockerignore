@@ -5,9 +5,7 @@ node_modules/
 .dockerignore
 Dockerfile
 docker-compose.yml
-README.md
 scripts/
-other/
 docs/
 .vscode/
 cypress/

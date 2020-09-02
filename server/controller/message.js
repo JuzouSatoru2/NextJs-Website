@@ -16,22 +16,33 @@ exports.index = (req, res) => {
   });
 };
 exports.new = (req, res) => {
-  var message = new Message();
-  message.email = req.body.email;
-  message.name = req.body.name;
-  message.message = req.body.message;
-  message.save((err) => {
-    if (err) {
+  if (
+    /.*\S.*/.test(req.body.email) &&
+    /.*\S.*/.test(req.body.name) &&
+    /.*\S.*/.test(req.body.message)
+  ) {
+    var message = new Message();
+    message.email = req.body.email;
+    message.name = req.body.name;
+    message.message = req.body.message;
+    message.save((err) => {
+      if (err) {
+        res.json({
+          status: 'error',
+          omessage: err,
+        });
+      }
       res.json({
-        status: 'error',
-        omessage: err,
+        omessage: 'New message created!',
+        data: message,
       });
-    }
-    res.json({
-      omessage: 'New message created!',
-      data: message,
     });
-  });
+  } else {
+    res.json({
+      status: 'error',
+      omessage: 'Not valid inputs!',
+    });
+  }
 };
 exports.view = (req, res) => {
   Message.findById(req.params.message_id, (err, message) => {
@@ -42,7 +53,8 @@ exports.view = (req, res) => {
       });
     }
     res.json({
-      omessage: 'Message details loading..',
+      status: 'success',
+      message: 'Messages retrieved successfully',
       data: message,
     });
   });
