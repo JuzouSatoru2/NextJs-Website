@@ -35,15 +35,15 @@
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "cross-env": "^7.0.2",
-    "dompurify": "^2.0.12",
+    "dompurify": "^2.0.14",
     "express": "^4.17.1",
     "helmet": "^3.23.3",
     "js-cookie": "^2.2.1",
     "jsdom": "^16.4.0",
     "jsonwebtoken": "^8.5.1",
     "marked": "^1.1.1",
-    "mongoose": "^5.10.0",
-    "next": "^9.5.2",
+    "mongoose": "^5.10.2",
+    "next": "^9.5.3",
     "nprogress": "^0.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -53,10 +53,10 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "cypress": "^4.12.1",
-    "eslint": "^7.7.0",
+    "eslint": "^7.8.1",
     "eslint-plugin-react": "^7.20.6",
     "nodemon": "^2.0.4",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.1",
     "start-server-and-test": "^1.11.3"
   }
 }
