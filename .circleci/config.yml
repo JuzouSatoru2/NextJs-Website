@@ -2,23 +2,50 @@ version: 2.1
 orbs:
   cypress: cypress-io/cypress@1.22.0
 jobs:
-  build:
-    docker:
-      - image: circleci/node:12.9.1-browsers
+  install:
     working_directory: ~/repo
     steps:
-      - checkout
+      - cypress/install
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:12.9.1-browsers
+    steps:
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run: npm ci
+            - v2-build-{{ checksum "package.json" }}
       - run: npm run build
       - save_cache:
           paths:
-            - node_modules
             - .next/cache
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm i -D cypress
-      - run: npm run test:lint
-      - run: npm run test:ci
+          key:
+            - v2-build-{{ checksum "package.json" }}
+  lint-format:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:12.9.1-browsers
+    steps:
+      - run npm run test:lint
+      - run npm run format:check
+  test:
+    working_directory: ~/repo
+    steps:
+      - cypress/run:
+          start: npm run start
+          wait-on: 'http://localhost:3000'
+          store_artifacts: true
+          parallel: true
+          parallelism: 4
+          group: 'all specs'
+
+workflows:
+  install_and_build:
+    jobs:
+      - install
+      - build
+  all_tests:
+    requires:
+      - install_and_build
+    jobs:
+      - lint-format
+      - test
