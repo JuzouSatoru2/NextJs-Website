@@ -16,6 +16,4 @@ workflows:
           parallelism: 4
           group: 'all tests'
           no-workspace: true
-          post-steps:
-            - store_test_results:
-                path: cypress/results
+          store_artifacts: true
