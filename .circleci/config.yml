@@ -1,13 +1,12 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1.22.0
-
-workflows:
+jobs:
   build:
     docker:
       - image: circleci/node:12.9.1-browsers
     working_directory: ~/repo
-    jobs:
+    steps:
       - restore_cache:
         keys:
           - v2-build-{{ checksum "package.json" }}
