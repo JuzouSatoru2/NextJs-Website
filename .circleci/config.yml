@@ -12,8 +12,7 @@ workflows:
                   - v2-build-{{ checksum "package.json" }}
           post-steps:
             - save_cache:
-                keys:
-                  - v2-build-{{ checksum "package.json" }}
+                key: v2-build-{{ checksum "package.json" }}
                 paths:
                   - .next/cache
       - cypress/run:
