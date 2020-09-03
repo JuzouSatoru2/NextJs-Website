@@ -6,6 +6,14 @@ workflows:
     jobs:
       - cypress/install:
           build: 'npm run build'
+          pre-steps:
+            - save_cache:
+              keys:
+                - v2-build-{{ checksum "package.json" }}
+          post-steps:
+            - restore_cache:
+              keys:
+                - v2-build-{{ checksum "package.json" }}
       - cypress/run:
           requires:
             - cypress/install
@@ -15,3 +23,7 @@ workflows:
           parallel: true
           parallelism: 4
           group: 'all tests'
+          no-workspace: true
+          post-steps:
+            - store_test_results:
+                path: cypress/results

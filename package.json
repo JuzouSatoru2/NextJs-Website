@@ -7,12 +7,11 @@
     "dev": "nodemon server.js",
     "start": "cross-env NODE_ENV=production node server.js",
     "build": "next build",
+    "lint": "eslint next.config.js server.js server/** components/** pages/**",
     "test": "cypress run",
-    "format": "prettier --write server.js server/** components/** pages/**",
-    "format:check": "prettier --check server.js server/** components/** pages/**",
-    "test:ci": "start-server-and-test start http://localhost:3000 test",
     "test:open": "cypress open",
-    "test:lint": "eslint next.config.js server.js server/** components/** pages/**"
+    "format": "prettier --write server.js server/** components/** pages/**",
+    "format:check": "prettier --check server.js server/** components/** pages/**"
   },
   "author": "Alex",
   "license": "MIT",
@@ -56,7 +55,6 @@
     "eslint": "^7.8.1",
     "eslint-plugin-react": "^7.20.6",
     "nodemon": "^2.0.4",
-    "prettier": "^2.1.1",
-    "start-server-and-test": "^1.11.3"
+    "prettier": "^2.1.1"
   }
 }
