@@ -16,4 +16,3 @@ workflows:
           parallelism: 4
           group: 'all tests'
           no-workspace: true
-          store_artifacts: true
