@@ -6,6 +6,16 @@ workflows:
     jobs:
       - cypress/install:
           build: 'npm run build'
+          pre-steps:
+            - restore_cache:
+              keys:
+                - v2-build-{{ checksum "package.json" }}
+              paths:
+                - .next/cache
+          post-steps:
+            - save_cache:
+              keys:
+                - v2-build-{{ checksum "package.json" }}
       - cypress/run:
           requires:
             - cypress/install
