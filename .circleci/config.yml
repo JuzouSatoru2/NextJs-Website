@@ -1,6 +1,13 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1.26.0
+jobs:
+  cache-build:
+    steps:
+      - save_cache:
+          key: v2-build-{{ checksum "package.json" }}
+          paths:
+            - .next/cache
 workflows:
   build:
     jobs:
@@ -10,11 +17,9 @@ workflows:
             - restore_cache:
                 keys:
                   - v2-build-{{ checksum "package.json" }}
-          post-steps:
-            - save_cache:
-                key: v2-build-{{ checksum "package.json" }}
-                paths:
-                  - .next/cache
+      - cache-build:
+          requires:
+            - cypress/install
       - cypress/run:
           requires:
             - cypress/install

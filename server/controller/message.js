@@ -16,6 +16,7 @@ exports.index = (req, res) => {
   });
 };
 exports.new = (req, res) => {
+  if(req.body.email && req.body.name && req.body.message) {
   if (
     /.*\S.*/.test(req.body.email) &&
     /.*\S.*/.test(req.body.name) &&
@@ -43,6 +44,9 @@ exports.new = (req, res) => {
       omessage: 'Not valid inputs!',
     });
   }
+} else {
+  res.sendStatus(403);
+}
 };
 exports.view = (req, res) => {
   Message.findById(req.params.message_id, (err, message) => {
