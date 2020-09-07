@@ -6,7 +6,6 @@ jobs:
     executor: cypress/base-10
     steps:
       - attach_workspace:
-        at: ~/repo
       - save_cache:
           key: v2-build-{{ checksum "package.json" }}
           paths:
