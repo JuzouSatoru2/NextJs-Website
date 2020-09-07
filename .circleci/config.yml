@@ -15,9 +15,6 @@ workflows:
                 key: v2-build-{{ checksum "package.json" }}
                 paths:
                   - .next/cache
-      - cacheBuild:
-          requires:
-            - cypress/install
       - cypress/run:
           requires:
             - cypress/install
