@@ -4,7 +4,7 @@ filename = filename.substring(filename.lastIndexOf('/') + 1);
 
 function navScroll() {
   if ($(window).width() >= 992) {
-    var scrollTop = 0;
+    let scrollTop = 0;
     scrollTop = $(window).scrollTop();
 
     if (scrollTop >= 100) {
