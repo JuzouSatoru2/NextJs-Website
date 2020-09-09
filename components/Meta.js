@@ -91,8 +91,11 @@ const Meta = () => (
       <meta name="msapplication-config" content="/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
       <meta name="application-name" content="Alex" />
-      <meta name="keywords" content="website, next, node, express" />
-      <meta name="description" content="personal website in nextJs" />
+      <meta name="keywords" content="nextjs, node, express" />
+      <meta
+        name="description"
+        content="Self-learning software and web engineering through research & development. Making random stuff."
+      />
       <meta name="author" content="Alex" />
       <meta name="robots" content="nofollow" />
       <meta name="HandheldFriendly" content="true" />
