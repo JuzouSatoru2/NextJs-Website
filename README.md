@@ -48,8 +48,10 @@ docker-compose up --build -d
 
 ## Run test
 
+> Requires a started server
+
 ```sh
-npm run test:ci
+npm run test
 ```
 
 ## CI Information
