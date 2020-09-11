@@ -4,6 +4,8 @@ WORKDIR /usr/app
 
 COPY ./package*.json ./
 
+RUN npm install pm2 -g
+
 RUN npm install --production
 
 COPY ./ ./
@@ -14,4 +16,4 @@ EXPOSE 3000
 
 USER node
 
-CMD [ "npm", "run", "start" ]
+CMD [ "pm2-runtime", "npm", "--", "start" ]
