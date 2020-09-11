@@ -388,7 +388,9 @@ export default function Index() {
         .homeSouth {
           text-align: center;
           position: absolute;
-          left: calc(50% - 65px);
+          left: 50%;
+          width: 50%;
+          margin: 0 0 0 -25%;
           top: calc(100% - 140px);
           font-size: 1.4em;
         }
