@@ -3,6 +3,7 @@ const next = require('next');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const rateLimit = require('express-rate-limit');
 const jwt = require('jsonwebtoken');
 const helmet = require('helmet');
 const cors = require('cors');
@@ -27,6 +28,13 @@ app
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({ extended: false }));
     server.set('trust proxy', true);
+    server.use(
+      '/api/',
+      rateLimit({
+        windowMs: 60000,
+        max: 30,
+      })
+    );
     server.use('/api', apiRoutes);
     server.use('/api/blog', blogRoutes);
     server.use('/api/monitor', monitorRoutes);
@@ -83,7 +91,7 @@ app
         req.token = cookieToken;
         next();
       } else {
-        res.redirect('404');
+        return app.render(req, res, '/404', req.query);
       }
     }
 
@@ -93,7 +101,7 @@ app
         process.env.JWT_KEY || 'secretkey',
         (err, authData) => {
           if (err) {
-            res.redirect('404');
+            return app.render(req, res, '/404', req.query);
           } else {
             handle(req, res);
           }
