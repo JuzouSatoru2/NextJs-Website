@@ -9,7 +9,7 @@ services:
       - 3000:3000
     container_name: frontend
   portainer:
-    image: portainer/portainer
+    image: portainer/portainer:latest
     command: -H unix:///var/run/docker.sock
     restart: always
     ports:
@@ -20,7 +20,7 @@ services:
       - portainer_data:/data
     container_name: portainer
   mongo:
-    image: mongo
+    image: mongo:latest
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
@@ -29,7 +29,7 @@ services:
       - "27017-27019:27017-27019"
     container_name: mongodb
   mongo-express:
-    image: mongo-express
+    image: mongo-express:latest
     restart: always
     ports:
       - 8081:8081
