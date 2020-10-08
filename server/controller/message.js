@@ -68,35 +68,35 @@ exports.update = (req, res) => {
       /.*\S.*/.test(req.body.name) &&
       /.*\S.*/.test(req.body.message)
     ) {
-          Message.findById(req.params.message_id, (err, message) => {
-            if (err) {
-              res.send(err);
-            }
-            message.email = req.body.email;
-            message.name = req.body.name;
-            message.message = req.body.message;
-            message.save((err) => {
-              if (err) {
-                res.json({
-                  status: 'error',
-                  message: err,
-                });
-              }
-              res.json({
-                status: 'success',
-                data: message,
-              });
-            });
-          });
-        } else {
-          res.json({
-            status: 'error',
-            message: 'Unvalid entrie(s)!',
-          });
+      Message.findById(req.params.message_id, (err, message) => {
+        if (err) {
+          res.send(err);
         }
+        message.email = req.body.email;
+        message.name = req.body.name;
+        message.message = req.body.message;
+        message.save((err) => {
+          if (err) {
+            res.json({
+              status: 'error',
+              message: err,
+            });
+          }
+          res.json({
+            status: 'success',
+            data: message,
+          });
+        });
+      });
     } else {
-        res.sendStatus(403);
+      res.json({
+        status: 'error',
+        message: 'Unvalid entrie(s)!',
+      });
     }
+  } else {
+    res.sendStatus(403);
+  }
 };
 exports.delete = (req, res) => {
   Message.deleteOne(
