@@ -56,7 +56,7 @@ npm run test
 
 ## CI Information
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/01f0675aaa774401b6d4321f7afd1830)](https://www.codacy.com/manual/mccr4fthd/NextJs-Website?utm_source=github.com&utm_medium=referral&utm_content=JuzouSatoru2/NextJs-Website&utm_campaign=Badge_Grade) [![CircleCI](https://circleci.com/gh/JuzouSatoru2/NextJs-Website.svg?style=svg)](https://circleci.com/gh/JuzouSatoru2/NextJs-Website)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/01f0675aaa774401b6d4321f7afd1830)](https://www.codacy.com/gh/JuzouSatoru2/NextJs-Website/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JuzouSatoru2/NextJs-Website&amp;utm_campaign=Badge_Grade) [![CircleCI](https://circleci.com/gh/JuzouSatoru2/NextJs-Website.svg?style=svg)](https://circleci.com/gh/JuzouSatoru2/NextJs-Website)
 
 ## Author
 

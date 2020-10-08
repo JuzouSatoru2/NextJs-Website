@@ -51,7 +51,6 @@ All locally installed packages in package.json
 
 - axios and body-parser for data fetch
 - compression for server data compression
-- dotenv for enviroment variables
 - express for the Backend server
 - next, react and react-dom for the Frontend
 - react-table for displaying github data
@@ -62,7 +61,6 @@ All locally installed packages in package.json
 - helmet and cors for server security
 - nprogress for loading indication
 - cypress for testing
-- start-server-and-test combining server and testing
 - dompurify, jsdom, marked and slugify for the back-end formatting of the blog api posts
 - eslint, babel-eslint and eslint-plugin-react lints all js files
 - Prettier formats the code

@@ -26,7 +26,3 @@ The testing unit is [Cypress](https://www.cypress.io/).
 ### Formatting
 
 [Prettier](https://https://prettier.io/) checks the formatting and formats it to the project standard.
-
-### start-server-and-test
-
-The package is used to start the server and test in combination at the same time.
