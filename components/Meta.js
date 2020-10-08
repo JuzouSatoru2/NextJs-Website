@@ -6,7 +6,7 @@ const Meta = () => (
       <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
       />
       <title>Alex</title>
       <meta property="og:type" content="website" />
