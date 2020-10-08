@@ -10,7 +10,6 @@ exports.index = (req, res) => {
     }
     res.json({
       status: 'success',
-      message: 'Messages retrieved successfully',
       data: message,
     });
   });
@@ -30,18 +29,18 @@ exports.new = (req, res) => {
         if (err) {
           res.json({
             status: 'error',
-            omessage: err,
+            message: err,
           });
         }
         res.json({
-          omessage: 'New message created!',
+          status: 'success',
           data: message,
         });
       });
     } else {
       res.json({
         status: 'error',
-        omessage: 'Not valid inputs!',
+        message: 'Unvalid entrie(s)!',
       });
     }
   } else {
@@ -58,32 +57,46 @@ exports.view = (req, res) => {
     }
     res.json({
       status: 'success',
-      message: 'Messages retrieved successfully',
       data: message,
     });
   });
 };
 exports.update = (req, res) => {
-  Message.findById(req.params.message_id, (err, message) => {
-    if (err) {
-      res.send(err);
+  if (req.body.email && req.body.name && req.body.message) {
+    if (
+      /.*\S.*/.test(req.body.email) &&
+      /.*\S.*/.test(req.body.name) &&
+      /.*\S.*/.test(req.body.message)
+    ) {
+          Message.findById(req.params.message_id, (err, message) => {
+            if (err) {
+              res.send(err);
+            }
+            message.email = req.body.email;
+            message.name = req.body.name;
+            message.message = req.body.message;
+            message.save((err) => {
+              if (err) {
+                res.json({
+                  status: 'error',
+                  message: err,
+                });
+              }
+              res.json({
+                status: 'success',
+                data: message,
+              });
+            });
+          });
+        } else {
+          res.json({
+            status: 'error',
+            message: 'Unvalid entrie(s)!',
+          });
+        }
+    } else {
+        res.sendStatus(403);
     }
-    message.email = req.body.email;
-    message.name = req.body.name;
-    message.message = req.body.message;
-    message.save((err) => {
-      if (err) {
-        res.json({
-          status: 'error',
-          message: err,
-        });
-      }
-      res.json({
-        omessage: 'Message Info updated',
-        data: message,
-      });
-    });
-  });
 };
 exports.delete = (req, res) => {
   Message.deleteOne(
@@ -99,7 +112,6 @@ exports.delete = (req, res) => {
       }
       res.json({
         status: 'success',
-        omessage: 'Message deleted',
       });
     }
   );
