@@ -9,7 +9,6 @@
 - [/monitor](#monitor)
 - [/mongoadmin](#mongoadmin)
 - [/portainer](#portainer)
-- [/hangfire](#hangfire)
 
 ### msg
 
@@ -40,7 +39,3 @@
 ### portainer
 
 - / local docker network/container dashboard
-
-### hangfire
-
-- / background processing dashboard

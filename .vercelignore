@@ -4,7 +4,7 @@
 cypress
 docs
 scripts
-services
+nginx
 template.env
 docker-compose.yml
 Dockerfile

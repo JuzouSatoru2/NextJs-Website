@@ -6,7 +6,6 @@
 - [Portainer](#portainer)
 - [Nginx](#nginx)
 - [MongoDB & MongoExpress](#mongodb-and-mongoexpress)
-- [Hangfire](#hangfire)
 - [Tools](#tools)
 - [Npm Packages](#npm-packages)
 
@@ -33,10 +32,6 @@ The webserver [Nginx](https://www.nginx.com/) with reverse proxy summarizes all 
 ### MongoDB and MongoExpress
 
 [MongoDB](https://mongodb.com/) is the database used by the Backend and displayed by [MongoExpress](https://github.com/mongo-express/mongo-express).
-
-### Hangfire
-
-[Hangfire](https://www.hangfire.io/) performs background processing backed by persistent storage. It is written in Asp.net Core.
 
 ## Tools
 

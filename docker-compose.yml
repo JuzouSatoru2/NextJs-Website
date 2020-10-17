@@ -41,46 +41,11 @@ services:
       ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
       ME_CONFIG_SITE_BASEURL: /api/mongoadmin/
     container_name: mongodb_dashboard
-  postgresql:
-    image: "bitnami/postgresql:latest"
-    restart: always
-    ports:
-      - "5432:5432"
-    environment:
-      - POSTGRESQL_USERNAME=root
-      - POSTGRESQL_PASSWORD=svfsck2
-      - POSTGRESQL_DATABASE=hangfire
-    volumes:
-      - pgdata:/bitnami
-    container_name: hangfire_db
-  hangui:
-    image: hangui
-    restart: always
-    build:
-      context: ./services/hangfire
-      dockerfile: ./Hangfire.UI/Dockerfile
-    ports:
-      - "5005:80"
-    depends_on:
-      - postgresql
-    container_name: hangfire_ui
-  hangserver:
-    image: hangserver
-    restart: always
-    build:
-      context: ./services/hangfire
-      dockerfile: ./Hangfire.Server/Dockerfile
-    depends_on:
-      - postgresql
-      - hangui
-    container_name: hangfire_server
   nginx:
-    build: ./services/nginx
+    build: ./nginx
     restart: always
     depends_on:
       - nextjs
-      - hangserver
-      - hangui
     ports:
       - 80:80
     container_name: webserver
