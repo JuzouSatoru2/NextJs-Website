@@ -43,20 +43,20 @@
     "jsdom": "^16.4.0",
     "jsonwebtoken": "^8.5.1",
     "marked": "^1.2.0",
-    "mongoose": "^5.10.8",
-    "next": "^9.5.4",
+    "mongoose": "^5.10.9",
+    "next": "^9.5.5",
     "nprogress": "^0.2.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-table": "^6.11.5",
     "slugify": "^1.4.5"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "cypress": "^4.12.1",
-    "eslint": "^7.10.0",
-    "eslint-plugin-react": "^7.21.3",
-    "nodemon": "^2.0.4",
+    "eslint": "^7.11.0",
+    "eslint-plugin-react": "^7.21.4",
+    "nodemon": "^2.0.5",
     "prettier": "^2.1.2"
   }
 }
