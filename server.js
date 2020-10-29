@@ -22,7 +22,42 @@ app
   .then(() => {
     const server = express();
     server.use(cors());
-    server.use(helmet());
+    server.use(
+      helmet.contentSecurityPolicy({
+        directives: {
+          defaultSrc: ["'self'", 'api.github.com'],
+          baseUri: ["'self'"],
+          blockAllMixedContent: [],
+          fontSrc: ["'self'", 'https:', 'data:'],
+          frameAncestors: ["'self'"],
+          imgSrc: ["'self'", 'data:'],
+          objectSrc: ["'none'"],
+          scriptSrc: ["'self'"],
+          scriptSrcAttr: ["'none'"],
+          styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
+          upgradeInsecureRequests: [],
+        },
+      })
+    );
+    server.use(
+      helmet({
+        contentSecurityPolicy: {
+          directives: {
+            defaultSrc: ["'self'", 'api.github.com'],
+            baseUri: ["'self'"],
+            blockAllMixedContent: [],
+            fontSrc: ["'self'", 'https:', 'data:'],
+            frameAncestors: ["'self'"],
+            imgSrc: ["'self'", 'data:'],
+            objectSrc: ["'none'"],
+            scriptSrc: ["'self'"],
+            scriptSrcAttr: ["'none'"],
+            styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
+            upgradeInsecureRequests: [],
+          },
+        },
+      })
+    );
     server.use(compression());
     server.use(cookieParser());
     server.use(bodyParser.json());
