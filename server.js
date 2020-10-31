@@ -23,34 +23,21 @@ app
     const server = express();
     server.use(cors());
     server.use(
-      helmet.contentSecurityPolicy({
-        directives: {
-          defaultSrc: ["'self'", 'api.github.com'],
-          baseUri: ["'self'"],
-          blockAllMixedContent: [],
-          fontSrc: ["'self'", 'https:', 'data:'],
-          frameAncestors: ["'self'"],
-          imgSrc: ["'self'", 'data:'],
-          objectSrc: ["'none'"],
-          scriptSrc: ["'self'"],
-          scriptSrcAttr: ["'none'"],
-          styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
-          upgradeInsecureRequests: [],
-        },
-      })
-    );
-    server.use(
       helmet({
         contentSecurityPolicy: {
           directives: {
-            defaultSrc: ["'self'", 'api.github.com'],
+            defaultSrc: [
+              "'self'",
+              'api.github.com',
+              'storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js',
+            ],
             baseUri: ["'self'"],
             blockAllMixedContent: [],
             fontSrc: ["'self'", 'https:', 'data:'],
             frameAncestors: ["'self'"],
             imgSrc: ["'self'", 'data:'],
             objectSrc: ["'none'"],
-            scriptSrc: ["'self'"],
+            scriptSrc: ["'self'", "'unsafe-inline'"],
             scriptSrcAttr: ["'none'"],
             styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
             upgradeInsecureRequests: [],
