@@ -3,7 +3,6 @@
 .vscode
 cypress
 docs
-scripts
 nginx
 template.env
 docker-compose.yml
