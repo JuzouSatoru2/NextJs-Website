@@ -17,9 +17,9 @@ clean:
 	rm -rf out
 
 minify:
-	node-minify --compressor clean-css --input public/static/css/nav.css --output public/static/css/nav.min.css
-	node-minify --compressor uglify-es --input public/static/js/main.js --output public/static/js/main.min.js
-	node-minify --compressor uglify-es --input public/static/js/nav.js --output public/static/js/nav.min.js
+	cleancss  -o public/static/css/nav.min.css public/static/css/nav.css
+	uglifyjs --compress --mangle --output public/static/js/main.min.js -- public/static/js/main.js
+	uglifyjs --compress --mangle --output public/static/js/nav.min.js -- public/static/js/nav.js
 
 start: lint-format
 	npm run build
