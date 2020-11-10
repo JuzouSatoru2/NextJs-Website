@@ -16,6 +16,7 @@ clean:
 	rm -rf .next
 	rm -rf out
 
+# npm i -g clean-css-cli uglify-es
 minify:
 	cleancss  -o public/static/css/nav.min.css public/static/css/nav.css
 	uglifyjs --compress --mangle --output public/static/js/main.min.js -- public/static/js/main.js
