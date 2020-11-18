@@ -4,5 +4,5 @@ out/
 node_modules
 .env*.local
 docs/Admin/
-sw.js
-workbox-*.js
+sw*.js*
+workbox-*.js*
