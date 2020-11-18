@@ -37,7 +37,7 @@ The webserver [Nginx](https://www.nginx.com/) with reverse proxy summarizes all 
 
 All Node Packages installed globaly and used in this project.
 
-- node-minify for file minification
+- clean-css-cli and uglify-es for file minification
 - readme-md-generator for the Readme
 
 ## Npm Packages
