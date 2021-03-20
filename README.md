@@ -1,3 +1,7 @@
+<h1>OUTDATED</h1>
+This project is not maintained anymore<br>
+
+
 <h1 align="center">Welcome to my NextJs Website 👋</h1>
 <p>
   <img src="https://img.shields.io/github/package-json/v/JuzouSatoru2/NextJs-Website?style=flat-square" />
