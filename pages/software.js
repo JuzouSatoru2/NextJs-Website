@@ -14,7 +14,7 @@ const columns = [
     Cell: (e) => (
       <a href={e.value}>
         {' '}
-        {e.value.replace('https://github.com/JuzouSatoru2/', '')}{' '}
+        {e.value.replace('https://github.com/Alex289/', '')}{' '}
       </a>
     ),
   },
@@ -55,7 +55,7 @@ export default function software() {
 
   useEffect(() => {
     axios
-      .get('https://api.github.com/users/JuzouSatoru2/repos', {
+      .get('https://api.github.com/users/Alex289/repos', {
         responseType: 'json',
       })
       .then((response) => {

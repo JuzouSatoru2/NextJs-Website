@@ -16,13 +16,13 @@
   },
   "author": "Alex",
   "license": "MIT",
-  "homepage": "https://github.com/JuzouSatoru2/NextJs-Website#readme",
+  "homepage": "https://github.com/Alex289/NextJs-Website#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JuzouSatoru2/NextJs-Website.git"
+    "url": "git+https://github.com/Alex289/NextJs-Website.git"
   },
   "bugs": {
-    "url": "https://github.com/JuzouSatoru2/NextJs-Website/issues"
+    "url": "https://github.com/Alex289/NextJs-Website/issues"
   },
   "engines": {
     "npm": ">=6.13.7",

@@ -1,4 +1,4 @@
-# Testing [![CircleCI](https://circleci.com/gh/JuzouSatoru2/NextJs-Website.svg?style=svg)](https://circleci.com/gh/JuzouSatoru2/NextJs-Website)
+# Testing [![CircleCI](https://circleci.com/gh/Alex289/NextJs-Website.svg?style=svg)](https://circleci.com/gh/Alex289/NextJs-Website)
 
 - [General](#general)
 - [Cypress](#cypress)

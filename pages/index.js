@@ -104,7 +104,7 @@ export default function Index() {
             <tbody>
               <tr>
                 <td>
-                  <Link href="https://github.com/JuzouSatoru2/NextJs-Website">
+                  <Link href="https://github.com/Alex289/NextJs-Website">
                     <a
                       className="projectLink"
                       target="_blank"
@@ -118,7 +118,7 @@ export default function Index() {
               </tr>
               <tr>
                 <td>
-                  <Link href="https://github.com/JuzouSatoru2/NextJs-Boilerplate">
+                  <Link href="https://github.com/Alex289/NextJs-Boilerplate">
                     <a
                       className="projectLink"
                       target="_blank"
@@ -132,7 +132,7 @@ export default function Index() {
               </tr>
               <tr>
                 <td>
-                  <Link href="https://github.com/JuzouSatoru2/create-nextjs-project">
+                  <Link href="https://github.com/Alex289/create-nextjs-project">
                     <a
                       className="projectLink"
                       target="_blank"
